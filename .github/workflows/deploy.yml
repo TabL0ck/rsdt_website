@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22          # обновили, чтобы убрать предупреждение
           cache: 'npm'
 
       - name: Install dependencies
@@ -31,9 +31,20 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
+            echo "🚀 Начинаем деплой на сервер..."
             cd /var/www/rsdt_website
-            git pull origin main
-            npm ci --production
+            
+            echo "📥 Обновляем код из GitHub..."
+            git fetch --all
+            git reset --hard origin/main
+            
+            echo "📦 Устанавливаем все зависимости..."
+            npm ci
+            
+            echo "🔨 Собираем React-приложение..."
             npm run build
-            systemctl restart nginx
-            echo "✅ Деплой завершён успешно!"
+            
+            echo "🔄 Перезапускаем nginx..."
+            systemctl restart nginx || echo "⚠️ Не удалось перезапустить nginx (проверь права)"
+            
+            echo "✅ Деплой успешно завершён!"
