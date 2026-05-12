@@ -35,5 +35,11 @@ jobs:
             git pull origin main
             npm ci --production
             npm run build
+<<<<<<< HEAD
             systemctl restart nginx
             echo "✅ Деплой завершён успешно!"
+=======
+            # Если нужно перезапустить nginx (раскомментируй при необходимости)
+            # systemctl restart nginx
+            echo "✅ Деплой завершён успешно!"
+>>>>>>> 080e50ccb393258f9bc7640994467b93ea202e6e
