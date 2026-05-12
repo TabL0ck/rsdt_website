@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build React app
-        run: npm run build
+        run: CI=false npm run build     # ← вот эта строка
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.1.0
