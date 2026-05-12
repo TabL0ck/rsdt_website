@@ -1,6 +1,27 @@
 import React from 'react';
+import RadarModel3D from './RadarModel3D';
+import { useNavigate } from 'react-router-dom';
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
+    // Если мы не на главной, переходим на главную
+    if (window.location.hash !== '#/' && window.location.hash !== '') {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+      return;
+    }
+    e.preventDefault();
+    const element = document.getElementById(anchor);
+    if (element) {
+      const top = element.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="hero" id="hero">
       <div className="hero-bg-image"></div>
@@ -16,21 +37,22 @@ const Hero: React.FC = () => {
           Advanced mmWave radar sensors engineered for tomorrow's mobility — detecting heartbeat,
           respiration, presence, and inattention with uncompromising precision and privacy.
         </p>
+        <div className="hero-radar-model">
+          <div style={{ marginTop: '2rem' }}>
+            <RadarModel3D usePlaceholder={false} /> 
+          </div>
+        </div>
         <div className="hero-buttons">
-          <a href="#solutions" className="btn-primary">
+          <a href="/#solutions" onClick={(e) => handleAnchor(e, 'solutions')} className="btn-primary">
             Explore Solutions
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
             </svg>
           </a>
-          <a href="#specs" className="btn-outline">View Specifications</a>
+          <a href="/#specs" onClick={(e) => handleAnchor(e, 'specs')} className="btn-outline">View Specifications</a>
         </div>
       </div>
-      <a href="#parallax-transition" className="scroll-indicator" aria-label="Scroll to Radar Solutions">
-        <span>Radar Solutions</span>
-        <div className="scroll-arrow">
-          <svg viewBox="0 0 24 24"><path d="M12 5v14M7 14l5 5 5-5" /></svg>
-        </div>
+      <a href="/#parallax-transition" onClick={(e) => handleAnchor(e, 'parallax-transition')} className="scroll-indicator">
       </a>
     </section>
   );

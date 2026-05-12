@@ -1,0 +1,202 @@
+.about-page {
+    background: var(--white);
+    color: var(--text);
+}
+
+/* hero */
+.about-hero {
+    background: linear-gradient(135deg, var(--orange-light) 0%, var(--white) 100%);
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+.about-hero h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+.about-hero p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+/* общие секции */
+.about-section {
+    padding: 5rem 2rem;
+}
+.about-section:nth-child(even) {
+    background: var(--off-white);
+}
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.about-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+.about-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--orange);
+    margin-top: 0.5rem;
+    border-radius: 2px;
+}
+.about-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: var(--text);
+}
+.about-section p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Сетка для текста и фото */
+.about-story-grid {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+.about-story-text {
+    flex: 1;
+}
+.about-story-image {
+    flex-shrink: 0;
+    width: 40%;
+    max-width: 450px;
+}
+.about-story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    object-fit: cover;
+}
+
+/* Этапы */
+.about-stages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+.stage-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-left: 4px solid var(--orange);
+    transition: all var(--transition);
+}
+.stage-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}
+
+/* Проекты */
+.about-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+.project-item {
+    display: flex;
+    gap: 1.2rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: all var(--transition);
+}
+.project-item:hover {
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+.project-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--orange-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-info h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+.project-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+}
+.project-client {
+    display: inline-block;
+    background: var(--orange-light);
+    color: var(--orange);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 20px;
+}
+
+/* Mission / Vision */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+.mv-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: all var(--transition);
+}
+.mv-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}
+.mv-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+.mv-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Адаптив – на мобильных фото переносится под текст */
+@media (max-width: 768px) {
+    .about-story-grid {
+        flex-direction: column;
+    }
+    .about-story-image {
+        width: 100%;
+        max-width: 100%;
+        order: -1; /* фото над текстом, если хочешь – можно убрать */
+    }
+    .about-stages {
+        grid-template-columns: 1fr;
+    }
+}
