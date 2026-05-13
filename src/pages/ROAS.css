@@ -1,4 +1,4 @@
-.product-page {
+.product-page-roas {
   background: var(--white);
   color: var(--text);
   padding-top: 64px;
@@ -8,7 +8,7 @@
 }
 
 /* ==================== ОДИН ЕДИНСТВЕННЫЙ ГРАДИЕНТ НА ВСЮ СТРАНИЦУ ==================== */
-.product-page::before {
+.product-page-roas::before {
   content: '';
   position: absolute;
   top: 0;
@@ -21,7 +21,7 @@
 }
 
 /* ==================== HERO — теперь без собственного градиента ==================== */
-.product-hero {
+.product-hero-roas {
   background: transparent;   /* ← убрали отдельный градиент */
   padding: 6rem 2rem 8rem;
   display: flex;
@@ -36,12 +36,12 @@
   z-index: 1;
 }
 
-.product-hero-content {
+.product-hero-content-roas {
   flex: 1;
   max-width: 600px;
 }
 
-.product-hero-model {
+.product-hero-model-roas {
   flex: 1;
   max-width: 500px;
   min-height: 420px;
@@ -49,7 +49,7 @@
   justify-content: flex-end;
 }
 
-.product-badge {
+.product-badge-roas {
   display: inline-block;
   background: var(--orange);
   color: #fff;
@@ -61,14 +61,14 @@
   margin-bottom: 1rem;
 }
 
-.product-hero h1 {
+.product-hero-roas h1 {
   font-size: clamp(2.6rem, 5vw, 3.8rem);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 1rem;
 }
 
-.product-subtitle {
+.product-subtitle-roas {
   font-size: 1.15rem;
   color: var(--text-muted);
   line-height: 1.7;
@@ -76,20 +76,20 @@
 }
 
 /* Секции — все прозрачные, чтобы один градиент был виден везде */
-.product-section,
-.product-section-alt {
+.product-section-roas,
+.product-section-roas-alt {
   position: relative;
   padding: 2.5rem 2rem;
   background: transparent;
   z-index: 1;
 }
 
-.product-container {
+.product-container-roas {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.product-section h2 {
+.product-section-roas h2 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
@@ -97,7 +97,7 @@
   position: relative;
 }
 
-.product-section h2::after {
+.product-section-roas h2::after {
   content: '';
   display: block;
   width: 60px;
@@ -107,7 +107,7 @@
   border-radius: 4px;
 }
 
-.section-description {
+.section-description-roas {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 1.5rem;
@@ -115,14 +115,14 @@
   color: var(--text-secondary);
 }
 
-.product-grid {
+.product-grid-roas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
-.product-card,
-.product-app-card {
+.product-card-roas,
+.product-app-card-roas {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -134,20 +134,20 @@
   z-index: 1;
 }
 
-.product-card:hover,
-.product-app-card:hover {
+.product-card-roas:hover,
+.product-app-card-roas:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
   border-color: var(--orange);
 }
 
-.product-icon {
+.product-icon-roas {
   font-size: 3rem;
   margin-bottom: 1.5rem;
   display: block;
 }
 
-.specs-table table {
+.specs-table-roas table {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -158,20 +158,20 @@
   box-shadow: var(--shadow-sm);
 }
 
-.specs-table td {
+.specs-table-roas td {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--border);
   font-size: 1rem;
 }
 
-.specs-table td:first-child {
+.specs-table-roas td:first-child {
   font-weight: 600;
   width: 45%;
   background: var(--orange-light);
   color: var(--orange);
 }
 
-.product-cta-final {
+.product-cta-final-roas {
   background: var(--orange);
   color: #fff;
   text-align: center;
@@ -180,20 +180,20 @@
   z-index: 1;
 }
 
-.product-cta-final h2 {
+.product-cta-final-roas h2 {
   color: #fff;
   margin-bottom: 1.5rem;
 }
 
 /* Адаптив */
 @media (max-width: 768px) {
-  .product-hero {
+  .product-hero-roas {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
     padding: 4rem 1rem 7rem;
   }
-  .product-hero-model {
+  .product-hero-model-roas {
     justify-content: center;
     max-width: 100%;
   }

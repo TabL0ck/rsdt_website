@@ -36,10 +36,10 @@ const ROAS: React.FC = () => {
         }
     ];
     return (
-    <div className="product-page roas-page">
+    <div className="product-page-roas roas-page">
         {/* HERO — 3D теперь сильно правее */}
             <section 
-            className="product-hero" 
+            className="product-hero-roas" 
             style={{ 
                 gap: '1rem',
                 justifyContent: 'center',
@@ -58,13 +58,13 @@ const ROAS: React.FC = () => {
                     pointerEvents: 'none'
                 }}
             ></div>
-            <div className="product-hero-content">
-            <div className="product-badge">60-64 GHz FMCW Radar</div>
+            <div className="product-hero-content-roas">
+            <div className="product-badge-roas">60-64 GHz FMCW Radar</div>
             <h1>
                 ROAS — Rear Occupant<br />
                 <span className="highlight">Alert Sensor</span>
             </h1>
-            <p className="product-subtitle">
+            <p className="product-subtitle-roas">
                 Contactless mmWave radar that detects children, pets and passengers left in the rear seats.<br />
                 Prevents tragic hot-car incidents with instant alerts.
             </p>
@@ -79,7 +79,7 @@ const ROAS: React.FC = () => {
             </div>
 
             {/* 3D модель — теперь явно правее */}
-            <div className="product-hero-model">
+            <div className="product-hero-model-roas">
                 <RadarModel3D 
                     modelPath="/models/ROAS.glb"
                     cameraPosition={[0, 0, 150]}
@@ -94,17 +94,17 @@ const ROAS: React.FC = () => {
         </section>
 
         {/* CORE FUNCTIONALITY — 6 карточек */}
-        <section className="product-section">
-            <div className="product-container">
+        <section className="product-section-roas">
+            <div className="product-container-roas">
             <h2>Core Functionality</h2>
-            <p className="section-description">
+            <p className="section-description-roas">
                 Advanced mmWave radar capabilities that make ROAS one of the most intelligent and privacy-focused rear occupant monitoring systems on the market.
             </p>
 
-            <div className="product-grid">
+            <div className="product-grid-roas">
                 {features.map((feature, index) => (
-                <div key={index} className="product-card">
-                    <div className="product-icon">{feature.icon}</div>
+                <div key={index} className="product-card-roas">
+                    <div className="product-icon-roas">{feature.icon}</div>
                     <h3>{feature.title}</h3>
                     <p>{feature.description}</p>
                 </div>
@@ -114,19 +114,19 @@ const ROAS: React.FC = () => {
         </section>
 
         {/* APPLICATIONS */}
-        <section className="product-section product-section-alt">
-            <div className="product-container">
+        <section className="product-section-roas product-section-roas-alt">
+            <div className="product-container-roas">
             <h2>Applications</h2>
-            <div className="product-grid">
-                <div className="product-app-card">
+            <div className="product-grid-roas">
+                <div className="product-app-card-roas">
                 <h3>Family Vehicles</h3>
                 <p>Child left in car detection</p>
                 </div>
-                <div className="product-app-card">
+                <div className="product-app-card-roas">
                 <h3>Ride-Sharing &amp; Taxis</h3>
                 <p>Passenger safety verification</p>
                 </div>
-                <div className="product-app-card">
+                <div className="product-app-card-roas">
                 <h3>Commercial Fleets</h3>
                 <p>Occupant monitoring &amp; compliance</p>
                 </div>
@@ -135,10 +135,10 @@ const ROAS: React.FC = () => {
         </section>
 
         {/* TECHNICAL SPECIFICATIONS */}
-        <section className="product-section" id="specs">
-            <div className="product-container">
+        <section className="product-section-roas" id="specs">
+            <div className="product-container-roas">
             <h2>Technical Specifications</h2>
-            <div className="specs-table">
+            <div className="specs-table-roas">
                 <table>
                 <tbody>
                     <tr><td>Operating Frequency</td><td>60-64 GHz FMCW Radar AiP</td></tr>
@@ -155,8 +155,8 @@ const ROAS: React.FC = () => {
         </section>
 
         {/* CTA FINAL */}
-        <section className="product-cta-final">
-            <div className="product-container">
+        <section className="product-cta-final-roas">
+            <div className="product-container-roas">
             <h2>Ready to integrate ROAS into your next vehicle?</h2>
             <a href="/#contact" className="btn-primary">Contact RSDT Team</a>
             </div>

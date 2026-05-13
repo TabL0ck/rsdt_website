@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 import useSmoothScroll from './hooks/useSmoothScroll';
 import ROAS from './pages/ROAS';
+import MasterSensorUnit from './pages/MasterSensorUnit'
 
 const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
   <div className="about-page" style={{ paddingTop: '80px' }}>
@@ -67,7 +68,7 @@ const App: React.FC = () => {
 
         {}
         <Route path="/roas" element={<ROAS />} />
-        <Route path="/master-sensor-unit" element={<PlaceholderSolution title="Master Sensor/Unit" />} />
+        <Route path="/master-sensor-unit" element={<MasterSensorUnit />} />
         <Route path="/unified-sensor-6634" element={<PlaceholderSolution title="Unified Sensor 6634" />} />
         <Route path="/low-power-sensor" element={<PlaceholderSolution title="Low power sensor" />} />
         <Route path="/medical-sensor" element={<PlaceholderSolution title="Medical sensor" />} />
