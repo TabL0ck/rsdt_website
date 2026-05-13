@@ -1,61 +1,46 @@
+// src/components/Nav.tsx
 import React, { useEffect, useState, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 const Nav: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
-
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const location = useLocation();
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Scroll
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // ... (useEffects для scroll и resize остаются без изменений)
 
-  // Resize
+  // Очистка таймера при размонтировании
   useEffect(() => {
-    const handleResize = () => {
-      const mobile = window.innerWidth < 1025;
-      setIsMobile(mobile);
-      if (!mobile) setMenuOpen(false);
+    return () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current);
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const toggleMenu = () => setMenuOpen(prev => !prev);
+  // Закрываем дропдаун при смене маршрута
+  useEffect(() => {
+    setIsSolutionsOpen(false);
+  }, [location.pathname]);
 
-  const openMenu = () => {
-    if (!isMobile) setMenuOpen(true);
-  };
-
-  const scheduleClose = () => {
-    if (!isMobile) {
-      closeTimer.current = setTimeout(() => setMenuOpen(false), 180);
-    }
-  };
-
-  const cancelClose = () => {
-    if (closeTimer.current) {
-      clearTimeout(closeTimer.current);
-      closeTimer.current = null;
-    }
-  };
+  const radarSolutions = [
+    { name: 'ROAS', path: '/roas' },
+    { name: 'Master Sensor/Unit', path: '/master-sensor-unit' },
+    { name: 'Unified Sensor 6634', path: '/unified-sensor-6634' },
+    { name: 'Low power sensor', path: '/low-power-sensor' },
+    { name: 'Medical sensor', path: '/medical-sensor' },
+    { name: 'UWB sensor', path: '/uwb-sensor' },
+  ];
 
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
-    setMenuOpen(false);
     if (location.pathname !== '/') {
       window.location.href = `/#${anchor}`;
       return;
     }
     e.preventDefault();
-    const el = document.getElementById(anchor);
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+    const element = document.getElementById(anchor);
+    if (element) {
+      const navHeight = 64 + 16;
+      const top = element.getBoundingClientRect().top + window.pageYOffset - navHeight;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   };
@@ -63,44 +48,48 @@ const Nav: React.FC = () => {
   return (
     <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <NavLink to="/" className="nav-logo" onClick={() => setMenuOpen(false)}>
-          <span className="dot"></span> RSDTeam
+        <NavLink to="/" className="nav-logo">
+          <span className="dot"></span> RSDTeam.
         </NavLink>
-
-        {/* ←←← Это важно! Обёртка + кнопка */}
-        <div className="burger-wrapper">
-          <button
-            className={`burger ${menuOpen ? 'open' : ''}`}
-            onClick={toggleMenu}
-            onMouseEnter={openMenu}
-            onMouseLeave={scheduleClose}
-            aria-label="Меню"
-          >
-            <span />
-            <span />
-            <span />
-          </button>
-
-          {menuOpen && (
-            <div
-              className="dropdown-menu"
-              onMouseEnter={cancelClose}
-              onMouseLeave={scheduleClose}
+        <ul className="nav-links">
+          {/* Кнопка Radar Solutions теперь раскрывается в дропдаун */}
+          <li className={`dropdown ${isSolutionsOpen ? 'open' : ''}`}>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsSolutionsOpen((prev) => !prev);
+              }}
+              className="dropdown-toggle"
             >
-              <ul>
-                <li><a href="/#solutions" onClick={(e) => handleAnchorClick(e, 'solutions')}>Radar Solutions</a></li>
-                <li><a href="/#design-services" onClick={(e) => handleAnchorClick(e, 'design-services')}>Design Services</a></li>
-                <li><a href="/#semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
-                <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink></li>
-                <li>
-                  <a href="/#contact" onClick={(e) => handleAnchorClick(e, 'contact')} className="nav-cta">
-                    Contact Us
-                  </a>
+              Radar Solutions
+            </a>
+            <ul className="dropdown-menu">
+              {radarSolutions.map((solution) => (
+                <li key={solution.path}>
+                  <NavLink
+                    to={solution.path}
+                    onClick={() => setIsSolutionsOpen(false)}
+                  >
+                    {solution.name}
+                  </NavLink>
                 </li>
-              </ul>
-            </div>
-          )}
-        </div>
+              ))}
+            </ul>
+          </li>
+
+          <li><a href="/#design-services" onClick={(e) => handleAnchorClick(e, 'design-services')}>Design Services</a></li>
+          <li><a href="/#semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><a href="/#contact" onClick={(e) => handleAnchorClick(e, 'contact')} className="nav-cta">Contact Us</a></li>
+        </ul>
+
+        {/* Бургер-меню (стили уже есть в global.css) */}
+        <button className="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
   );

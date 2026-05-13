@@ -12,7 +12,7 @@ const sensorData: Record<string, {
 }> = {
   'rear-occupant-alert': {
     title: 'Rear Occupant Alert Sensor',
-    subtitle: 'Never Leave Anyone Behind',
+    subtitle: 'Safety.',
     description:
       'Millimeter‑wave radar sensor for detecting presence and vital signs of passengers in rear seats — including infants in child seats. Provides real‑time alerts to prevent hot‑car incidents and ensures no occupant is ever left unnoticed.',
     specs: [

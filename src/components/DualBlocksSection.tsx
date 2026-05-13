@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const DualBlocksSection: React.FC = () => {
   const navigate = useNavigate();
@@ -68,11 +68,12 @@ const DualBlocksSection: React.FC = () => {
             </li>
           </ul>
 
-          <Link to="/sensor/rear-occupant-alert" className="btn-service">
+          <a href="/#solutions" onClick={(e) => handleLearnMore(e, 'solutions')} className="btn-service">
             Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-          </Link>
+          </a>
         </div>
 
+        {/* Design Services – фон 7.jpg */}
         <div
           className="service-card"
           style={{
