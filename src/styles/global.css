@@ -39,6 +39,18 @@ body {
 .nav-cta { background:var(--orange); color:#fff!important; padding:10px 22px; border-radius:50px; font-weight:600; transition:all var(--transition); font-size:0.85rem; }
 .nav-cta:hover { background:var(--orange-dark); transform:translateY(-1px); box-shadow:0 6px 20px rgba(244,121,32,0.35); }
 
+@keyframes pulse-dot {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.7);
+        opacity: 0.5;
+    }
+}
+
 /* ─── HERO (усиленный градиент) ─── */
 .hero {
     position:relative;

@@ -1,6 +1,6 @@
 // src/App.tsx (обновлённый)
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import RsdtBanner from './components/RsdtBanner';
@@ -10,6 +10,7 @@ import SpecsStrip from './components/SpecsStrip';
 import AdvantagesSection from './components/AdvantagesSection';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
+import SensorDetailPage from './pages/SensorDetailPage';
 import useSmoothScroll from './hooks/useSmoothScroll';
 import ROAS from './pages/ROAS';
 import MasterSensorUnit from './pages/MasterSensorUnit'
