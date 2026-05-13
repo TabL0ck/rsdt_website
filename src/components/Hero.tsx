@@ -47,20 +47,6 @@ const Hero: React.FC = () => {
           Advanced mmWave radar sensors engineered for tomorrow's mobility — detecting heartbeat,
           respiration, presence, and inattention with uncompromising precision and privacy.
         </p>
-        <div className="hero-radar-model">
-          <div style={{ marginTop: '2rem' }}>
-            <RadarModel3D 
-              modelPath="/models/US6634.glb"
-              cameraPosition={[0, 150, 0]}
-              fov={45}
-              modelCenter={[35, 29, -85]}
-              modelScale={1.5}
-              rotationAxis={'z'}
-              rotationSpeed={0}
-              rotationCenter={[10, 29, -45]}
-            />
-          </div>
-        </div>
         <div className="hero-buttons">
           <a href="/#solutions" onClick={(e) => handleAnchor(e, 'solutions')} className="btn-primary">
             Explore Solutions
