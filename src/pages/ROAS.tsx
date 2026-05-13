@@ -38,7 +38,14 @@ const ROAS: React.FC = () => {
     return (
     <div className="product-page roas-page">
         {/* HERO — 3D теперь сильно правее */}
-        <section className="product-hero">
+            <section 
+            className="product-hero" 
+            style={{ 
+                gap: '1rem',
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}
+            >
             <div 
                 style={{
                     position: 'absolute',
