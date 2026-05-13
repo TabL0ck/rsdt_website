@@ -337,3 +337,91 @@ body {
             background: var(--orange-light);
             color: var(--orange);
         }
+
+        /* ─── DROPDOWN для Radar Solutions ─── */
+.nav-links .dropdown {
+  position: relative;
+}
+
+.nav-links .dropdown-toggle {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav-links .dropdown-toggle:hover {
+  color: var(--orange);
+}
+
+.dropdown-toggle::after {
+  content: '▼';
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.3s ease;
+}
+
+.dropdown.open .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  padding: 8px 0;
+  min-width: 240px;
+  list-style: none;
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition);
+}
+
+.dropdown.open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: all var(--transition);
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--orange-light);
+  color: var(--orange);
+  padding-left: 24px;
+}
+
+/* Адаптив для мобильных (дропдаун становится вертикальным в меню) */
+@media (max-width: 640px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background: transparent;
+    min-width: auto;
+  }
+  .dropdown-menu li a {
+    padding-left: 2rem;
+  }
+}
