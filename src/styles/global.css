@@ -173,3 +173,167 @@ body {
     .nav-links { display:none; }
     .hero h1 { font-size:1.8rem; }
 }
+
+/* ─── МОБИЛЬНАЯ ВЕРСИЯ (телефоны) ─── */
+@media (max-width: 640px) {
+    html {
+        font-size: 14px;
+    }
+
+    .nav {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    /* скрыть меню, пока не сделаем гамбургер */
+    .nav-logo {
+        font-size: 1rem;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 4rem 1rem 2rem;
+    }
+
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary, .btn-outline {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .rsdt-banner h2 {
+        font-size: 1.4rem;
+    }
+
+    .rsdt-banner p {
+        font-size: 0.9rem;
+    }
+
+    .parallax-section {
+        height: 40vh;
+        min-height: 250px;
+    }
+
+    .dual-blocks-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .specs-strip-inner {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Шрифты и заголовки */
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Планшеты (небольшие) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .dual-blocks-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Стили бургера */
+.burger {
+    display: none; /* скрыт на больших экранах */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+    .burger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+@media (max-width: 640px) {
+    .burger {
+        display: flex;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+    /* скрываем обычное меню */
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    padding: 1rem;
+    z-index: 999;
+}
+
+    .mobile-menu ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 0.6rem 1rem;
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        border-radius: var(--radius-sm);
+    }
+
+        .mobile-menu a:hover {
+            background: var(--orange-light);
+            color: var(--orange);
+        }

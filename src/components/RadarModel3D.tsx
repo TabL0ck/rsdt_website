@@ -8,13 +8,13 @@ const Model: React.FC = () => {
   const { scene } = useGLTF('/models/sensor_1.glb'); // путь к модели
   const ref = useRef<THREE.Group>(null);
 
-  const modelCenter = [25, 0, -40]; // пример – замени на свои числа!
+  const modelCenter = [10, 29, -45]; // пример – замени на свои числа!
   const offset = modelCenter.map(v => -v); // инвертируем зна
 
   // Лёгкое автоматическое вращение
   useFrame((state, delta) => {
     if (ref.current) {
-      ref.current.rotation.y += 0; // скорость вращения
+      ref.current.rotation.z += 0.01; // скорость вращения
     }
   });
 
@@ -42,7 +42,7 @@ const PlaceholderModel: React.FC = () => {
 // Основная сцена
 const RadarModel3D: React.FC<{ usePlaceholder?: boolean }> = ({ usePlaceholder = false }) => {
   return (
-    <div style={{ width: '100%', height: '400px' }}>
+    <div style={{ width: '100%', height: '500px' }}>
       <Canvas camera={{ position: [0, 150, -0], fov: 45 }}>
         <ambientLight intensity={0.2} />
 
@@ -59,11 +59,6 @@ const RadarModel3D: React.FC<{ usePlaceholder?: boolean }> = ({ usePlaceholder =
           </group>
         </Suspense>
 
-        <OrbitControls
-          target={[0, 0, 0]}
-          enableZoom={false}
-          enablePan={false}
-        />
 
         <Environment preset="city" />
 
