@@ -1,6 +1,6 @@
 import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF, OrbitControls, Environment, ContactShadows } from '@react-three/drei';
+import { useGLTF, Environment, ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface ModelProps {

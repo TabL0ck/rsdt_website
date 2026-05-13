@@ -24,11 +24,21 @@ const Hero: React.FC = () => {
 
   return (
     <section className="hero" id="hero">
-      <div className="hero-bg-image"></div>
+      <video
+        className="hero-bg-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="/videos/automob_salon.mp4"  // статичная заглушка на время загрузки видео
+      >
+        <source src="/videos/automob_salon.mp4" type="video/mp4" />
+        {/* Резервное изображение, если видео не поддерживается */}
+        <img src="/photos/hero-poster.jpg" alt="hero background" />
+      </video>
       <div className="hero-bg-pattern"></div>
       <div className="hero-grid-lines"></div>
       <div className="hero-content">
-        <div className="hero-badge">64 GHz FMCW Radar AiP</div>
         <h1>
           Intelligent Sensing.<br />
           <span className="highlight">Complete Cabin Awareness.</span>

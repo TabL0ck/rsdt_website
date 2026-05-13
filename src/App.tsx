@@ -1,6 +1,6 @@
 // src/App.tsx (обновлённый)
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import RsdtBanner from './components/RsdtBanner';
@@ -10,9 +10,10 @@ import SpecsStrip from './components/SpecsStrip';
 import AdvantagesSection from './components/AdvantagesSection';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
-import SensorDetailPage from './pages/SensorDetailPage';
 import useSmoothScroll from './hooks/useSmoothScroll';
 import ROAS from './pages/ROAS';
+import UWB from './pages/UWB';
+import MEDICAL from './pages/MedicalSensor';
 import MasterSensorUnit from './pages/MasterSensorUnit'
 
 const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
@@ -72,8 +73,8 @@ const App: React.FC = () => {
         <Route path="/master-sensor-unit" element={<MasterSensorUnit />} />
         <Route path="/unified-sensor-6634" element={<PlaceholderSolution title="Unified Sensor 6634" />} />
         <Route path="/low-power-sensor" element={<PlaceholderSolution title="Low power sensor" />} />
-        <Route path="/medical-sensor" element={<PlaceholderSolution title="Medical sensor" />} />
-        <Route path="/uwb-sensor" element={<SensorDetailPage />} />
+        <Route path="/medical-sensor" element={<MEDICAL/>} />
+        <Route path="/uwb-sensor" element={<UWB/>} />
       </Routes>
       <Footer />
     </>

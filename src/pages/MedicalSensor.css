@@ -1,0 +1,248 @@
+.product-page {
+  background: var(--white);
+  color: var(--text);
+  padding-top: 64px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* ==================== ЕДИНЫЙ ГРАДИЕНТ ==================== */
+.product-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse 90% 70% at 50% 30%, rgba(244,121,32,0.22) 0%, transparent 68%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ==================== HERO ==================== */
+.product-hero {
+  background: transparent;
+  padding: 6rem 2rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  z-index: 1;
+}
+
+.product-hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.product-hero-model {
+  flex: 1;
+  max-width: 500px;
+  min-height: 420px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-badge {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.product-hero h1 {
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.product-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.product-section,
+.product-section-alt {
+  position: relative;
+  padding: 5rem 2rem;
+  background: transparent;
+  z-index: 1;
+}
+
+.product-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-section h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.product-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--orange);
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+.section-description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.product-card,
+.product-app-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  position: relative;
+  z-index: 1;
+}
+
+.product-card:hover,
+.product-app-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--orange);
+}
+
+.product-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.specs-table table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.specs-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+.specs-table td:first-child {
+  font-weight: 600;
+  width: 45%;
+  background: var(--orange-light);
+  color: var(--orange);
+}
+
+.product-cta-final {
+  background: var(--orange);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.product-cta-final h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .product-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    padding: 4rem 1rem 7rem;
+  }
+  .product-hero-model {
+    justify-content: center;
+    max-width: 100%;
+  }
+}
+
+/* ========== Стили для фото VitalMonitor ========== */
+.vital-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vital-device-image {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 25px 40px -12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.vital-device-image:hover {
+  transform: scale(1.02);
+}
+
+/* Анимация пульса (медицинская тематика) */
+.vital-pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244,121,32,0.3) 0%, rgba(244,121,32,0) 70%);
+  transform: translate(-50%, -50%);
+  animation: vitalPulse 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes vitalPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+}
