@@ -273,15 +273,16 @@ body {
     }
 }
 
-/* Стили бургера */
+/* Бургер-иконка */
 .burger {
-    display: none; /* скрыт на больших экранах */
+    display: flex; /* показываем всегда */
     flex-direction: column;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
+    z-index: 1001; /* чтобы была над выпадающим меню */
 }
 
     .burger span {
@@ -293,47 +294,121 @@ body {
         transition: var(--transition);
     }
 
-@media (max-width: 640px) {
-    .burger {
-        display: flex;
+    /* Анимация открытого бургера (превращается в крестик) */
+    .burger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
-    .desktop-menu {
-        display: none;
+    .burger.open span:nth-child(2) {
+        opacity: 0;
     }
-    /* скрываем обычное меню */
+
+    .burger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+/* Горизонтальное меню полностью скрыто (удалите класс .desktop-menu или оставьте, но он не используется) */
+.nav-links.desktop-menu {
+    display: none;
 }
 
-/* Мобильное меню */
-.mobile-menu {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    box-shadow: var(--shadow-md);
-    padding: 1rem;
+/* Обёртка для правильного позиционирования */
+.burger-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* ========== DROPDOWN MENU ========== */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* сразу под бургером */
+    right: 0; /* выравниваем по правому краю бургера */
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-lg);
+    padding: 1rem 0;
+    width: 360px;
     z-index: 999;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: all 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+    pointer-events: none;
 }
 
-    .mobile-menu ul {
+    /* Показываем меню */
+    .nav:hover .dropdown-menu,
+    .dropdown-menu:hover,
+    .dropdown-menu.show { /* можно добавить класс .show при необходимости */
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    /* Стили списка */
+    .dropdown-menu ul {
         list-style: none;
+        padding: 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 4px;
     }
 
-    .mobile-menu a {
+    .dropdown-menu a {
         display: block;
-        padding: 0.6rem 1rem;
+        padding: 0.85rem 1.5rem;
         color: var(--text);
         text-decoration: none;
         font-weight: 500;
-        border-radius: var(--radius-sm);
+        transition: all var(--transition);
+        white-space: nowrap;
     }
 
-        .mobile-menu a:hover {
+        .dropdown-menu a:hover {
             background: var(--orange-light);
             color: var(--orange);
+            padding-left: 1.8rem;
         }
+
+    /* CTA внутри меню */
+    .dropdown-menu .nav-cta {
+        margin: 0.6rem 1.25rem 0.4rem;
+        text-align: center;
+    }
+
+/* Мобильная версия (полноэкранное меню) */
+@media (max-width: 1024px) {
+    .dropdown-menu {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        width: auto;
+        max-width: none;
+        margin-top: 0;
+        border-radius: 0;
+        border-top: 1px solid var(--border);
+        border-left: none;
+        border-right: none;
+        box-shadow: var(--shadow-md);
+        padding: 2rem 1.5rem;
+    }
+
+        .dropdown-menu ul {
+            max-width: 100%;
+            align-items: center;
+        }
+
+        .dropdown-menu a {
+            text-align: center;
+            padding: 1.1rem 1.5rem;
+            font-size: 1.1rem;
+        }
+}
+.service-list ul {
+    list-style: none;
+    padding-left: 20px; /* отступ слева сохранится, но без маркеров */
+}
