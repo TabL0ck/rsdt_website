@@ -15,14 +15,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22          # обновили, чтобы убрать предупреждение
+          node-version: 22
           cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build React app
-        run: CI=false npm run build     # ← вот эта строка
+        run: CI=false npm run build
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.1.0
@@ -32,19 +32,18 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             echo "🚀 Начинаем деплой на сервер..."
+            
             cd /var/www/rsdt_website
             
-            echo "📥 Обновляем код из GitHub..."
+            echo "📥 Получаем свежий код с GitHub..."
             git fetch --all
             git reset --hard origin/main
+            git clean -fd
             
-            echo "📦 Устанавливаем все зависимости..."
-            npm ci
-            
-            echo "🔨 Собираем React-приложение..."
-            npm run build
+            echo "📦 Устанавливаем зависимости..."
+            npm install
             
             echo "🔄 Перезапускаем nginx..."
-            systemctl restart nginx || echo "⚠️ Не удалось перезапустить nginx (проверь права)"
+            systemctl restart nginx || echo "⚠️ Не удалось перезапустить nginx"
             
-            echo "✅ Деплой успешно завершён!"
+            echo "✅ Деплой успешно завершён! 🎉"
