@@ -39,6 +39,18 @@ const ROAS: React.FC = () => {
     <div className="product-page roas-page">
         {/* HERO — 3D теперь сильно правее */}
         <section className="product-hero">
+            <div 
+                style={{
+                    position: 'absolute',
+                    inset: 0,
+                    backgroundImage: "url('/background/sensors_background.png')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    opacity: 0.12,
+                    zIndex: 0,
+                    pointerEvents: 'none'
+                }}
+            ></div>
             <div className="product-hero-content">
             <div className="product-badge">60-64 GHz FMCW Radar</div>
             <h1>
@@ -63,13 +75,13 @@ const ROAS: React.FC = () => {
             <div className="product-hero-model">
                 <RadarModel3D 
                     modelPath="/models/ROAS.glb"
-                    cameraPosition={[0, 0, 50]}
+                    cameraPosition={[0, 0, 150]}
                     fov={45}
-                    modelCenter={[40, 60, 20]}
+                    modelCenter={[70, 90, 20]}
                     modelScale={1.5}
                     rotationAxis={'y'}
                     rotationSpeed={0}
-                    rotationCenter={[10, 29, -45]}
+                    rotationCenter={[40, 60, 20]}
                 />
             </div>
         </section>

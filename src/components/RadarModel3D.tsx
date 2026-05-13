@@ -1,6 +1,6 @@
 import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF, Environment, ContactShadows } from '@react-three/drei';
+import { useGLTF, OrbitControls, Environment, ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface ModelProps {
@@ -23,7 +23,6 @@ const Model: React.FC<ModelProps> = ({
   const { scene } = useGLTF(modelPath);
   const pivotRef = useRef<THREE.Group>(null!);
 
-  // Смещаем модель так, чтобы её центр оказался в точке вращения
   const modelOffset = modelCenter.map((v, i) => rotationCenter[i] - v) as [number, number, number];
 
   useFrame(() => {
@@ -118,6 +117,16 @@ const RadarModel3D: React.FC<RadarModel3DProps> = ({
             )}
           </group>
         </Suspense>
+
+        {/* === ИНТЕРАКТИВНОЕ ВРАЩЕНИЕ === */}
+        <OrbitControls 
+          enablePan={false}
+          enableZoom={true}
+          minDistance={20}
+          maxDistance={400}
+          enableDamping={true}
+          dampingFactor={0.1}
+        />
 
         <Environment preset="city" />
         <ContactShadows
