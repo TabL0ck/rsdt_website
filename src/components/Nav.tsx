@@ -1,5 +1,5 @@
 // src/components/Nav.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 const Nav: React.FC = () => {
