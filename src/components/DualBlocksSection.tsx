@@ -44,11 +44,30 @@ const DualBlocksSection: React.FC = () => {
           </div>
           <h3>Radar Solutions</h3>
           <ul className="service-list">
-            <li><b>Rear Occupant Alert Sensor</b></li>
-            <li><b>Vital Signs Monitoring Sensor</b></li>
-            <li><b>Driver Monitoring Sensor</b></li>
-            <li><b>Driver & Passenger Monitoring System (DMS2)</b></li>
+
+            <li>
+              <b>Frequency-Modulated Continuous-Wave (FMCW) Radar Sensors:</b>
+              <ul>
+                <li>Rear Occupant Alert Sensor</li>
+                <li>Vital Signs Monitoring Sensor</li>
+                <li>Driver Monitoring Sensor</li>
+                <li>Driver & Passenger Monitoring System (DMS2)</li>
+              </ul>
+            </li>
+
+            <li><b>Child presence detection</b></li>
+
+            <li>
+              <b>Ultra Wide Band (UWB) Radar Sensors:</b>
+              <ul>
+                <li>UWB Rear Occupant Alert Sensor</li>
+                <li>UWB Rear KICK Sensor </li>
+                <li>UWB Vital Signs Monitoring Sensor</li>
+                <li>Driver & Passenger Monitoring System (DMS2)</li>
+              </ul>
+            </li>
           </ul>
+
           <a href="/#solutions" onClick={(e) => handleLearnMore(e, 'solutions')} className="btn-service">
             Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
           </a>

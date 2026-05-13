@@ -6,13 +6,15 @@ const Nav: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const location = useLocation();
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // ... (useEffects для scroll и resize остаются без изменений)
+
+  // Очистка таймера при размонтировании
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+    return () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Закрываем дропдаун при смене маршрута
@@ -44,7 +46,7 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className={`nav ${scrolled ? 'scrolled' : ''}`} id="nav">
+    <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
         <NavLink to="/" className="nav-logo">
           <span className="dot"></span> RSDTeam.
