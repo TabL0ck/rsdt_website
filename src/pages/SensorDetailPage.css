@@ -1,0 +1,156 @@
+.sensor-page {
+    background: var(--white);
+    color: var(--text);
+}
+
+/* ---------- Hero ---------- */
+.sensor-hero {
+    background: linear-gradient(135deg, var(--orange-light) 0%, var(--white) 100%);
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.sensor-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sensor-breadcrumb {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.sensor-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.sensor-subtitle {
+    font-size: 1.1rem;
+    color: var(--orange);
+    font-weight: 600;
+}
+
+/* ---------- Description + image ---------- */
+.sensor-description {
+    padding: 5rem 2rem;
+}
+
+.sensor-description-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sensor-text {
+    flex: 1 1 400px;
+}
+
+    .sensor-text h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+        .sensor-text h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--orange);
+            margin-top: 0.5rem;
+            border-radius: 2px;
+        }
+
+    .sensor-text p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+    }
+
+.sensor-image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+    .sensor-image img {
+        max-width: 100%;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-md);
+    }
+
+/* ---------- Specs table ---------- */
+.sensor-specs {
+    padding: 5rem 2rem;
+    background: var(--off-white);
+}
+
+    .sensor-specs h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+.specs-table {
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+    .specs-table td {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+        .specs-table td:first-child {
+            font-weight: 600;
+            color: var(--text);
+            width: 40%;
+        }
+
+        .specs-table td:last-child {
+            color: var(--text-secondary);
+        }
+
+    .specs-table tr:last-child td {
+        border-bottom: none;
+    }
+
+/* ---------- Why RSDT ---------- */
+.sensor-why {
+    padding: 5rem 2rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+    .sensor-why h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .sensor-why p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+    }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+    .sensor-description-grid {
+        flex-direction: column;
+    }
+}
