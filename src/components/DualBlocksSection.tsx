@@ -51,19 +51,18 @@ const DualBlocksSection: React.FC = () => {
                 <li>Rear Occupant Alert Sensor</li>
                 <li>Vital Signs Monitoring Sensor</li>
                 <li>Driver Monitoring Sensor</li>
-                <li>Driver & Passenger Monitoring System (DMS2)</li>
+                <li>Driver & Passenger Monitoring System</li>
+                <li>Child presence detection</li>
+                <li>Intrusion detection</li>
               </ul>
             </li>
-
-            <li><b>Child presence detection</b></li>
 
             <li>
               <b>Ultra Wide Band (UWB) Radar Sensors:</b>
               <ul>
                 <li>UWB Rear Occupant Alert Sensor</li>
                 <li>UWB Rear KICK Sensor </li>
-                <li>UWB Vital Signs Monitoring Sensor</li>
-                <li>Driver & Passenger Monitoring System (DMS2)</li>
+                <li>Child presence detection</li>
               </ul>
             </li>
           </ul>
@@ -102,6 +101,58 @@ const DualBlocksSection: React.FC = () => {
             <li><b>Embedded hardware</b></li>
             <li><b>Embedded testing</b></li>
             <li><b>Antenna design</b></li>
+          </ul>
+          <a href="/#design-services" onClick={(e) => handleLearnMore(e, 'design-services')} className="btn-service">
+            Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+
+        {/* Semiconductors*/}
+        <div
+          className="service-card"
+          style={{
+            backgroundImage: 'linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(/photos/2.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+        <div className="service-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            {/* Основной корпус чипа */}
+            <rect x="10" y="10" width="28" height="28" rx="3" />
+            
+            {/* Центральная область (кристалл) */}
+            <rect x="16" y="16" width="16" height="16" rx="2" />
+            
+            {/* Внутренние линии (схема) */}
+            <line x1="18" y1="20" x2="30" y2="20" />
+            <line x1="18" y1="24" x2="30" y2="24" />
+            <line x1="18" y1="28" x2="30" y2="28" />
+            
+            {/* Ножки сверху */}
+            <line x1="16" y1="10" x2="16" y2="6" />
+            <line x1="24" y1="10" x2="24" y2="6" />
+            <line x1="32" y1="10" x2="32" y2="6" />
+            
+            {/* Ножки снизу */}
+            <line x1="16" y1="38" x2="16" y2="42" />
+            <line x1="24" y1="38" x2="24" y2="42" />
+            <line x1="32" y1="38" x2="32" y2="42" />
+            
+            {/* Ножки слева */}
+            <line x1="10" y1="16" x2="6" y2="16" />
+            <line x1="10" y1="24" x2="6" y2="24" />
+            <line x1="10" y1="32" x2="6" y2="32" />
+            
+            {/* Ножки справа */}
+            <line x1="38" y1="16" x2="42" y2="16" />
+            <line x1="38" y1="24" x2="42" y2="24" />
+            <line x1="38" y1="32" x2="42" y2="32" />
+          </svg>
+        </div>
+          <h3>Semiconductors</h3>
+          <ul className="service-list">
+            <li><b>blank</b></li>
           </ul>
           <a href="/#design-services" onClick={(e) => handleLearnMore(e, 'design-services')} className="btn-service">
             Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
