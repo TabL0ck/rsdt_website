@@ -73,7 +73,7 @@ const App: React.FC = () => {
         <Route path="/unified-sensor-6634" element={<PlaceholderSolution title="Unified Sensor 6634" />} />
         <Route path="/low-power-sensor" element={<PlaceholderSolution title="Low power sensor" />} />
         <Route path="/medical-sensor" element={<PlaceholderSolution title="Medical sensor" />} />
-        <Route path="/uwb-sensor" element={<PlaceholderSolution title="UWB sensor" />} />
+        <Route path="/uwb-sensor" element={<SensorDetailPage />} />
       </Routes>
       <Footer />
     </>
