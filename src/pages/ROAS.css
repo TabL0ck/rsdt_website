@@ -15,14 +15,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse 90% 70% at 50% 30%, rgba(244,121,32,0.24) 0%, transparent 65%);
+  background: radial-gradient(ellipse 90% 70% at 50% 30%, rgba(244,121,32,0.22) 0%, transparent 68%);
   z-index: 0;
   pointer-events: none;
 }
 
-/* ==================== HERO — ПОЛНАЯ ШИРИНА ==================== */
+/* ==================== HERO — теперь без собственного градиента ==================== */
 .product-hero {
-  background: linear-gradient(135deg, var(--orange-light) 0%, var(--white) 100%);
+  background: transparent;   /* ← убрали отдельный градиент */
   padding: 6rem 2rem 8rem;
   display: flex;
   align-items: center;
@@ -75,17 +75,13 @@
   margin-bottom: 2rem;
 }
 
-/* Секции — теперь без своих градиентов */
+/* Секции — все прозрачные, чтобы один градиент был виден везде */
 .product-section,
 .product-section-alt {
   position: relative;
   padding: 5rem 2rem;
-  background: transparent;        /* прозрачный, чтобы общий градиент был виден */
+  background: transparent;
   z-index: 1;
-}
-
-.product-section-alt {
-  background: var(--off-white);
 }
 
 .product-container {
