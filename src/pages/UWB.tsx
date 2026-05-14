@@ -86,8 +86,8 @@ const UWB: React.FC = () => {
             UWB - ultra wideband sensor <br />
           </h1>
           <p className="product-subtitle-roas">
-            Centimeter-level spatial and directional tracking for automotive and industrial applications.<br />
-            Enables secure keyless entry, in-cabin occupant detection, and asset tracking with ultra-low power.
+            <strong>Centimeter-level spatial and directional tracking for automotive and industrial applications.<br />
+            Enables secure keyless entry, in-cabin occupant detection, and asset tracking with ultra-low power.</strong>
           </p>
           <div className="info-buttons">
                 <div className="product-cta">
