@@ -1,0 +1,268 @@
+/* ========== ГЛОБАЛЬНЫЕ НАСТРОЙКИ СТРАНИЦЫ ========== */
+/* Рекомендую подключить шрифт Inter в index.html:
+   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+*/
+.product-page-roas {
+    --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --text-primary: #1e1e2f;
+    --text-secondary: #4a4a5a;
+    --text-muted: #5e5e72;
+    --orange: #f47920;
+    --orange-light: #fff4ed;
+    --border: #e5e7eb;
+    --radius-lg: 16px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.06);
+    --shadow-lg: 0 16px 32px rgba(0,0,0,0.08);
+    --transition: 0.25s ease;
+
+    background: #ffffff;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding-top: 64px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.product-page-roas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse 90% 70% at 50% 30%, rgba(244,121,32,0.16) 0%, transparent 68%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.product-hero-roas {
+    background: transparent;
+    padding: 6rem 2rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    z-index: 1;
+}
+
+.product-hero-content-roas {
+    flex: 1;
+    max-width: 600px;
+}
+
+.product-hero-model-roas {
+    flex: 1;
+    max-width: 500px;
+    min-height: 420px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-badge-roas {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.product-hero-roas h1 {
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.product-subtitle-roas {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.info-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ==================== ОБЩИЕ СЕКЦИИ (УЛУЧШЕННАЯ ТИПОГРАФИКА) ==================== */
+.product-section-roas,
+.product-section-roas-alt {
+    position: relative;
+    padding: 5rem 2rem;
+    background: transparent;
+    z-index: 1;
+}
+
+.product-section-roas-alt {
+    background: rgba(249, 250, 251, 0.7); /* лёгкий фон для чередования */
+}
+
+.product-container-roas {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Заголовки секций */
+.product-section-roas h2,
+.product-section-roas-alt h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.product-section-roas h2::after,
+.product-section-roas-alt h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--orange);
+    margin: 16px auto 0;
+    border-radius: 4px;
+}
+
+/* Контейнер для пар “изображение‑текст” */
+.how-it-works-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.work-item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.work-item-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Изображения */
+.work-image-wrapper {
+    flex: 1;
+    max-width: 480px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: #f5f5f5;
+}
+
+.work-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Уточнение размеров для отдельных изображений */
+.work-image-babysimPage--overview {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Описание (текстовый блок) */
+.work-description {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.work-description p {
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.work-description strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.work-description--shielding {
+    /* оставлены специфичные настройки, если нужны */
+    color: var(--text-secondary);
+    font-size: 1.05rem;     /* унифицировано */
+    max-width: 100%;
+}
+
+.work-description--shielding p {
+    margin-bottom: 1.2rem;
+}
+
+/* Кнопки и CTA */
+.product-cta .btn-primary,
+.product-cta-final-roas .btn-primary {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background var(--transition), transform var(--transition);
+    box-shadow: 0 4px 12px rgba(244,121,32,0.3);
+}
+
+.product-cta .btn-primary:hover,
+.product-cta-final-roas .btn-primary:hover {
+    background: #e06b10;
+    transform: translateY(-2px);
+}
+
+.product-cta-final-roas {
+    text-align: center;
+    padding: 4rem 2rem 6rem;
+}
+
+/* ==================== АДАПТИВ ==================== */
+@media (max-width: 768px) {
+    .product-hero-roas {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+        padding: 4rem 1rem 7rem;
+    }
+
+    .product-hero-model-roas {
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .work-item,
+    .work-item-reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .work-image-wrapper {
+        max-width: 100%;
+    }
+}

@@ -44,8 +44,8 @@ const Hero: React.FC = () => {
           <span className="highlight">Complete Cabin Awareness.</span>
         </h1>
         <p className="hero-subtitle">
-          Advanced mmWave radar sensors engineered for tomorrow's mobility — detecting heartbeat,
-          respiration, presence, and inattention with uncompromising precision and privacy.
+          <strong>Advanced mmWave radar sensors engineered for tomorrow's mobility — detecting heartbeat,
+          respiration, presence, and inattention with uncompromising precision and privacy.</strong>
         </p>
         <div className="hero-buttons">
           <a href="/#solutions" onClick={(e) => handleAnchor(e, 'solutions')} className="btn-primary">
