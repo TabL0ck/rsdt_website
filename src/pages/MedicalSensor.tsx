@@ -119,7 +119,7 @@ const MedicalSensor: React.FC = () => {
         <div className="product-container-roas">
           <h2>Core Functionality</h2>
           <p className="section-description-roas">
-            Advanced 60‑GHz FMCW radar with integrated DSP, delivering clinical‑grade vital signs without any physical contact.
+            <strong>Advanced 60‑GHz FMCW radar with integrated DSP, delivering clinical‑grade vital signs without any physical contact.</strong>
           </p>
           <div className="product-grid-roas">
             {features.map((feature, index) => (
