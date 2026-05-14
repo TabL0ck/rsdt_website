@@ -1,3 +1,5 @@
+/* About_History.css — минималистичный таймлайн с продвинутой типографикой и фиксом выравнивания */
+
 .timeline {
   position: relative;
   padding: 2rem 0;
@@ -30,11 +32,16 @@
 
 .timeline-item {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rem;
   opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.6s ease;
   position: relative;
+}
+
+.timeline-item.right {
+  flex-direction: row-reverse;
 }
 
 .timeline-item--visible {
@@ -68,73 +75,110 @@
   100% { box-shadow: 0 0 0 0 rgba(244, 121, 32, 0); }
 }
 
+/* Карточка контента — прозрачная, без рамок */
 .timeline-content {
   width: 45%;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem 2rem;
-  box-shadow: var(--shadow-sm);
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 1rem 0;
+  transition: transform 0.3s ease;
 }
 
 .timeline-content:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
 }
 
-.timeline-year {
-  display: inline-block;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #fff;
-  background: var(--orange);
-  padding: 4px 14px;
-  border-radius: 50px;
-  margin-bottom: 0.5rem;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
-}
-
+/* Заголовки — теперь без горизонтального смещения, чётко по левому краю */
 .timeline-content h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
+  font-family: 'Space Grotesk', 'Montserrat', 'Inter', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 1rem 0;
+  padding: 0;
   color: var(--text);
   opacity: 0;
-  transform: translateX(-10px);
-  transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+  transform: translateX(0);
+  transition: opacity 0.4s ease 0.2s;
+  background: linear-gradient(135deg, #1e2a3a 0%, #2c3e50 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  text-align: left;
 }
 
+/* Для правых элементов — тоже без смещения */
+.timeline-item.right .timeline-content h3 {
+  transform: translateX(0);
+}
+
+/* Основной текст — единое выравнивание */
 .timeline-body {
-  font-size: 1rem;
+  font-family: 'Space Grotesk', 'Montserrat', 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.65;
   color: var(--text-secondary);
-  line-height: 1.6;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease 0.3s, transform 0.4s ease 0.3s;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
-.timeline-item--visible .timeline-year,
+.timeline-body p {
+  margin: 0 0 1rem 0;
+}
+
+.timeline-body ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.timeline-body li {
+  margin-bottom: 0.4rem;
+}
+
+.timeline-body strong {
+  color: var(--orange);
+  font-weight: 600;
+}
+
 .timeline-item--visible .timeline-content h3,
 .timeline-item--visible .timeline-body {
   opacity: 1;
   transform: translate(0);
 }
 
-.timeline-item.left .timeline-content {
-  margin-right: auto;
+/* Большая цифра года — градиентная, центрированная */
+.timeline-year-big {
+  flex: 1;
+  text-align: center;
+  font-family: 'Space Grotesk', 'Montserrat', 'Inter', sans-serif;
+  font-size: 7rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--orange) 0%, #f5a65a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 5px rgba(244, 121, 32, 0.15);
+  letter-spacing: -0.02em;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+  line-height: 1;
+  user-select: none;
+  z-index: 1;
 }
 
-.timeline-item.right {
-  flex-direction: row-reverse;
+.timeline-item--visible .timeline-year-big {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.timeline-item.right .timeline-content {
-  margin-left: auto;
-}
-
+/* Адаптив для мобильных */
 @media (max-width: 768px) {
   .timeline::before {
     left: 20px;
@@ -143,8 +187,11 @@
   .timeline-item,
   .timeline-item.right {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
     padding-left: 50px;
+    gap: 1rem;
+    margin-bottom: 3rem;
   }
 
   .timeline-marker {
@@ -153,11 +200,40 @@
 
   .timeline-content {
     width: 100%;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    padding: 0.5rem 0;
   }
 
   .timeline-content h3 {
-    transform: translateY(10px);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .timeline-year-big {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    transform: scale(1);
+    opacity: 0;
+    order: -1;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-item--visible .timeline-year-big {
+    opacity: 1;
+  }
+  
+  .timeline-body {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-body ul {
+    padding-left: 1.2rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.3rem;
   }
 }

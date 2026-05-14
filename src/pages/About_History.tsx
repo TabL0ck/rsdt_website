@@ -1,9 +1,8 @@
-// CompanyHistoryPage.tsx
+// About_History.tsx — финальная версия с обновлённым текстом
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './About_History.css'; // общие стили
+import './About_History.css';
 
-// Данные для таймлайна
 const timelineData = [
   {
     year: '2020',
@@ -11,65 +10,113 @@ const timelineData = [
     content: (
       <>
         <p>
-          The first major area of activity was the development of automotive radar sensors for a large
-          South Korean company.
+          The company’s development history began in 2020. The company’s primary areas of activity became the
+          development of automotive sensors for a South Korean customer, as well as research and development in
+          the field of non‑contact medical sensors.
+        </p>
+        <p>
+          From the very beginning, the company established a full‑cycle development process for electronic and
+          radar devices — from requirements analysis and system design to prototype manufacturing and comprehensive
+          testing. Project activities included:
         </p>
         <ul>
-          <li><strong>Passenger Occupancy Sensor v1</strong> – universal solution with omnidirectional antennas for passenger presence detection.</li>
-          <li><strong>Driver & Passenger Vital Signs Sensor</strong> – non-contact respiration and heart rate measurement.</li>
-          <li><strong>Passenger Occupancy Sensor v2</strong> – shifted scanning area + passenger recognition.</li>
+          <li>development of digital signal processing algorithms;</li>
+          <li>design of antenna systems and RF/microwave front‑end circuits;</li>
+          <li>electrical and mechanical design of devices;</li>
+          <li>development of embedded DSP software;</li>
+          <li>testing and preparation of engineering documentation;</li>
+          <li>prototype manufacturing using the company’s in‑house technological capabilities.</li>
         </ul>
         <p>
-          This marked the transition from basic sensing to intelligent radar systems with advanced analytics.
+          The first major area of activity was the development of automotive radar sensors for a large
+          South Korean company. In 2020, the company developed <strong>ROA (Rear Occupant Alert version 1)</strong> — a
+          universal solution with omnidirectional antennas designed to detect passenger presence inside a vehicle cabin.
+          The development of the second‑generation sensor marked an important transition from basic sensing systems to
+          intelligent radar solutions with advanced analytical capabilities.
         </p>
       </>
     ),
   },
   {
-    year: '2021–2023',
+    year: '2021–2022',
     title: 'Technology Development',
     content: (
       <>
-        <p>Focused on improving:</p>
+        <p>
+          During the following years, the company focused on improving:
+        </p>
         <ul>
-          <li>Radar signal processing algorithms</li>
-          <li>Antenna structures</li>
-          <li>Embedded software</li>
-          <li>Object classification & recognition inside vehicle cabins</li>
+          <li>radar signal processing algorithms;</li>
+          <li>antenna structures;</li>
+          <li>embedded software;</li>
+          <li>object classification and recognition methods inside vehicle cabins.</li>
         </ul>
-        <p>Gained substantial experience in reliable automotive sensors for modern safety systems.</p>
+        <p>
+          During this period, the company gained substantial experience in developing reliable automotive sensors
+          suitable for integration into modern vehicle safety and monitoring systems.
+        </p>
+        <p>
+          In <strong>2021</strong>, the <strong>DMS (Driver Monitoring System version 1)</strong> automotive sensor was developed.
+        </p>
+        <p>
+          In <strong>2022</strong>, the <strong>ROA2 (Rear Occupant Alert version 2)</strong> automotive sensor was developed.
+        </p>
       </>
     ),
   },
   {
-    year: '2024',
-    title: 'Expansion into Medical Technologies',
+    year: '2023–2024',
+    title: 'Medical Sensing Systems',
     content: (
-      <p>
-        Started development of non-contact medical technologies – a compact radar system for monitoring
-        human physiological parameters without contact sensors.
-      </p>
+      <>
+        <p>
+          In <strong>2023</strong>, the <strong>VSM (Vital Signs Monitor)</strong> medical sensor was first introduced.
+        </p>
+        <p>
+          In <strong>2024</strong>, the company continued developing non‑contact medical technologies. The project
+          focused on creating a compact radar‑based <strong>CMMS (Contactless Medical Monitoring System)</strong> to
+          measure heart rate and breath rate without the use of contact sensors.
+        </p>
+      </>
     ),
   },
   {
-    year: '2025',
+    year: '2025–2026',
     title: 'Intelligent Driver Monitoring Systems',
     content: (
       <>
         <p>
-          Development of a <strong>Driver Monitoring System (DMS)</strong> for continuous driver condition
-          monitoring, vital signs analysis, and detection of fatigue or attention loss.
+          During this year, the development of <strong>DMS2</strong> started. The DMS2 project aimed at improving
+          vehicle safety through continuous driver condition monitoring, vital signs analysis, and detection of
+          potentially dangerous conditions associated with fatigue or loss of attention.
         </p>
         <p>
-          By this stage, the company had completed <strong>six automotive sensor projects</strong> and
-          <strong> two research projects</strong> in non-contact medical sensors.
+          In <strong>2026</strong>, two new projects were started: <strong>ICMS (In‑Cabin Monitoring Sensor)</strong>{' '}
+          and <strong>UWBKaROA (Ultra‑Wideband Kick and Rear Occupant Alert)</strong>. UWBKaROA utilized a new radar
+          chip based on IEEE 802.15.4a standard.
         </p>
+        <p>
+          By this stage, the company had completed:
+        </p>
+        <ul>
+          <li>six automotive sensor development projects;</li>
+          <li>two non‑contact medical sensors.</li>
+        </ul>
+        <p>
+          The accumulated experience enabled the company to establish expertise in:
+        </p>
+        <ul>
+          <li>automotive radar systems;</li>
+          <li>DSP and embedded software;</li>
+          <li>RF/microwave engineering;</li>
+          <li>non‑contact vital signs monitoring;</li>
+          <li>intelligent sensor systems for transportation and medical applications.</li>
+        </ul>
       </>
     ),
   },
 ];
 
-// Хук для отслеживания видимости элемента
 function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.2) {
   const [inView, setInView] = useState(false);
 
@@ -78,7 +125,7 @@ function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.2) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
-          observer.unobserve(entry.target); // анимируем только один раз
+          observer.unobserve(entry.target);
         }
       },
       { threshold }
@@ -90,7 +137,6 @@ function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.2) {
   return inView;
 }
 
-// Отдельный элемент таймлайна
 const TimelineItem = ({
   year,
   title,
@@ -111,8 +157,8 @@ const TimelineItem = ({
       className={`timeline-item ${position} ${inView ? 'timeline-item--visible' : ''}`}
     >
       <div className="timeline-marker" />
+      <div className="timeline-year-big">{year}</div>
       <div className="timeline-content">
-        <span className="timeline-year">{year}</span>
         <h3>{title}</h3>
         <div className="timeline-body">{children}</div>
       </div>
@@ -123,7 +169,6 @@ const TimelineItem = ({
 const CompanyHistoryPage: React.FC = () => {
   return (
     <div className="product-page-roas uwb-page">
-      {/* Hero */}
       <section
         className="product-hero-roas"
         style={{ gap: '1rem', justifyContent: 'center', alignItems: 'center', padding: '4rem 2rem' }}
@@ -132,16 +177,16 @@ const CompanyHistoryPage: React.FC = () => {
           style={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: "url('/background/sensors_background.png')",
+            backgroundImage: "url('/background/bg_history.JPG')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0.12,
             zIndex: 0,
             pointerEvents: 'none',
           }}
-        ></div>
+        />
         <div className="product-hero-content-roas" style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <div className="product-badge-roas">Our Journey</div>
+          <div className="product-badge-roas">RSDT</div>
           <h1>Company History</h1>
           <p className="product-subtitle-roas">
             From automotive radar sensors in 2020 to intelligent driver monitoring and non‑contact medical
@@ -153,7 +198,6 @@ const CompanyHistoryPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="product-section-roas">
         <div className="product-container-roas">
           <div className="timeline">
@@ -171,7 +215,6 @@ const CompanyHistoryPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="product-cta-final-roas">
         <div className="product-container-roas">
           <h2>Want to know more about our current projects?</h2>
