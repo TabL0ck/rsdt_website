@@ -1,3 +1,4 @@
+/* UWB.css — identical to ROAS.css */
 .product-page-roas {
   background: var(--white);
   color: var(--text);
@@ -7,7 +8,7 @@
   min-height: 100vh;
 }
 
-/* ==================== ОДИН ЕДИНСТВЕННЫЙ ГРАДИЕНТ НА ВСЮ СТРАНИЦУ ==================== */
+/* ==================== SINGLE GRADIENT FOR THE ENTIRE PAGE ==================== */
 .product-page-roas::before {
   content: '';
   position: absolute;
@@ -20,9 +21,9 @@
   pointer-events: none;
 }
 
-/* ==================== HERO — теперь без собственного градиента ==================== */
+/* ==================== HERO — no separate gradient ==================== */
 .product-hero-roas {
-  background: transparent;   /* ← убрали отдельный градиент */
+  background: transparent;
   padding: 6rem 2rem 8rem;
   display: flex;
   align-items: center;
@@ -75,7 +76,7 @@
   margin-bottom: 2rem;
 }
 
-/* Секции — все прозрачные, чтобы один градиент был виден везде */
+/* Sections — all transparent so the single gradient is visible everywhere */
 .product-section-roas,
 .product-section-roas-alt {
   position: relative;
@@ -185,7 +186,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* Адаптив */
+/* Responsive */
 @media (max-width: 768px) {
   .product-hero-roas {
     flex-direction: column;
