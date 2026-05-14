@@ -102,14 +102,14 @@ const MedicalSensor: React.FC = () => {
         {/* 3D модель — теперь явно правее */}
         <div className="product-hero-model-roas">
             <RadarModel3D 
-                modelPath="/models/ROAS.glb"
-                cameraPosition={[0, 0, 150]}
+                modelPath="/models/VSM.glb"
+                cameraPosition={[0, 150, 0]}
                 fov={45}
-                modelCenter={[43, 65, 20]}
+                modelCenter={[0, 0, 0]}
                 modelScale={1.5}
-                rotationAxis={'y'}
+                rotationAxis={'z'}
                 rotationSpeed={0.008}
-                rotationCenter={[43, 65, 20]}
+                rotationCenter={[0, 0, 0]}
             />
         </div>
       </section>
