@@ -59,7 +59,7 @@ const LPS: React.FC = () => {
                 }}
             ></div>
             <div className="product-hero-content-lps">
-            <div className="product-badge-lps">60-64 GHz FMCW Radar • Low Power</div>
+            <div className="product-badge-lps">58-62 GHz FMCW Radar • Low Power</div>
             <h1>
                 LPS — Low Power Sensor<br />
             </h1>
@@ -143,7 +143,7 @@ const LPS: React.FC = () => {
             <div className="specs-table-lps">
                 <table>
                 <tbody>
-                    <tr><td>Operating Frequency</td><td>60-64 GHz FMCW Radar AiP</td></tr>
+                    <tr><td>Operating Frequency</td><td>58-62 GHz FMCW Radar AiP</td></tr>
                     <tr><td>Field of View (Az/EI)</td><td>146° / 108°</td></tr>
                     <tr><td><strong>Power Consumption</strong></td><td><strong>&lt; 5 mW (standby) and 1.68 W (active radiation)</strong></td></tr>
                     <tr><td><strong>TX Channels</strong></td><td><strong>4 (enhanced from 3)</strong></td></tr>
