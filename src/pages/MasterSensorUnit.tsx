@@ -58,8 +58,8 @@ const MasterSensorUnit: React.FC = () => {
                     </h1>
                     
                     <p className="product-subtitle-MS">
-                        The central hub that connects up to 4 ROAS sensors into a unified local network, 
-                        completely independent of the vehicle’s CAN bus.
+                        <strong>The central hub that connects up to 4 <a href="/#/roas">ROAS</a> into a unified local network, 
+                        completely independent of the vehicle’s CAN bus.</strong>
                     </p>
 
                     <div className="product-cta-MS">
@@ -92,7 +92,7 @@ const MasterSensorUnit: React.FC = () => {
                 <div className="product-container-MS">
                     <h2>Core Functionality</h2>
                     <p className="section-description-MS">
-                        Advanced mmWave radar capabilities that make ROAS one of the most intelligent 
+                        Advanced mmWave radar capabilities that make <a href="/#/roas">ROAS</a> one of the most intelligent 
                         and privacy-focused rear occupant monitoring systems on the market.
                     </p>
 
@@ -143,6 +143,7 @@ const MasterSensorUnit: React.FC = () => {
                                 <tr><td>Temperature Range</td><td>-40°C … +85°C</td></tr>
                                 <tr><td>Interface</td><td>2 × CAN-FD / 2 × CAN 2.0 / UART</td></tr>
                                 <tr><td>Detection Range</td><td>Up to 8 rows of seats</td></tr>
+                                <tr><td>Key feature</td><td>Control up to 4 <a href="/#/roas">ROAS</a> sensors</td></tr>
                             </tbody>
                         </table>
                     </div>

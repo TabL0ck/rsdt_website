@@ -102,8 +102,8 @@ const MedicalSensor: React.FC = () => {
         {/* 3D модель — теперь явно правее */}
         <div className="product-hero-model-roas">
             <RadarModel3D 
-                modelPath="/models/medical.glb"
-                cameraPosition={[0, 0, 200]}
+                modelPath="/models/ROAS.glb"
+                cameraPosition={[0, 0, 150]}
                 fov={45}
                 modelCenter={[43, 65, 20]}
                 modelScale={1.5}
@@ -119,7 +119,7 @@ const MedicalSensor: React.FC = () => {
         <div className="product-container-roas">
           <h2>Core Functionality</h2>
           <p className="section-description-roas">
-            Advanced 60‑GHz FMCW radar with integrated DSP, delivering clinical‑grade vital signs without any physical contact.
+            <strong>Advanced 60‑GHz FMCW radar with integrated DSP, delivering clinical‑grade vital signs without any physical contact.</strong>
           </p>
           <div className="product-grid-roas">
             {features.map((feature, index) => (
