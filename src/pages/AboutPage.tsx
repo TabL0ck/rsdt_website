@@ -20,10 +20,9 @@ const AboutPage: React.FC = () => {
           <div className="about-story-grid">
             <div className="about-story-text">
               <p>
-                Radar Sensor Development Team (RSDT) is a leading provider of full-cycle microwave radar sensor design, intelligent perception systems, and ad-vanced embedded engineering.
-                With over 4 years of focused development, we offer a proven portfolio of short-, mid-, and long-range radar sensors for in-cabin monitoring, driver assistance, and autonomous driving applications.
-                RSDT assembles top-tier expertise in system architecture, DSP al-gorithm design, microwave antenna and feeder development, embedded software, hardware, and functional testing, all within a single engineering center.
-
+                Radar Sensor Development Team (RSDT) is a leading provider of full-cycle microwave radar sensor design, intelligent perception systems, and advanced embedded engineering. 
+                With over 10 years of focused development, we offer a proven portfolio of short-, mid-, and long-range radar sensors for in-cabin monitoring, driver assistance, and autonomous driving applications. 
+                RSDT assembles top-tier expertise in system architecture, DSP algorithm design, microwave antenna and feeder development, embedded software, hardware, and functional testing, all within a single engineering center.
               </p>
             </div>
             <div className="about-story-image">
@@ -42,10 +41,10 @@ const AboutPage: React.FC = () => {
             </div>
               <div className="about-story-text">
               <p>
-               RSDT executes every phase of sensor creation – from requirement analysis and system design through signal processing, antenna and PCB development, embed-ded DSP firmware, and full validation to final technical documentation.
-              Our solutions build on a track record of six completed automotive radar projects, covering occupancy detection, vital-sign monitoring, and blind-spot sensing. Additionally, two R&D programs in contactless respiration and heartbeat sensing for medical use have been successfully delivered.
-              Our client engagements include multinational automotive suppliers and innovative technology companies. We also actively contribute to state-funded research initiatives and have been recognized in national innovation com-petitions.
-              RSDT combines proven engineering methods with deep domain knowledge to bring pioneering radar sensing products to market faster and more reliably.
+               RSDT executes every phase of sensor creation – from requirement analysis and system design through signal processing, antenna and PCB development, embedded DSP firmware, and full validation to final technical documentation.
+                Our solutions build on a track record of six completed automotive radar projects, covering occupancy detection, vital-sign monitoring, and blind-spot sensing.
+                 Additionally, two R&D programs in contactless respiration and heartbeat sensing for medical use have been successfully delivered. Our client engagements include multinational automotive suppliers and innovative technology companies.
+                  We also have been recognized in national innovation competitions. RSDT combines proven engineering methods with deep domain knowledge to bring pioneering radar sensing products to market faster and more reliably.
               </p>
               {/* остальные элементы (этапы, проекты) останутся ниже */}
           </div>
