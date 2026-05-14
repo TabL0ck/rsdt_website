@@ -47,7 +47,6 @@ const Hero: React.FC = () => {
           Advanced mmWave radar sensors engineered for tomorrow's mobility — detecting heartbeat,
           respiration, presence, and inattention with uncompromising precision and privacy.
         </p>
-
         <div className="hero-buttons">
           <a href="/#solutions" onClick={(e) => handleAnchor(e, 'solutions')} className="btn-primary">
             Explore Solutions
