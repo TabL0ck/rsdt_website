@@ -16,6 +16,7 @@ import UWB from './pages/UWB';
 import MEDICAL from './pages/MedicalSensor';
 import BABYSIM from './pages/BabysimInfo';
 import MasterSensorUnit from './pages/MasterSensorUnit'
+import ABOUTHISTORY from './pages/About_History'
 
 const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
   <div className="about-page" style={{ paddingTop: '80px' }}>
@@ -77,6 +78,8 @@ const App: React.FC = () => {
         <Route path="/medical-sensor" element={<MEDICAL/>} />
         <Route path="/uwb-sensor" element={<UWB/>} />
         <Route path="/babysim" element={<BABYSIM/>} />
+        <Route path="/about-history" element={<ABOUTHISTORY/>} />
+        <Route path="/main" element={<Hero/>} />
       </Routes>
       <Footer />
     </>
