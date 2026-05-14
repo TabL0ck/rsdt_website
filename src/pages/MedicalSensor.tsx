@@ -78,7 +78,14 @@ const MedicalSensor: React.FC = () => {
                         </a>
                     </div>
                 </div>
-
+                <div className="product-cta">
+                        <a href="/#contact" className="btn-primary">
+                            Get in Touch
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                            </svg>
+                        </a>
+                    </div>
                  <div className="product-hero-model">
                     <RadarModel3D 
                         modelPath="/models/ROAS.glb"
