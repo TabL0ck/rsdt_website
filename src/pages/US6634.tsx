@@ -15,7 +15,7 @@ const US6634: React.FC = () => {
         description: 'Instantly identifies whether the seat is occupied by an adult, child, or inanimate object.'
         },
         {
-        icon: '❤️',
+        icon: '🫀',
         title: 'Driver Vital Signs',
         description: 'Continuously monitors driver’s breathing rate and heart rate for safety and alertness.'
         },
@@ -91,12 +91,15 @@ const US6634: React.FC = () => {
             </div>
         </section>
 
-        {/* CORE FUNCTIONALITY — 6 карточек */}
+        {/* CORE FUNCTIONALITY — 6 карточек (обновлено) */}
         <section className="product-section-us6634">
             <div className="product-container-us6634">
             <h2>Core Functionality</h2>
             <p className="section-description-us6634">
-                Advanced mmWave radar capabilities that make ROAS one of the most intelligent and privacy-focused rear occupant monitoring systems on the market.
+                Advanced mmWave radar capabilities that make <a href="/#/unified-sensor-6634">US6634</a> the ultimate unified sensor on the market. 
+                It combines the full rear occupant monitoring functionality of <a href="/#/roas">ROAS</a> with the master sensor unit 
+                capabilities of <a href="/#/master-sensor-unit">MS</a>, allowing the use of identical hardware and software throughout the entire vehicle 
+                without the need to explicitly load different programs for master and slave units.
             </p>
 
             <div className="product-grid-us6634">
@@ -156,7 +159,7 @@ const US6634: React.FC = () => {
         {/* CTA FINAL */}
         <section className="product-cta-final-us6634">
             <div className="product-container-us6634">
-            <h2>Ready to integrate ROAS into your next vehicle?</h2>
+            <h2>Ready to integrate US6634 into your next vehicle?</h2>
             <a href="/#contact" className="btn-primary">Contact RSDT Team</a>
             </div>
         </section>

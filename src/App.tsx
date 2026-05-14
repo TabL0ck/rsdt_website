@@ -17,6 +17,7 @@ import MEDICAL from './pages/MedicalSensor';
 import BABYSIM from './pages/BabysimInfo';
 import MasterSensorUnit from './pages/MasterSensorUnit'
 import US6634 from './pages/US6634';
+import LPS from './pages/LowPowerSensor';
 
 const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
   <div className="about-page" style={{ paddingTop: '80px' }}>
@@ -74,7 +75,7 @@ const App: React.FC = () => {
         <Route path="/roas" element={<ROAS />} />
         <Route path="/master-sensor-unit" element={<MasterSensorUnit />} />
         <Route path="/unified-sensor-6634" element={<US6634 />} />
-        <Route path="/low-power-sensor" element={<PlaceholderSolution title="Low power sensor" />} />
+        <Route path="/low-power-sensor" element={<LPS />} />
         <Route path="/medical-sensor" element={<MEDICAL/>} />
         <Route path="/uwb-sensor" element={<UWB/>} />
         <Route path="/babysim" element={<BABYSIM/>} />
