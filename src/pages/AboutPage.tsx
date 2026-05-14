@@ -1,14 +1,31 @@
 import React from 'react';
 import './AboutPage.css';
+import { Link } from 'react-router-dom';
 
 const AboutPage: React.FC = () => {
   return (
     <div className="about-page">
       {/* шапка */}
-      <section className="about-hero">
-        <div className="about-hero-content">
+      <section className="about-hero" style={{ position: 'relative' }}>
+        {/* Абсолютный фон с прозрачностью */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: "url('/background/aboutUs_bg.JPG')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.24,            // прозрачность только для фона
+            zIndex: 0,
+            pointerEvents: 'none',
+          }}
+        />
+        <div className="about-hero-content" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
           <h1>About RSDT</h1>
           <p>Radar Sensor Development Team</p>
+        <div className="info-buttons" style={{ justifyContent: 'center' }}>
+            <Link to="/main" className="btn-primary">← Back to main</Link>
+          </div>
         </div>
       </section>
 

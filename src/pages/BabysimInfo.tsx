@@ -17,17 +17,18 @@ const BabysimPage: React.FC = () => {
         }}
       >
         <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: "url('/background/sensors_background.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.12,
-            zIndex: 0,
-            pointerEvents: 'none'
-          }}
-        ></div>
+            style={{
+                position: 'absolute',
+                inset: 0,
+                backgroundImage: "url('/background/child_sit.png')",
+                backgroundSize: 'cover',      /* ← было cover */
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',  /* ← чтобы не множилось */
+                opacity: 0.24,
+                zIndex: 0,
+                pointerEvents: 'none'
+            }}
+            />
         <div className="product-hero-content-roas">
           <div className="product-badge-roas">Child Presence Detection Simulator</div>
           <h1>BABYSIM</h1>
@@ -44,21 +45,6 @@ const BabysimPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Иллюстрация BABYSIM */}
-        <div className="product-hero-model-roas" style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className="product-hero-model-roas">
-                <RadarModel3D 
-                    modelPath="/models/sleeping_baby.glb"
-                    cameraPosition={[0, 0, 20]}
-                    fov={45}
-                    modelCenter={[40, 60, 20]}
-                    modelScale={5}
-                    rotationAxis={'y'}
-                    rotationSpeed={0.01}
-                    rotationCenter={[40, 60, 20]}
-                />
-            </div>
-        </div>
       </section>
 
       {/* ==================== OVERVIEW ==================== */}

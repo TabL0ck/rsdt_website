@@ -1,5 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+
 
 const DualBlocksSection: React.FC = () => {
   const navigate = useNavigate();
@@ -46,10 +47,10 @@ const DualBlocksSection: React.FC = () => {
           <ul className="service-list">
 
             <li>
-              <b>Frequency-Modulated Continuous-Wave (FMCW) Radar Sensors:</b>
+              <b><strong>Frequency-Modulated Continuous-Wave (FMCW) Radar Sensors:</strong></b>
               <ul>
-                <li>Rear Occupant Alert Sensor</li>
-                <li>Vital Signs Monitoring Sensor</li>
+                <li><Link to="/roas">Rear Occupant Alert Sensor</Link></li>
+                <li><Link to="/medical-sensor">Vital Signs Monitoring Sensor</Link></li>
                 <li>Driver Monitoring Sensor</li>
                 <li>Driver & Passenger Monitoring System</li>
                 <li>Child presence detection</li>
@@ -58,7 +59,7 @@ const DualBlocksSection: React.FC = () => {
             </li>
 
             <li>
-              <b>Ultra Wide Band (UWB) Radar Sensors:</b>
+              <b><strong>Ultra Wide Band (UWB) Radar Sensors:</strong></b>
               <ul>
                 <li>UWB Rear Occupant Alert Sensor</li>
                 <li>UWB Rear KICK Sensor </li>
@@ -66,10 +67,6 @@ const DualBlocksSection: React.FC = () => {
               </ul>
             </li>
           </ul>
-
-          <a href="/#solutions" onClick={(e) => handleLearnMore(e, 'solutions')} className="btn-service">
-            Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-          </a>
         </div>
 
         {/* Design Services – фон 7.jpg */}
@@ -98,13 +95,10 @@ const DualBlocksSection: React.FC = () => {
           <h3>Design Services</h3>
           <ul className="service-list">
             <li><b>Embedded software</b></li>
-            <li><b>Embedded hardware</b></li>
+            <li><Link to="/embedded-hardware">Embedded hardware</Link></li>
             <li><b>Embedded testing</b></li>
             <li><b>Antenna design</b></li>
           </ul>
-          <a href="/#design-services" onClick={(e) => handleLearnMore(e, 'design-services')} className="btn-service">
-            Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-          </a>
         </div>
 
         {/* Semiconductors*/}
@@ -154,9 +148,6 @@ const DualBlocksSection: React.FC = () => {
           <ul className="service-list">
             <li><b>blank</b></li>
           </ul>
-          <a href="/#design-services" onClick={(e) => handleLearnMore(e, 'design-services')} className="btn-service">
-            Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-          </a>
         </div>
       </div>
     </section>
