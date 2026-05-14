@@ -5,8 +5,10 @@ import { NavLink, useLocation } from 'react-router-dom';
 const Nav: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const location = useLocation();
 
   // Скролл шапки
@@ -21,6 +23,8 @@ const Nav: React.FC = () => {
     setMenuOpen(false);
     setIsSolutionsOpen(false);
     setMobileSolutionsOpen(false);
+    setIsAboutOpen(false);
+    setMobileAboutOpen(false);
   }, [location.pathname]);
 
   // Блокировка скролла при открытом меню
@@ -44,6 +48,12 @@ const Nav: React.FC = () => {
     { name: 'UWB sensor', path: '/uwb-sensor' },
   ];
 
+  const aboutLinks = [
+    { name: 'About Us', path: '/about' },
+    { name: 'History', path: '/about-history' },
+    { name: 'Careers', path: '/about/careers' },
+  ];
+
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
     if (location.pathname !== '/') {
       window.location.href = `/#${anchor}`;
@@ -63,6 +73,7 @@ const Nav: React.FC = () => {
   const closeMenu = () => {
     setMenuOpen(false);
     setMobileSolutionsOpen(false);
+    setMobileAboutOpen(false);
   };
 
   return (
@@ -93,7 +104,24 @@ const Nav: React.FC = () => {
 
           <li><a href="/#design-services" onClick={(e) => handleAnchorClick(e, 'design-services')}>Design Services</a></li>
           <li><a href="/#semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
-          <li><NavLink to="/about">About</NavLink></li>
+
+          <li className={`dropdown ${isAboutOpen ? 'open' : ''}`}>
+            <a
+              href="#"
+              onClick={(e) => { e.preventDefault(); setIsAboutOpen(!isAboutOpen); }}
+              className="dropdown-toggle"
+            >
+              About
+            </a>
+            <ul className="dropdown-menu">
+              {aboutLinks.map((link) => (
+                <li key={link.path}>
+                  <NavLink to={link.path} onClick={() => setIsAboutOpen(false)}>{link.name}</NavLink>
+                </li>
+              ))}
+            </ul>
+          </li>
+
           <li><a href="/#contact" onClick={(e) => handleAnchorClick(e, 'contact')} className="nav-cta">Contact Us</a></li>
         </ul>
 
@@ -152,7 +180,27 @@ const Nav: React.FC = () => {
 
             <li><a href="/#design-services" onClick={(e) => handleAnchorClick(e, 'design-services')}>Design Services</a></li>
             <li><a href="/#semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
-            <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
+
+            <li>
+              <a 
+                href="#" 
+                onClick={(e) => { e.preventDefault(); setMobileAboutOpen(!mobileAboutOpen); }}
+                style={{ fontWeight: 600, display: 'flex', justifyContent: 'space-between' }}
+              >
+                About
+                <span>{mobileAboutOpen ? '▲' : '▼'}</span>
+              </a>
+              {mobileAboutOpen && (
+                <ul style={{ paddingLeft: '1.2rem', marginTop: '0.4rem' }}>
+                  {aboutLinks.map((link) => (
+                    <li key={link.path}>
+                      <NavLink to={link.path} onClick={closeMenu}>{link.name}</NavLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+
             <li><a href="/#contact" onClick={(e) => handleAnchorClick(e, 'contact')} className="nav-cta">Contact Us</a></li>
           </ul>
         </div>
