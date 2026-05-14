@@ -65,8 +65,8 @@ const ROAS: React.FC = () => {
                 <span className="highlight">Alert Sensor</span>
             </h1>
             <p className="product-subtitle-roas">
-                Contactless mmWave radar that detects children, pets and passengers left in the rear seats.<br />
-                Prevents tragic hot-car incidents with instant alerts.
+                <strong>Contactless mmWave radar that detects children, pets and passengers left in the rear seats.<br />
+                Prevents tragic hot-car incidents with instant alerts.</strong>
             </p>
             <div className="product-cta">
                 <a href="/#contact" className="btn-primary">

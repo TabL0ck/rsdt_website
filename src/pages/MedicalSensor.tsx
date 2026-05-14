@@ -86,8 +86,8 @@ const MedicalSensor: React.FC = () => {
             <span className="highlight">Contactless Vital Signs Sensor</span>
           </h1>
           <p className="product-subtitle-roas">
-            Measures breathing rate and heart rate from up to 3 meters away, through clothing and blankets.<br />
-            On‑board DSP with FFT, phase extraction and multi‑person tracking. Wi‑Fi &amp; Bluetooth, MQTT/JSON.
+            <strong>Measures breathing rate and heart rate from up to 3 meters away, through clothing and blankets.<br />
+            On‑board DSP with FFT, phase extraction and multi‑person tracking. Wi‑Fi &amp; Bluetooth, MQTT/JSON. </strong>
           </p>
           <div className="product-cta">
             <a href="/#contact" className="btn-primary">

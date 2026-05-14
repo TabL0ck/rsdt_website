@@ -14,6 +14,7 @@ import useSmoothScroll from './hooks/useSmoothScroll';
 import ROAS from './pages/ROAS';
 import UWB from './pages/UWB';
 import MEDICAL from './pages/MedicalSensor';
+import BABYSIM from './pages/BabysimInfo';
 import MasterSensorUnit from './pages/MasterSensorUnit'
 
 const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
@@ -75,6 +76,7 @@ const App: React.FC = () => {
         <Route path="/low-power-sensor" element={<PlaceholderSolution title="Low power sensor" />} />
         <Route path="/medical-sensor" element={<MEDICAL/>} />
         <Route path="/uwb-sensor" element={<UWB/>} />
+        <Route path="/babysim" element={<BABYSIM/>} />
       </Routes>
       <Footer />
     </>
