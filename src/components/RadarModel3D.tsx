@@ -1,6 +1,6 @@
 import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF, OrbitControls, Environment, ContactShadows } from '@react-three/drei';
+import { useGLTF, Environment, ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface ModelProps {
@@ -117,16 +117,6 @@ const RadarModel3D: React.FC<RadarModel3DProps> = ({
             )}
           </group>
         </Suspense>
-
-        {/* === ИНТЕРАКТИВНОЕ ВРАЩЕНИЕ === */}
-        <OrbitControls 
-          enablePan={false}
-          enableZoom={true}
-          minDistance={20}
-          maxDistance={400}
-          enableDamping={true}
-          dampingFactor={0.1}
-        />
 
         <Environment preset="city" />
         <ContactShadows

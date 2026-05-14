@@ -78,11 +78,11 @@ const MasterSensorUnit: React.FC = () => {
                         modelPath="/models/MS.glb"
                         cameraPosition={[0, 0, 140]}
                         fov={45}
-                        modelCenter={[70, 90, 20]}
+                        modelCenter={[70, 0, 20]}
                         modelScale={1.5}
                         rotationAxis={'y'}
-                        rotationSpeed={0}
-                        rotationCenter={[40, 60, 20]}
+                        rotationSpeed={0.008}
+                        rotationCenter={[70, 0, 20]}
                     />
                 </div>
             </section>

@@ -99,18 +99,18 @@ const MedicalSensor: React.FC = () => {
           </div>
         </div>
 
-        {/* 3D Model — identical props as ROAS */}
+        {/* 3D модель — теперь явно правее */}
         <div className="product-hero-model-roas">
-          <RadarModel3D
-            modelPath="/models/ROAS.glb"
-            cameraPosition={[0, 0, 150]}
-            fov={45}
-            modelCenter={[70, 90, 20]}
-            modelScale={1.5}
-            rotationAxis={'y'}
-            rotationSpeed={0}
-            rotationCenter={[40, 60, 20]}
-          />
+            <RadarModel3D 
+                modelPath="/models/ROAS.glb"
+                cameraPosition={[0, 0, 150]}
+                fov={45}
+                modelCenter={[43, 65, 20]}
+                modelScale={1.5}
+                rotationAxis={'y'}
+                rotationSpeed={0.008}
+                rotationCenter={[43, 65, 20]}
+            />
         </div>
       </section>
 

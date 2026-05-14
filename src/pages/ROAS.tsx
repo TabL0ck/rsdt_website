@@ -84,11 +84,11 @@ const ROAS: React.FC = () => {
                     modelPath="/models/ROAS.glb"
                     cameraPosition={[0, 0, 150]}
                     fov={45}
-                    modelCenter={[70, 90, 20]}
+                    modelCenter={[43, 65, 20]}
                     modelScale={1.5}
                     rotationAxis={'y'}
-                    rotationSpeed={0}
-                    rotationCenter={[40, 60, 20]}
+                    rotationSpeed={0.008}
+                    rotationCenter={[43, 65, 20]}
                 />
             </div>
         </section>

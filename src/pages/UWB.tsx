@@ -104,11 +104,11 @@ const UWB: React.FC = () => {
             modelPath="/models/UWB.glb"
             cameraPosition={[0, 360, 0]}
             fov={45}
-            modelCenter={[70, 90, -50]}
+            modelCenter={[75, 90, 20]}
             modelScale={3}
-            rotationAxis={'y'}
-            rotationSpeed={0}
-            rotationCenter={[40, 60, 20]}
+            rotationAxis={'z'}
+            rotationSpeed={0.008}
+            rotationCenter={[75, 90, 20]}
           />
         </div>
       </section>
