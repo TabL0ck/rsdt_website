@@ -1,5 +1,5 @@
 /* UWB.css — identical to ROAS.css */
-.product-page-us6634 {
+.product-page-lps {
   background: var(--white);
   color: var(--text);
   padding-top: 64px;
@@ -9,7 +9,7 @@
 }
 
 /* ==================== SINGLE GRADIENT FOR THE ENTIRE PAGE ==================== */
-.product-page-us6634::before {
+.product-page-lps::before {
   content: '';
   position: absolute;
   top: 0;
@@ -22,7 +22,7 @@
 }
 
 /* ==================== HERO — no separate gradient ==================== */
-.product-hero-us6634 {
+.product-hero-lps {
   background: transparent;
   padding: 6rem 2rem 8rem;
   display: flex;
@@ -37,12 +37,12 @@
   z-index: 1;
 }
 
-.product-hero-content-us6634 {
+.product-hero-content-lps {
   flex: 1;
   max-width: 600px;
 }
 
-.product-hero-model-us6634 {
+.product-hero-model-lps {
   flex: 1;
   max-width: 500px;
   min-height: 420px;
@@ -50,7 +50,7 @@
   justify-content: flex-end;
 }
 
-.product-badge-us6634 {
+.product-badge-lps {
   display: inline-block;
   background: var(--orange);
   color: #fff;
@@ -62,14 +62,14 @@
   margin-bottom: 1rem;
 }
 
-.product-hero-us6634 h1 {
+.product-hero-lps h1 {
   font-size: clamp(2.6rem, 5vw, 3.8rem);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 1rem;
 }
 
-.product-subtitle-us6634 {
+.product-subtitle-lps {
   font-size: 1.15rem;
   color: var(--text-muted);
   line-height: 1.7;
@@ -77,20 +77,20 @@
 }
 
 /* Sections — all transparent so the single gradient is visible everywhere */
-.product-section-us6634,
-.product-section-us6634-alt {
+.product-section-lps,
+.product-section-lps-alt {
   position: relative;
   padding: 2.5rem 2rem;
   background: transparent;
   z-index: 1;
 }
 
-.product-container-us6634 {
+.product-container-lps {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.product-section-us6634 h2 {
+.product-section-lps h2 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
@@ -98,7 +98,7 @@
   position: relative;
 }
 
-.product-section-us6634 h2::after {
+.product-section-lps h2::after {
   content: '';
   display: block;
   width: 60px;
@@ -108,7 +108,7 @@
   border-radius: 4px;
 }
 
-.section-description-us6634 {
+.section-description-lps {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 1.5rem;
@@ -116,14 +116,14 @@
   color: var(--text-secondary);
 }
 
-.product-grid-us6634 {
+.product-grid-lps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
-.product-card-us6634,
-.product-app-card-us6634 {
+.product-card-lps,
+.product-app-card-lps {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -135,20 +135,20 @@
   z-index: 1;
 }
 
-.product-card-us6634:hover,
-.product-app-card-us6634:hover {
+.product-card-lps:hover,
+.product-app-card-lps:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
   border-color: var(--orange);
 }
 
-.product-icon-us6634 {
+.product-icon-lps {
   font-size: 3rem;
   margin-bottom: 1.5rem;
   display: block;
 }
 
-.specs-table-us6634 table {
+.specs-table-lps table {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -159,20 +159,20 @@
   box-shadow: var(--shadow-sm);
 }
 
-.specs-table-us6634 td {
+.specs-table-lps td {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--border);
   font-size: 1rem;
 }
 
-.specs-table-us6634 td:first-child {
+.specs-table-lps td:first-child {
   font-weight: 600;
   width: 45%;
   background: var(--orange-light);
   color: var(--orange);
 }
 
-.product-cta-final-us6634 {
+.product-cta-final-lps {
   background: var(--orange);
   color: #fff;
   text-align: center;
@@ -181,20 +181,20 @@
   z-index: 1;
 }
 
-.product-cta-final-us6634 h2 {
+.product-cta-final-lps h2 {
   color: #fff;
   margin-bottom: 1.5rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .product-hero-us6634 {
+  .product-hero-lps {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
     padding: 4rem 1rem 7rem;
   }
-  .product-hero-model-us6634 {
+  .product-hero-model-lps {
     justify-content: center;
     max-width: 100%;
   }

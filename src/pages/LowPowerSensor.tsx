@@ -36,10 +36,10 @@ const LPS: React.FC = () => {
         }
     ];
     return (
-    <div className="product-page-us6634 us6634-page">
-        {/* HERO — 3D теперь сильно правее */}
+    <div className="product-page-lps lps-page">
+        {/* HERO */}
             <section 
-            className="product-hero-us6634" 
+            className="product-hero-lps" 
             style={{ 
                 gap: '1rem',
                 justifyContent: 'center',
@@ -58,13 +58,15 @@ const LPS: React.FC = () => {
                     pointerEvents: 'none'
                 }}
             ></div>
-            <div className="product-hero-content-us6634">
-            <div className="product-badge-us6634">60-64 GHz FMCW Radar</div>
+            <div className="product-hero-content-lps">
+            <div className="product-badge-lps">60-64 GHz FMCW Radar • Low Power</div>
             <h1>
-                Low-power sensor<br />
+                LPS — Low Power Sensor<br />
             </h1>
-            <p className="product-subtitle-us6634">
-                <strong>Contactless mmWave radar that combine full functionality of <a href="/#/roas">ROAS</a> and <a href="/#/master-sensor-unit">MS</a> allowing the use of the same software and boards of the same type throughout the entire vehicle without the need to explicitly load different programs for the master and slaves.</strong>
+            <p className="product-subtitle-lps">
+                <strong>Contactless mmWave radar with <span className="highlight">4 TX channels</span> and record-low power consumption of just <span className="highlight">1.68 W</span>. 
+                Combines full functionality of <a href="/#/roas">ROAS</a> and <a href="/#/master-sensor-unit">MS</a>, 
+                allowing the use of the same software and identical boards throughout the entire vehicle without the need to load different programs for master and slave units.</strong>
             </p>
             <div className="product-cta">
                 <a href="/#contact" className="btn-primary">
@@ -76,8 +78,8 @@ const LPS: React.FC = () => {
             </div>
             </div>
 
-            {/* 3D модель — теперь явно правее */}
-            <div className="product-hero-model-us6634">
+            {/* 3D модель */}
+            <div className="product-hero-model-lps">
                 <RadarModel3D 
                     modelPath="/models/L-power board.glb"
                     cameraPosition={[0, 0, 150]}
@@ -91,21 +93,20 @@ const LPS: React.FC = () => {
             </div>
         </section>
 
-        {/* CORE FUNCTIONALITY — 6 карточек (обновлено) */}
-        <section className="product-section-us6634">
-            <div className="product-container-us6634">
+        {/* CORE FUNCTIONALITY */}
+        <section className="product-section-lps">
+            <div className="product-container-lps">
             <h2>Core Functionality</h2>
-            <p className="section-description-us6634">
-                Advanced mmWave radar capabilities that make <a href="/#/unified-sensor-6634">US6634</a> the ultimate unified sensor on the market. 
-                It combines the full rear occupant monitoring functionality of <a href="/#/roas">ROAS</a> with the master sensor unit 
-                capabilities of <a href="/#/master-sensor-unit">MS</a>, allowing the use of identical hardware and software throughout the entire vehicle 
-                without the need to explicitly load different programs for master and slave units.
+            <p className="section-description-lps">
+                Advanced mmWave radar capabilities that make LPS the most power-efficient unified sensor on the market. 
+                With <strong>4 TX channels</strong> and only <strong>1.68 W</strong> active power consumption, it combines the full rear occupant monitoring of ROAS 
+                with MS master sensor unit capabilities — all on identical hardware and software across the vehicle.
             </p>
 
-            <div className="product-grid-us6634">
+            <div className="product-grid-lps">
                 {features.map((feature, index) => (
-                <div key={index} className="product-card-us6634">
-                    <div className="product-icon-us6634">{feature.icon}</div>
+                <div key={index} className="product-card-lps">
+                    <div className="product-icon-lps">{feature.icon}</div>
                     <h3>{feature.title}</h3>
                     <p>{feature.description}</p>
                 </div>
@@ -115,19 +116,19 @@ const LPS: React.FC = () => {
         </section>
 
         {/* APPLICATIONS */}
-        <section className="product-section-us6634 product-section-us6634-alt">
-            <div className="product-container-us6634">
+        <section className="product-section-lps product-section-lps-alt">
+            <div className="product-container-lps">
             <h2>Applications</h2>
-            <div className="product-grid-us6634">
-                <div className="product-app-card-us6634">
+            <div className="product-grid-lps">
+                <div className="product-app-card-lps">
                 <h3>Family Vehicles</h3>
                 <p>Child left in car detection</p>
                 </div>
-                <div className="product-app-card-us6634">
+                <div className="product-app-card-lps">
                 <h3>Ride-Sharing &amp; Taxis</h3>
                 <p>Passenger safety verification</p>
                 </div>
-                <div className="product-app-card-us6634">
+                <div className="product-app-card-lps">
                 <h3>Commercial Fleets</h3>
                 <p>Occupant monitoring &amp; compliance</p>
                 </div>
@@ -136,20 +137,21 @@ const LPS: React.FC = () => {
         </section>
 
         {/* TECHNICAL SPECIFICATIONS */}
-        <section className="product-section-us6634" id="specs">
-            <div className="product-container-us6634">
+        <section className="product-section-lps" id="specs">
+            <div className="product-container-lps">
             <h2>Technical Specifications</h2>
-            <div className="specs-table-us6634">
+            <div className="specs-table-lps">
                 <table>
                 <tbody>
                     <tr><td>Operating Frequency</td><td>60-64 GHz FMCW Radar AiP</td></tr>
                     <tr><td>Field of View (Az/EI)</td><td>146° / 108°</td></tr>
-                    <tr><td>Power Consumption</td><td>&lt; 5 mW (standby) and  2.4 W (active radiation)</td></tr>
+                    <tr><td><strong>Power Consumption</strong></td><td><strong>&lt; 5 mW (standby) and 1.68 W (active radiation)</strong></td></tr>
+                    <tr><td><strong>TX Channels</strong></td><td><strong>4 (enhanced from 3)</strong></td></tr>
                     <tr><td>Dimensions</td><td>66 × 34 × 7 mm</td></tr>
                     <tr><td>Temperature Range</td><td>-40°C … +85°C</td></tr>
                     <tr><td>Interface</td><td>2 x CAN-FD / 2 x CAN 2.0 / UART</td></tr>
                     <tr><td>Detection Range</td><td>Full cabin coverage up to 8 rows of seats</td></tr>
-                    <tr><td>Key feature</td><td>Convenient installation and software download</td></tr>
+                    <tr><td>Key feature</td><td>Ultra-low power + 4 TX channels with convenient installation</td></tr>
                 </tbody>
                 </table>
             </div>
@@ -157,9 +159,9 @@ const LPS: React.FC = () => {
         </section>
 
         {/* CTA FINAL */}
-        <section className="product-cta-final-us6634">
-            <div className="product-container-us6634">
-            <h2>Ready to integrate US6634 into your next vehicle?</h2>
+        <section className="product-cta-final-lps">
+            <div className="product-container-lps">
+            <h2>Ready to integrate the most efficient Low Power Sensor into your next vehicle?</h2>
             <a href="/#contact" className="btn-primary">Contact RSDT Team</a>
             </div>
         </section>
