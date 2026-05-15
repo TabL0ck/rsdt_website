@@ -122,9 +122,9 @@ const UWB: React.FC = () => {
             fov={45}
             modelCenter={[70, 90, -50]}
             modelScale={3}
-            rotationAxis={'y'}
-            rotationSpeed={0}
-            rotationCenter={[40, 60, 20]}
+            rotationAxis={'z'}
+            rotationSpeed={0.008}
+            rotationCenter={[70, 90, -50]}
           />
         </div>
       </section>
