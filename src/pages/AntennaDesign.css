@@ -1,0 +1,558 @@
+/* AntennaDesign.css */
+.antenna-page {
+    --primary-color: #0070f0;
+    --primary-dark: #0050b0;
+    --text-light: #ffffff;
+    --text-dark: #1a1a1a;
+    --bg-light: #f8f9fa;
+    --bg-dark: #0a0a0a;
+    --card-bg: #ffffff;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero – двухколоночный */
+.antenna-hero {
+    position: relative;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+.antenna-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.antenna-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.antenna-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    padding: 0.4rem 1.2rem;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.antenna-hero-text h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.antenna-hero-text .highlight {
+    color: #eb7029;
+}
+
+.antenna-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.antenna-hero-cta {
+    margin-top: 1rem;
+}
+
+.antenna-hero-model {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Секции */
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: #666;
+}
+
+/* Ключевые услуги – вертикальный нумерованный список */
+.antenna-key-services {
+    padding: 6rem 0;
+    background: var(--bg-light);
+}
+
+.key-services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.key-service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.key-service-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.key-service-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    opacity: 0.3;
+    width: 50px;
+    flex-shrink: 0;
+}
+
+.key-service-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.key-service-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.key-service-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Инструменты – две колонки */
+.antenna-tools {
+    padding: 6rem 0;
+}
+
+.tools-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.tools-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.tool-group {
+    margin-bottom: 2rem;
+}
+
+.tool-group h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tool-group ul,
+.measurement-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tool-group li,
+.measurement-list li {
+    padding: 0.3rem 0;
+    color: #555;
+}
+
+.measurement-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.measurement-list li::before {
+    content: "✓";
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Проекты – горизонтальная прокрутка */
+.antenna-projects {
+    padding: 6rem 0;
+    background: var(--bg-light);
+}
+
+.project-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+}
+
+.project-carousel-card {
+    flex: 0 0 320px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    scroll-snap-align: start;
+    transition: var(--transition);
+}
+
+.project-carousel-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.project-carousel-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-carousel-content {
+    padding: 1.2rem;
+}
+
+.project-carousel-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-carousel-content p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Секция интеграции – новая */
+.antenna-integration {
+    padding: 5rem 0;
+    background: white;
+}
+
+.integration-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.integration-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.integration-text p {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.integration-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Pull Quote */
+.antenna-pullquote {
+    padding: 5rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+}
+
+.antenna-pullquote blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    line-height: 1.6;
+}
+
+.pullquote-attribution {
+    color: #888;
+    font-weight: 500;
+}
+
+/* Тестирование + модель */
+.antenna-testing {
+    padding: 6rem 0;
+}
+
+.testing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.testing-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.testing-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.testing-text li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.testing-text li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.testing-note {
+    margin-top: 1.5rem;
+    font-style: italic;
+    background: rgba(0,112,240,0.05);
+    padding: 1rem;
+    border-left: 3px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.testing-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Why Choose Us – иконки в круге */
+.antenna-why-us {
+    padding: 6rem 0;
+    background: var(--bg-light);
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.why-us-card {
+    text-align: center;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.why-us-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.why-us-circle {
+    width: 80px;
+    height: 80px;
+    background: rgba(0,112,240,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.why-us-card:hover .why-us-circle {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+.why-us-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.why-us-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* CTA */
+.antenna-cta {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--text-light);
+}
+
+.antenna-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.antenna-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.antenna-cta .btn-primary {
+    background: white;
+    color: var(--primary-color);
+}
+
+.antenna-cta .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    background: #a35426;
+    color: white;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #eb7029;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .antenna-hero-grid,
+    .tools-columns,
+    .testing-grid,
+    .integration-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .key-service-item {
+        flex-direction: column;
+    }
+
+    .project-carousel-card {
+        flex: 0 0 260px;
+    }
+
+    .antenna-hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Gallery – 7 фото по хронологии */
+.antenna-photo-gallery {
+    padding: 5rem 0;
+    background: white;
+}
+
+.photo-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.photo-item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.photo-left {
+    flex-direction: row;
+}
+
+.photo-right {
+    flex-direction: row-reverse;
+}
+
+.photo-image {
+    flex: 1;
+}
+
+.photo-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    max-height: 350px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.photo-caption {
+    flex: 1;
+    padding: 1rem;
+}
+
+.photo-caption h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.photo-caption p {
+    line-height: 1.6;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    .photo-item,
+    .photo-left,
+    .photo-right {
+        flex-direction: column;
+    }
+    .photo-image img {
+        max-height: 250px;
+    }
+}

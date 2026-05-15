@@ -9,7 +9,7 @@ const UWB: React.FC = () => {
     {
       icon: '📍',
       title: 'Centimeter-Level Positioning',
-      description: 'Precise spatial and directional tracking with up to 5 cm accuracy for critical applications.'
+      description: 'Precise spatial and directional tracking with up to 15 cm accuracy for critical applications.'
     },
     {
       icon: '🚪',
@@ -116,16 +116,16 @@ const UWB: React.FC = () => {
 
         {/* 3D Model — using same positioning props as ROAS */}
         <div className="product-hero-model-roas">
-          <RadarModel3D
-            modelPath="/models/UWB.glb"
-            cameraPosition={[0, 360, 0]}
-            fov={45}
-            modelCenter={[70, 90, -50]}
-            modelScale={3}
-            rotationAxis={'y'}
-            rotationSpeed={0}
-            rotationCenter={[40, 60, 20]}
-          />
+            <RadarModel3D 
+                modelPath="/models/UWB.glb"
+                cameraPosition={[0, -180, 0]}
+                fov={45}
+                modelCenter={[0, 0, 0]}
+                modelScale={1.5}
+                rotationAxis={'z'}
+                rotationSpeed={0.008}
+                rotationCenter={[0, 0, 0]}
+            />
         </div>
       </section>
 
