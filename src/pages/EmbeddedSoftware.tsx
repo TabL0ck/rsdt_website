@@ -69,7 +69,7 @@ const EmbeddedSoftware: React.FC = () => {
     ];
 
     const toolsList = [
-        { category: "IDEs & Toolchains", items: ["Keil MDK", "IAR EWARM", "GCC (ARM/RISC‑V)", "VS Code + PlatformIO"] },
+        { category: "IDEs & Toolchains", items: ["VS Code", "Code Composer Studio", "GCC (ARM/RISC‑V)", "Visual Studio"] },
         { category: "Debug & Trace", items: ["J‑Trace Pro", "Segger Ozone", "Lauterbach", "Logic Analysers"] },
         { category: "CI/CD & Testing", items: ["Jenkins", "GitLab CI", "VectorCAST", "Ceedling/Unity"] }
     ];
