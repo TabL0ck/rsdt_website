@@ -103,7 +103,7 @@ const MedicalSensor: React.FC = () => {
         <div className="product-hero-model-roas">
             <RadarModel3D 
                 modelPath="/models/VSM.glb"
-                cameraPosition={[0, 150, 0]}
+                cameraPosition={[0, -150, 0]}
                 fov={45}
                 modelCenter={[0, 0, 0]}
                 modelScale={1.5}
