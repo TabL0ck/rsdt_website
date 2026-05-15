@@ -1,17 +1,17 @@
-// src/components/Nav.tsx
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 const Nav: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isDesignOpen, setIsDesignOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+  const [mobileDesignOpen, setMobileDesignOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const location = useLocation();
 
-  // Скролл шапки
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', handleScroll);
@@ -22,12 +22,14 @@ const Nav: React.FC = () => {
   useEffect(() => {
     setMenuOpen(false);
     setIsSolutionsOpen(false);
-    setMobileSolutionsOpen(false);
+    setIsDesignOpen(false);
     setIsAboutOpen(false);
+    setMobileSolutionsOpen(false);
+    setMobileDesignOpen(false);
     setMobileAboutOpen(false);
   }, [location.pathname]);
 
-  // Блокировка скролла при открытом меню
+  // Блокировка скролла при открытом мобильном меню
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
@@ -46,6 +48,13 @@ const Nav: React.FC = () => {
     { name: 'Low power sensor', path: '/low-power-sensor' },
     { name: 'Medical sensor', path: '/medical-sensor' },
     { name: 'UWB sensor', path: '/uwb-sensor' },
+  ];
+
+  const designServices = [
+    { name: 'Embedded Software', path: '/embedded-software' },
+    { name: 'Embedded Hardware', path: '/embedded-hardware' },
+    { name: 'Embedded Testing', path: '/embedded-testing' },
+    { name: 'Antenna Design', path: '/antenna-design' },
   ];
 
   const aboutLinks = [
@@ -73,6 +82,7 @@ const Nav: React.FC = () => {
   const closeMenu = () => {
     setMenuOpen(false);
     setMobileSolutionsOpen(false);
+    setMobileDesignOpen(false);
     setMobileAboutOpen(false);
   };
 
@@ -83,8 +93,9 @@ const Nav: React.FC = () => {
           <span className="dot"></span> RSDTeam.
         </NavLink>
 
-        {/* Десктоп */}
+        {/* Десктопное меню */}
         <ul className="nav-links desktop-menu">
+          {/* Radar Solutions */}
           <li className={`dropdown ${isSolutionsOpen ? 'open' : ''}`}>
             <a
               href="#"
@@ -102,9 +113,27 @@ const Nav: React.FC = () => {
             </ul>
           </li>
 
-          <li><a href="/#design-services" onClick={(e) => handleAnchorClick(e, 'design-services')}>Design Services</a></li>
+          {/* Design Services – теперь выпадающий */}
+          <li className={`dropdown ${isDesignOpen ? 'open' : ''}`}>
+            <a
+              href="#"
+              onClick={(e) => { e.preventDefault(); setIsDesignOpen(!isDesignOpen); }}
+              className="dropdown-toggle"
+            >
+              Design Services
+            </a>
+            <ul className="dropdown-menu">
+              {designServices.map((item) => (
+                <li key={item.path}>
+                  <NavLink to={item.path} onClick={() => setIsDesignOpen(false)}>{item.name}</NavLink>
+                </li>
+              ))}
+            </ul>
+          </li>
+
           <li><a href="/#semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
 
+          {/* About */}
           <li className={`dropdown ${isAboutOpen ? 'open' : ''}`}>
             <a
               href="#"
@@ -158,6 +187,7 @@ const Nav: React.FC = () => {
           </div>
 
           <ul>
+            {/* Radar Solutions */}
             <li>
               <a 
                 href="#" 
@@ -178,9 +208,30 @@ const Nav: React.FC = () => {
               )}
             </li>
 
-            <li><a href="/#design-services" onClick={(e) => handleAnchorClick(e, 'design-services')}>Design Services</a></li>
+            {/* Design Services */}
+            <li>
+              <a 
+                href="#" 
+                onClick={(e) => { e.preventDefault(); setMobileDesignOpen(!mobileDesignOpen); }}
+                style={{ fontWeight: 600, display: 'flex', justifyContent: 'space-between' }}
+              >
+                Design Services
+                <span>{mobileDesignOpen ? '▲' : '▼'}</span>
+              </a>
+              {mobileDesignOpen && (
+                <ul style={{ paddingLeft: '1.2rem', marginTop: '0.4rem' }}>
+                  {designServices.map((item) => (
+                    <li key={item.path}>
+                      <NavLink to={item.path} onClick={closeMenu}>{item.name}</NavLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+
             <li><a href="/#semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
 
+            {/* About */}
             <li>
               <a 
                 href="#" 
