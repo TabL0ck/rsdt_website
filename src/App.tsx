@@ -20,6 +20,7 @@ import ABOUTHISTORY from './pages/About_History'
 import EMBEDDEDSOFT from './pages/EmbeddedHardware'
 import US6634 from './pages/US6634';
 import LPS from './pages/LowPowerSensor';
+import ScrollToTop from './components/ScrollToTop';
 
 const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
   <div className="about-page" style={{ paddingTop: '80px' }}>
@@ -59,6 +60,7 @@ const App: React.FC = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Nav />
       <Routes>
         <Route path="/" element={
