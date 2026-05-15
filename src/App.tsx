@@ -1,6 +1,6 @@
 // src/App.tsx (обновлённый)
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import RsdtBanner from './components/RsdtBanner';
@@ -55,7 +55,14 @@ const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
 );
 
 const App: React.FC = () => {
-  useSmoothScroll();
+  const location = useLocation();
+
+  // Скролл вверх при смене маршрута
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+
+  useSmoothScroll(); // обрабатывает якорные ссылки (хеши) после скролла
 
   return (
     <>
@@ -73,7 +80,6 @@ const App: React.FC = () => {
         } />
         <Route path="/about" element={<AboutPage />} />
 
-        {}
         <Route path="/roas" element={<ROAS />} />
         <Route path="/master-sensor-unit" element={<MasterSensorUnit />} />
         <Route path="/unified-sensor-6634" element={<US6634 />} />
