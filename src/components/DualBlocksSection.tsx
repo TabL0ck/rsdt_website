@@ -94,7 +94,7 @@ const DualBlocksSection: React.FC = () => {
           </div>
           <h3>Design Services</h3>
           <ul className="service-list">
-            <li><b>Embedded software</b></li>
+            <li><Link to="/embedded-software">Embedded software</Link></li>
             <li><Link to="/embedded-hardware">Embedded hardware</Link></li>
             <li><b>Embedded testing</b></li>
             <li><b>Antenna design</b></li>

@@ -1,65 +1,85 @@
 // src/pages/EmbeddedHardware.tsx
 import React from 'react';
 import './EmbeddedHardware.css';
+import RadarModel3D from '../components/RadarModel3D';
 
 const EmbeddedHardware: React.FC = () => {
     const services = [
         {
-            title: "Analysis and Simulation",
-            description: "Conduct in-depth analysis and simulations to ensure optimal hardware solutions. Includes AC/DC analysis, cost optimization, power consumption calculation, thermal, level, timing analysis, and performance optimization.",
+            title: "Analysis and Technical Modeling",
+            description: "In-depth analysis of requirements, architecture, and constraints. Early risk evaluation, cost-performance optimization, and focus on EMC, thermal behavior, and certification requirements. Reduces design iterations and speeds up time-to-market.",
             icon: "🔬"
         },
         {
-            title: "Schematic Design Development",
-            description: "Covering digital, analog, and mixed-signal schematics using cutting-edge software tools and platforms.",
+            title: "Circuit Design Solutions",
+            description: "Digital, analog, and mixed-signal circuits. Interfaces: RS485/422, CAN, HSSPI, SPI/QSPI, USB, Ethernet, I²C, 1-Wire. Power and control systems with modern design tools for high accuracy.",
             icon: "📐"
         },
         {
-            title: "PCB Design and Development",
-            description: "We design PCBs for all types and complexities, including multi-layer, high-speed, and rigid-flex designs. We ensure accuracy and minimize errors through a stringent approach.",
+            title: "PCB Design",
+            description: "Multi-layer, high-speed, microstrip, and compact HDI boards. Special attention to EMC/EMI, thermal management, manufacturability, and operational reliability. Full production documentation (Gerber, BOM, Pick & Place, etc.).",
             icon: "🖥️"
         },
         {
-            title: "Full Lifecycle Management",
-            description: "Managing BOMs, tracking component obsolescence, and optimizing supply chains. We keep your production lines running smoothly.",
+            title: "Prototyping & Mass Production Prep",
+            description: "Design for Manufacturability (DFM) approach. Complete documentation package: schematics, PCB stack-up, assembly files, BOM. Optimization for production defects reduction and cost efficiency.",
             icon: "⚙️"
+        },
+        {
+            title: "Debugging & Experimental Verification",
+            description: "In-house lab with oscilloscopes, spectrum analyzers, VNAs, RLC meters. Full hardware-software debugging, high-speed signal and RF path validation before mass production.",
+            icon: "🛠️"
+        },
+        {
+            title: "Debug & Service Access Technologies",
+            description: "Compact contact pads instead of full debug connectors. Custom pogo-pin adapters for diagnostics, programming, and testing. Saves PCB space while maintaining full access — ideal for automotive and industrial electronics.",
+            icon: "🔌"
         }
     ];
 
     const expertiseAreas = [
-        "RF & mmWave Design",
-        "High-Speed Digital Design",
-        "Antenna Design & Simulation",
-        "Power Management & Efficiency",
+        "Automotive & Industrial Electronics",
+        "High-Speed Digital & RF Design",
+        "EMC/EMI Compliance",
+        "Thermal Management",
+        "Design for Manufacturability (DFM)",
+        "Firmware & Embedded Software Integration"
     ];
 
     const processSteps = [
         {
             step: "01",
-            title: "Feasibility & Architecture",
-            description: "We analyze your requirements, conduct feasibility studies, and define the optimal hardware architecture."
+            title: "Idea & Requirements",
+            description: "We analyze your technical idea, define architecture, and evaluate risks early to choose optimal solutions for cost, performance, and reliability."
         },
         {
             step: "02",
-            title: "Design & Development",
-            description: "Our team creates schematics, performs simulations, and develops the PCB layout with precision."
+            title: "Schematic & PCB Design",
+            description: "Create schematics (digital, analog, RF), design multi-layer PCBs with attention to EMC, thermal, and manufacturability constraints."
         },
         {
             step: "03",
-            title: "Prototyping & Testing",
-            description: "We build functional prototypes, perform rigorous testing, and validate designs to ensure reliability."
+            title: "Debugging & Prototyping",
+            description: "In-house experimental verification, full hardware/software debugging, and functional prototype testing under real-world conditions."
         },
         {
             step: "04",
             title: "Mass Production Support",
-            description: "We assist with manufacturing ramp-up and provide ongoing support throughout the product lifecycle."
+            description: "Prepare full production docs, DFM optimization, and ongoing support to ensure seamless ramp-up and lifecycle management."
         }
     ];
 
-    const partners = [
-        { name: "Infineon", logo: "/images/partners/infineon.png" },
-        { name: "NXP", logo: "/images/partners/nxp.png" },
-        { name: "Texas Instruments", logo: "/images/partners/ti.png" }
+    const toolsList = [
+        { category: "ECAD", items: ["Altium Designer", "Cadence Allegro", "KiCad"] },
+        { category: "Simulation", items: ["ANSYS HFSS", "MATLAB/Simulink", "SPICE"] },
+        { category: "Testing", items: ["Oscilloscopes", "Spectrum Analyzers", "Vector Network Analyzers", "HIL/SIL Systems"] }
+    ];
+
+    const whyChoose = [
+        { icon: "🏆", title: "10+ Years of Experience", description: "Proven track record in automotive, industrial, and consumer electronics." },
+        { icon: "🤝", title: "Turnkey Solutions", description: "From idea to finished device – hardware, firmware, and software under one roof." },
+        { icon: "⚡", title: "Reliability & Manufacturability", description: "DFM focus, reduced production defects, and faster time-to-market." },
+        { icon: "🔧", title: "In-House Lab", description: "Oscilloscopes, spectrum analyzers, VNAs – rapid testing and validation." }
     ];
 
     return (
@@ -69,17 +89,18 @@ const EmbeddedHardware: React.FC = () => {
                 <div
                     className="embedded-hero-bg"
                     style={{
-                        backgroundImage: '/photos/filtered-photo.png',
+                        backgroundImage: "url('/photos/filtered-photo.png')",
                         opacity: 0.4
                     }}
                 ></div>
                 <div className="container">
-                    <div className="embedded-badge">EMBEDDED HARDWARE</div>
+                    <div className="embedded-badge">HARDWARE DESIGN</div>
                     <h1>
-                        Embedded Hardware <span className="highlight">Development</span>
+                        Hardware <span className="highlight">Development</span>
                     </h1>
                     <p className="embedded-subtitle">
-                        End-to-end embedded hardware solutions tailored to specific projects. We take a holistic approach to hardware development, from initial concepts to functional realization and mass production.
+                        End-to-end embedded hardware solutions — from concept and circuit design to documentation for mass production.
+                        With over 10 years of experience, we turn technical ideas into reliable, high-tech products ready for real-world operation.
                     </p>
                     <div className="embedded-hero-cta">
                         <a href="/#contact" className="btn-primary">Discuss Your Project</a>
@@ -87,12 +108,13 @@ const EmbeddedHardware: React.FC = () => {
                 </div>
             </section>
 
-            {/* Services Grid */}
+            {/* What We Do - Services Grid */}
             <section className="embedded-services">
                 <div className="container">
-                    <h2 className="section-title">What We Offer</h2>
+                    <h2 className="section-title">What We Do</h2>
                     <p className="section-description">
-                        Expert engineering teams excel in designing and developing complex boards, ensuring high-quality, reliable, and innovative hardware.
+                        We design complex boards hosting single-chip radar ICs, patched antennas, processors, microcontrollers, DSPs, FPGAs, high-speed peripherals, and analog/digital RF components.
+                        Our hardware services are complemented by in-house firmware and embedded software teams for a complete turnkey product design.
                     </p>
                     <div className="services-grid">
                         {services.map((service, index) => (
@@ -113,7 +135,9 @@ const EmbeddedHardware: React.FC = () => {
                         <div className="expertise-content">
                             <h2 className="section-title">Our Expertise</h2>
                             <p>
-                                With over 10 years of experience, our skilled engineers possess an exceptional ability to predict and address potential issues in hardware design. We provide proactive solutions to mitigate risks and optimize hardware performance.
+                                With over 10 years of experience in automotive, industrial, and consumer applications,
+                                our engineers take into account mass production specifics, electromagnetic compatibility,
+                                thermal behavior, and certification requirements. This approach reduces iterations and accelerates time-to-market.
                             </p>
                             <div className="expertise-list">
                                 {expertiseAreas.map((area, index) => (
@@ -134,9 +158,9 @@ const EmbeddedHardware: React.FC = () => {
             {/* Development Process */}
             <section className="embedded-process">
                 <div className="container">
-                    <h2 className="section-title">Our Development Process</h2>
+                    <h2 className="section-title">From Idea to Finished Device</h2>
                     <p className="section-description">
-                        A seamless hardware development process from initial concepts to functional realization and mass production.
+                        We support your project at every development stage — from initial analysis to mass production readiness.
                     </p>
                     <div className="process-steps">
                         {processSteps.map((step, index) => (
@@ -155,32 +179,56 @@ const EmbeddedHardware: React.FC = () => {
                 <div className="container">
                     <h2 className="section-title">Tools and Platforms</h2>
                     <p className="section-description">
-                        We utilize industry-leading tools to ensure efficient and precise design development.
+                        We use industry-leading tools for efficient and precise design, simulation, and testing.
                     </p>
                     <div className="tools-list">
-                        <div className="tool-category">
-                            <h3>ECAD</h3>
+                        {toolsList.map((tool, idx) => (
+                            <div key={idx} className="tool-category">
+                                <h3>{tool.category}</h3>
+                                <ul>
+                                    {tool.items.map((item, i) => (
+                                        <li key={i}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Debug Access Section - Special highlight */}
+            <section className="embedded-debug-access">
+                <div className="container">
+                    <div className="debug-grid">
+                        <div className="debug-content">
+                            <div className="debug-badge">SMART DEBUG DESIGN</div>
+                            <h2>Debugging & Service Access Technologies</h2>
+                            <p>
+                                During device development, we plan ahead for debugging, testing, and service access.
+                                Signals required for diagnostics are routed to compact contact pads instead of full-size debug connectors.
+                                Specialized pogo-pin adapters, custom-made for each device, provide access to these interfaces.
+                            </p>
                             <ul>
-                                <li>Altium Designer</li>
-                                <li>Cadence Allegro</li>
-                                <li>KiCad</li>
+                                <li>Reduces final device footprint and frees PCB space</li>
+                                <li>Maintains access to all development and testing interfaces</li>
+                                <li>Simplifies manufacturing and service maintenance</li>
+                                <li>Only necessary connectors remain on the final product</li>
                             </ul>
+                            <p className="debug-note">
+                                Essential for compact, automotive, and industrial electronics where size, reliability, and manufacturability are critical.
+                            </p>
                         </div>
-                        <div className="tool-category">
-                            <h3>Simulation</h3>
-                            <ul>
-                                <li>ANSYS HFSS</li>
-                                <li>MATLAB/Simulink</li>
-                                <li>SPICE</li>
-                            </ul>
-                        </div>
-                        <div className="tool-category">
-                            <h3>Testing</h3>
-                            <ul>
-                                <li>Oscilloscopes</li>
-                                <li>Spectrum Analyzers</li>
-                                <li>HIL/SIL Test Systems</li>
-                            </ul>
+                            <div className="product-hero-model-roas">
+                            <RadarModel3D 
+                                modelPath="/models/pogo-pin.glb"
+                                cameraPosition={[0, 0, 150]}
+                                fov={45}
+                                modelCenter={[0, 0, 0]}
+                                modelScale={1.2}
+                                rotationAxis={'y'}
+                                rotationSpeed={0.008}
+                                rotationCenter={[0, 0, 0]}
+                            />
                         </div>
                     </div>
                 </div>
@@ -189,32 +237,24 @@ const EmbeddedHardware: React.FC = () => {
             {/* Why Choose Us */}
             <section className="embedded-why-us">
                 <div className="container">
-                    <h2 className="section-title">Why Choose RSDT for Embedded Hardware?</h2>
+                    <h2 className="section-title">Why Choose RSDT for Hardware Design?</h2>
                     <div className="why-us-grid">
-                        <div className="why-us-item">
-                            <div className="why-us-icon">🏆</div>
-                            <h3>20+ Years of Experience</h3>
-                            <p>Decades of expertise in delivering complex embedded hardware solutions.</p>
-                        </div>
-                        <div className="why-us-item">
-                            <div className="why-us-icon">🤝</div>
-                            <h3>Partnerships with Tier-1 Companies</h3>
-                            <p>Established relationships with leading industry suppliers.</p>
-                        </div>
-                        <div className="why-us-item">
-                            <div className="why-us-icon">⚡</div>
-                            <h3>Shorter Time-to-Market</h3>
-                            <p>Streamlined processes that accelerate your product development.</p>
-                        </div>
+                        {whyChoose.map((item, index) => (
+                            <div key={index} className="why-us-item">
+                                <div className="why-us-icon">{item.icon}</div>
+                                <h3>{item.title}</h3>
+                                <p>{item.description}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
+            {/* Final CTA */}
             <section className="embedded-cta">
                 <div className="container">
-                    <h2>Ready to start your embedded hardware project?</h2>
-                    <p>Let's turn your vision into reality.</p>
+                    <h2>Ready to turn your idea into a finished device?</h2>
+                    <p>Let's create modern hardware solutions ready for prototyping, testing, and mass production.</p>
                     <a href="/#contact" className="btn-primary">Contact Our Team</a>
                 </div>
             </section>

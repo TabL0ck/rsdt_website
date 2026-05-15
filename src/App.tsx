@@ -17,9 +17,10 @@ import MEDICAL from './pages/MedicalSensor';
 import BABYSIM from './pages/BabysimInfo';
 import MasterSensorUnit from './pages/MasterSensorUnit'
 import ABOUTHISTORY from './pages/About_History'
-import EMBEDDEDSOFT from './pages/EmbeddedHardware'
+import EMBEDDEDHARD from './pages/EmbeddedHardware'
 import US6634 from './pages/US6634';
 import LPS from './pages/LowPowerSensor';
+import EMBEDDEDSOFT from './pages/EmbeddedSoftware'
 
 const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
   <div className="about-page" style={{ paddingTop: '80px' }}>
@@ -74,7 +75,6 @@ const App: React.FC = () => {
             <RsdtBanner />
             <ParallaxTransition />
             <DualBlocksSection />
-            <SpecsStrip />
             <AdvantagesSection />
           </>
         } />
@@ -89,7 +89,8 @@ const App: React.FC = () => {
         <Route path="/babysim" element={<BABYSIM/>} />
         <Route path="/about-history" element={<ABOUTHISTORY/>} />
         <Route path="/main" element={<Hero/>} />
-        <Route path="/embedded-hardware" element={<EMBEDDEDSOFT/>} />
+        <Route path="/embedded-hardware" element={<EMBEDDEDHARD/>} />
+        <Route path="/embedded-software" element={<EMBEDDEDSOFT/>} />
       </Routes>
       <Footer />
     </>

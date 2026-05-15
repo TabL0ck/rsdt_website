@@ -411,3 +411,104 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ── GUI Showcase Section ── */
+.gui-showcase {
+  padding: 6rem 0;
+  background: var(--bg-light);
+}
+
+.gui-row {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.gui-row:last-child {
+  margin-bottom: 0;
+}
+
+.gui-text {
+  flex: 1;
+}
+
+.gui-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.gui-text h3 {
+  font-size: 1.4rem;
+  margin: 1.5rem 0 0.8rem;
+  color: var(--text-dark);
+}
+
+.gui-text p {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.gui-features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.gui-features li {
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #333;
+}
+
+.gui-media video {
+  pointer-events: none;
+  user-select: none;
+  touch-action: none;     /* на всякий случай */
+}
+
+.gui-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.gui-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gui-media video {
+  width: 100%;
+  max-width: 560px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  background: #000;
+}
+
+/* Обратный порядок для второго ряда (видео слева) */
+.gui-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .gui-row,
+  .gui-row-reverse {
+    flex-direction: column;
+  }
+
+  .gui-media video {
+    max-width: 100%;
+  }
+}

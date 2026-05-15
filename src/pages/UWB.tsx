@@ -27,11 +27,6 @@ const UWB: React.FC = () => {
       description: 'Simultaneously tracks up to 16 tags (keys, phones, badges) for fleet or family management.'
     },
     {
-      icon: '🛡️',
-      title: 'Anti-Spoofing',
-      description: 'Secure ranging prevents relay attacks and unauthorized relay of credentials.'
-    },
-    {
       icon: '⚡',
       title: 'Low Interference',
       description: 'Operates at 8 GHz with extremely low power spectral density, no interference with other car electronics.'
@@ -86,8 +81,8 @@ const UWB: React.FC = () => {
             UWB - ultra wideband sensor <br />
           </h1>
           <p className="product-subtitle-roas">
-            <strong>Centimeter-level spatial and directional tracking for automotive and industrial applications.<br />
-            Enables secure keyless entry, in-cabin occupant detection, and asset tracking with ultra-low power.</strong>
+            Centimeter-level spatial and directional tracking for automotive and industrial applications.<br />
+            Enables secure keyless entry, in-cabin occupant detection, and asset tracking with ultra-low power.
           </p>
           <div className="info-buttons">
                 <div className="product-cta">
@@ -125,11 +120,11 @@ const UWB: React.FC = () => {
             modelPath="/models/UWB.glb"
             cameraPosition={[0, 360, 0]}
             fov={45}
-            modelCenter={[75, 90, 20]}
+            modelCenter={[70, 90, -50]}
             modelScale={3}
-            rotationAxis={'z'}
-            rotationSpeed={0.008}
-            rotationCenter={[75, 90, 20]}
+            rotationAxis={'y'}
+            rotationSpeed={0}
+            rotationCenter={[40, 60, 20]}
           />
         </div>
       </section>
@@ -204,20 +199,23 @@ const UWB: React.FC = () => {
 
                 {/* GUI */}
                 <div className="work-item">
-                    <div className="work-image-wrapper">
+                  <div className="work-image-wrapper">
                     <img
-                        src="/photos/UWB_GUI.jpg"
-                        alt="UWB GUI – reflected signal and AOA"
-                        className="work-image"
+                      src="/photos/UWB_GUI.jpg"
+                      alt="UWB GUI – reflected signal and AOA"
+                      className="work-image"
                     />
-                    </div>
-                    <div className="work-description">
+                  </div>
+                  <div className="work-description">
                     <h3>Graphical User Interface</h3>
                     <p>
-                        GUI displays the reflected signal received from objects located within the sensor’s field of view.
-                        The signal level and AOA are calculated on the sensor.
+                      GUI displays the reflected signal received from objects located within the sensor’s field of view.
+                      The signal level and AOA are calculated on the sensor.
                     </p>
+                    <div className="babysim-more-wrapper">
+                      <Link to="/uwb-gui" className="btn-primary">More About GUI</Link>
                     </div>
+                  </div>
                 </div>
 
                 </div>
