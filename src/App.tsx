@@ -21,6 +21,7 @@ import EMBEDDEDSOFT from './pages/EmbeddedHardware'
 import US6634 from './pages/US6634';
 import LPS from './pages/LowPowerSensor';
 import ScrollToTop from './components/ScrollToTop';
+import ContactPage from './pages/ContactPage';
 
 const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
   <div className="about-page" style={{ paddingTop: '80px' }}>
@@ -92,6 +93,7 @@ const App: React.FC = () => {
         <Route path="/about-history" element={<ABOUTHISTORY/>} />
         <Route path="/main" element={<Hero/>} />
         <Route path="/embedded-hardware" element={<EMBEDDEDSOFT/>} />
+        <Route path="/contact" element={<ContactPage />} / >
       </Routes>
       <Footer />
     </>
