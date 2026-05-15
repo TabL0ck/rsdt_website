@@ -220,7 +220,7 @@ const EmbeddedHardware: React.FC = () => {
                         </div>
                             <div className="product-hero-model-roas">
                             <RadarModel3D 
-                                modelPath="/models/pogo-pin.glb"
+                                modelPath="/models/Pogo-pin.glb"
                                 cameraPosition={[0, 0, 150]}
                                 fov={45}
                                 modelCenter={[0, 0, 0]}

@@ -171,34 +171,6 @@ const EmbeddedSoftware: React.FC = () => {
                 </div>
             </section>
 
-            {/* Testing & Validation Section (аналог Debug Access) */}
-            <section className="embedded-debug-access">
-                <div className="container">
-                    <div className="debug-grid">
-                        <div className="debug-content">
-                            <div className="debug-badge">AUTOMATED TESTING</div>
-                            <h2>Testing & Validation Infrastructure</h2>
-                            <p>
-                                We built a dedicated HIL (Hardware‑in‑the‑Loop) test rig that simulates real radar
-                                reflections, enabling automated regression testing of our DSP algorithms and firmware
-                                on actual hardware – without needing a real vehicle or human subject.
-                            </p>
-                            <ul>
-                                <li>Fully automated overnight regression suites</li>
-                                <li>Exact repeatable test conditions for DSP validation</li>
-                                <li>Continuous integration with Jenkins / GitLab CI</li>
-                                <li>Coverage reports and static analysis integrated into workflow</li>
-                            </ul>
-                            <p className="debug-note">
-                                Essential for safety‑critical applications where every software change must be
-                                verified before release.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
              {/* GUI Showcase – replaces old Expertise section */}
             <section className="gui-showcase">
             <div className="container">
