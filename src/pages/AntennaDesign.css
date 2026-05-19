@@ -520,15 +520,27 @@
 
 .photo-image {
     flex: 1;
+    background: #f0f0f0; /* фон для областей, не занятых картинкой */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    overflow: hidden; /* чтобы фон не вылезал */
 }
 
 .photo-image img {
     width: 100%;
+    height: auto; /* автоматическая высота, сохраняем пропорции */
+    max-height: 450px; /* ограничиваем высоту, чтобы картинка не была слишком огромной */
+    object-fit: contain; /* вся картинка видна целиком, без обрезки */
+    background-color: #f8f9fa;
     border-radius: var(--border-radius);
-    object-fit: cover;
-    max-height: 350px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
+
+/* Если вы предпочитаете, чтобы картинка заполняла контейнер без пустых полей,
+   но с возможной обрезкой краёв – используйте object-fit: cover.
+   Однако это может обрезать важные детали. Выберите тот вариант, который лучше для ваших фото. */
 
 .photo-caption {
     flex: 1;
@@ -555,4 +567,151 @@
     .photo-image img {
         max-height: 250px;
     }
+}
+
+/* ========== АНИМАЦИИ ПРИ СКРОЛЛЕ ========== */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+                transform 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* Направления анимации */
+.fade-up {
+    transform: translateY(40px);
+}
+.fade-left {
+    transform: translateX(-40px);
+}
+.fade-right {
+    transform: translateX(40px);
+}
+
+/* Задержки для каскадных эффектов */
+.delay-1 {
+    transition-delay: 0.1s;
+}
+.delay-2 {
+    transition-delay: 0.2s;
+}
+.delay-3 {
+    transition-delay: 0.3s;
+}
+.delay-4 {
+    transition-delay: 0.4s;
+}
+.delay-5 {
+    transition-delay: 0.5s;
+}
+
+/* Адаптив: уменьшаем смещение на мобильных */
+@media (max-width: 768px) {
+    .fade-up {
+        transform: translateY(25px);
+    }
+    .fade-left, .fade-right {
+        transform: translateX(0);
+    }
+}
+
+/* Дописать в .key-service-item */
+.key-service-item {
+    position: relative;
+    background: var(--card-bg);
+    border: 1px solid rgba(0,112,240,0.1);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.key-service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, var(--primary-color), #eb7029);
+    transition: height 0.4s ease;
+}
+
+.key-service-item:hover::before {
+    height: 100%;
+}
+
+.key-service-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
+    border-color: transparent;
+}
+
+/* Дописать в .photo-image */
+.photo-image {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.photo-image img {
+    transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1), filter 0.3s;
+}
+
+.photo-item:hover .photo-image img {
+    transform: scale(1.02);
+    filter: brightness(1.02) contrast(1.02);
+}
+
+.photo-item:hover {
+    box-shadow: 0 20px 30px -15px rgba(0,0,0,0.2);
+    transform: translateY(-4px);
+}
+
+/* Добавим декоративный элемент */
+.photo-caption {
+    position: relative;
+}
+
+.photo-caption::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), #eb7029);
+    border-radius: 3px;
+}
+
+/* Изменяем маркеры списка */
+.tool-group li, .measurement-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    transition: transform 0.2s;
+}
+
+.tool-group li:hover, .measurement-list li:hover {
+    transform: translateX(5px);
+}
+
+.tool-group li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+.measurement-list li::before {
+    content: '✓';
+    background: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
 }
