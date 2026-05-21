@@ -150,8 +150,7 @@ const Nav: React.FC = () => {
               ))}
             </ul>
           </li>
-
-          <li><a href="/#contact" onClick={(e) => handleAnchorClick(e, 'contact')} className="nav-cta">Contact Us</a></li>
+          <li><NavLink to='/contact' className="nav-cta">Contact Us</NavLink></li>
         </ul>
 
         {/* Бургер */}
@@ -252,7 +251,7 @@ const Nav: React.FC = () => {
               )}
             </li>
 
-            <li><a href="/#contact" onClick={(e) => handleAnchorClick(e, 'contact')} className="nav-cta">Contact Us</a></li>
+            <li><NavLink to='/contact' >Contact</NavLink></li>
           </ul>
         </div>
       )}
