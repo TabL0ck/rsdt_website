@@ -90,7 +90,7 @@ const Nav: React.FC = () => {
     <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
         <NavLink to="/" className="nav-logo">
-          <span className="dot"></span> RSDTeam.
+          <span className="dot"></span> RSDT
         </NavLink>
 
         {/* Десктопное меню */}
