@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './ContactPage.css';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
-import { EMAILJS_CONFIG } from '../components/APILoginData'
 
 interface FormData {
   name: string;
@@ -24,55 +23,47 @@ const ContactPage: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
 
     try {
-        const SERVICE_ID = EMAILJS_CONFIG.SERVICE_ID;
-        const TEMPLATE_ID = EMAILJS_CONFIG.TEMPLATE_ID;
-        const PUBLIC_KEY = EMAILJS_CONFIG.PUBLIC_KEY;
+      const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID!;
+      const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID!;
+      const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY!;
 
-        await emailjs.send(
+      await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
         {
-            from_name: formData.name,
-            from_email: formData.email,
-            company: formData.company || 'Не указано',
-            message: formData.message,
-            to_name: 'RSDT Team',
-            reply_to: formData.email,           // ← добавлено
+          from_name: formData.name,
+          from_email: formData.email,
+          company: formData.company || 'Не указано',
+          message: formData.message,
+          to_name: 'RSDT Team',
+          reply_to: formData.email,
         },
         PUBLIC_KEY
-        );
+      );
 
-        setSubmitted(true);
+      setSubmitted(true);
 
-        setTimeout(() => {
+      setTimeout(() => {
         setSubmitted(false);
-        setFormData({
-            name: '',
-            email: '',
-            company: '',
-            message: ''
-        });
-        }, 2800);
+        setFormData({ name: '', email: '', company: '', message: '' });
+      }, 2800);
 
     } catch (err) {
-        console.error('EmailJS error:', err);
-        setError('Ошибка отправки. Попробуйте позже или напишите на contact@rsdt.tech');
+      console.error('EmailJS error:', err);
+      setError('Ошибка отправки. Попробуйте позже или напишите на contact@rsdt.tech');
     } finally {
-        setIsSubmitting(false);
+      setIsSubmitting(false);
     }
-    };
+  };
 
   return (
     <div className="contact-page">
