@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import RsdtBanner from './components/RsdtBanner';
 import ParallaxTransition from './components/ParallaxTransition';
 import DualBlocksSection from './components/DualBlocksSection';
+import RadarAdvantageSection from './components/RadarAdvantageSection';
 import SpecsStrip from './components/SpecsStrip';
 import AdvantagesSection from './components/AdvantagesSection';
 import Footer from './components/Footer';
@@ -24,6 +25,9 @@ import EMBEDDEDSOFT from './pages/EmbeddedSoftware'
 import ScrollToTop from './components/ScrollToTop';
 import ContactPage from './pages/ContactPage';
 import AntennaDesign from './pages/AntennaDesign';
+import WhyARadarSensors from './pages/WhyARadarSensors';
+import BABYSIMMAIN from './pages/BabysimInfoMain'
+import ABOUTOURRADARS from './pages/AboutOurRadars'
 
 const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
   <div className="about-page" style={{ paddingTop: '80px' }}>
@@ -79,6 +83,7 @@ const App: React.FC = () => {
             <RsdtBanner />
             <ParallaxTransition />
             <DualBlocksSection />
+            <RadarAdvantageSection />
             <AdvantagesSection />
           </>
         } />
@@ -91,12 +96,16 @@ const App: React.FC = () => {
         <Route path="/medical-sensor" element={<MEDICAL/>} />
         <Route path="/uwb-sensor" element={<UWB/>} />
         <Route path="/babysim" element={<BABYSIM/>} />
+        <Route path="/babysim-main" element={<BABYSIMMAIN/>} />
         <Route path="/about-history" element={<ABOUTHISTORY/>} />
         <Route path="/main" element={<Hero/>} />
         <Route path="/embedded-hardware" element={<EMBEDDEDHARD/>} />
         <Route path="/embedded-software" element={<EMBEDDEDSOFT/>} />
         <Route path="/contact" element={<ContactPage />} / >
         <Route path="/antenna-design" element={<AntennaDesign />} / >
+        <Route path="/why-radars" element={<WhyARadarSensors />} / >
+        <Route path="/about-our-radars" element={<ABOUTOURRADARS />} / >
+        
       </Routes>
       <Footer />
     </>

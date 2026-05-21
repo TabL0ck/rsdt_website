@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-
 const DualBlocksSection: React.FC = () => {
   const navigate = useNavigate();
 
@@ -45,7 +44,6 @@ const DualBlocksSection: React.FC = () => {
           </div>
           <h3>Radar Solutions</h3>
           <ul className="service-list">
-
             <li>
               <b><strong>Frequency-Modulated Continuous-Wave (FMCW) Radar Sensors:</strong></b>
               <ul>
@@ -57,7 +55,6 @@ const DualBlocksSection: React.FC = () => {
                 <li>Intrusion detection</li>
               </ul>
             </li>
-
             <li>
               <b><strong>Ultra Wide Band (UWB) Radar Sensors:</strong></b>
               <ul>
@@ -67,6 +64,13 @@ const DualBlocksSection: React.FC = () => {
               </ul>
             </li>
           </ul>
+          {/* Новая кнопка "About our radars" */}
+          <Link to="/about-our-radars" className="btn-about-radars">
+            About our radars
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
 
         {/* Design Services – фон 7.jpg */}
@@ -110,40 +114,27 @@ const DualBlocksSection: React.FC = () => {
             backgroundPosition: 'center',
           }}
         >
-        <div className="service-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            {/* Основной корпус чипа */}
-            <rect x="10" y="10" width="28" height="28" rx="3" />
-            
-            {/* Центральная область (кристалл) */}
-            <rect x="16" y="16" width="16" height="16" rx="2" />
-            
-            {/* Внутренние линии (схема) */}
-            <line x1="18" y1="20" x2="30" y2="20" />
-            <line x1="18" y1="24" x2="30" y2="24" />
-            <line x1="18" y1="28" x2="30" y2="28" />
-            
-            {/* Ножки сверху */}
-            <line x1="16" y1="10" x2="16" y2="6" />
-            <line x1="24" y1="10" x2="24" y2="6" />
-            <line x1="32" y1="10" x2="32" y2="6" />
-            
-            {/* Ножки снизу */}
-            <line x1="16" y1="38" x2="16" y2="42" />
-            <line x1="24" y1="38" x2="24" y2="42" />
-            <line x1="32" y1="38" x2="32" y2="42" />
-            
-            {/* Ножки слева */}
-            <line x1="10" y1="16" x2="6" y2="16" />
-            <line x1="10" y1="24" x2="6" y2="24" />
-            <line x1="10" y1="32" x2="6" y2="32" />
-            
-            {/* Ножки справа */}
-            <line x1="38" y1="16" x2="42" y2="16" />
-            <line x1="38" y1="24" x2="42" y2="24" />
-            <line x1="38" y1="32" x2="42" y2="32" />
-          </svg>
-        </div>
+          <div className="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="10" y="10" width="28" height="28" rx="3" />
+              <rect x="16" y="16" width="16" height="16" rx="2" />
+              <line x1="18" y1="20" x2="30" y2="20" />
+              <line x1="18" y1="24" x2="30" y2="24" />
+              <line x1="18" y1="28" x2="30" y2="28" />
+              <line x1="16" y1="10" x2="16" y2="6" />
+              <line x1="24" y1="10" x2="24" y2="6" />
+              <line x1="32" y1="10" x2="32" y2="6" />
+              <line x1="16" y1="38" x2="16" y2="42" />
+              <line x1="24" y1="38" x2="24" y2="42" />
+              <line x1="32" y1="38" x2="32" y2="42" />
+              <line x1="10" y1="16" x2="6" y2="16" />
+              <line x1="10" y1="24" x2="6" y2="24" />
+              <line x1="10" y1="32" x2="6" y2="32" />
+              <line x1="38" y1="16" x2="42" y2="16" />
+              <line x1="38" y1="24" x2="42" y2="24" />
+              <line x1="38" y1="32" x2="42" y2="32" />
+            </svg>
+          </div>
           <h3>Semiconductors</h3>
           <ul className="service-list">
             <li><b>blank</b></li>

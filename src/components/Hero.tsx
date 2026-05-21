@@ -30,10 +30,9 @@ const Hero: React.FC = () => {
         loop
         muted
         playsInline
-        poster="/videos/automob_salon.mp4"  // статичная заглушка на время загрузки видео
+        poster="/videos/automob_salon.mp4"
       >
         <source src="/videos/automob_salon.mp4" type="video/mp4" />
-        {/* Резервное изображение, если видео не поддерживается */}
         <img src="/photos/hero-poster.jpg" alt="hero background" />
       </video>
       <div className="hero-bg-pattern"></div>
@@ -55,7 +54,7 @@ const Hero: React.FC = () => {
               <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
             </svg>
           </a>
-          <a href="/#specs" onClick={(e) => handleAnchor(e, 'specs')} className="btn-outline">View Specifications</a>
+          <a href="/#why-radar" onClick={(e) => handleAnchor(e, 'why-radar')} className="btn-outline">Why a radar sensors?</a>
         </div>
       </div>
       <a href="/#parallax-transition" onClick={(e) => handleAnchor(e, 'parallax-transition')} className="scroll-indicator">
