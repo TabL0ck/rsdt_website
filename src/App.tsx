@@ -24,6 +24,7 @@ import EMBEDDEDSOFT from './pages/EmbeddedSoftware'
 import ScrollToTop from './components/ScrollToTop';
 import ContactPage from './pages/ContactPage';
 import AntennaDesign from './pages/AntennaDesign';
+import EmbeddedTesting from './pages/EmbeddedTesting';
 
 const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
   <div className="about-page" style={{ paddingTop: '80px' }}>
@@ -97,6 +98,7 @@ const App: React.FC = () => {
         <Route path="/embedded-software" element={<EMBEDDEDSOFT/>} />
         <Route path="/contact" element={<ContactPage />} / >
         <Route path="/antenna-design" element={<AntennaDesign />} / >
+        <Route path="/embedded-testing" element={<EmbeddedTesting />} />
       </Routes>
       <Footer />
     </>

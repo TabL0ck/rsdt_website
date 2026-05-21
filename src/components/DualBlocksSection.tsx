@@ -96,8 +96,8 @@ const DualBlocksSection: React.FC = () => {
           <ul className="service-list">
             <li><Link to="/embedded-software">Embedded software</Link></li>
             <li><Link to="/embedded-hardware">Embedded hardware</Link></li>
-            <li><b>Embedded testing</b></li>
-            <li><b>Antenna design</b></li>
+            <li><Link to="/embedded-testing">Embedded testing</Link></li>
+            <li><Link to="/antenna-design">Antenna design</Link></li>
           </ul>
         </div>
 

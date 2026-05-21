@@ -1,62 +1,61 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './AntennaDesign.css';
 
 const AntennaDesign: React.FC = () => {
-    // 8 фотографий (как у вас)
     const photoSpots = [
         {
             id: 1,
             title: '3D Model of the UWB Antenna',
-            description: 'Трёхмерная модель антенны сверхширокополосного радара. Частотный диапазон 7.737-8.237 ГГц.',
+            description: 'Three-dimensional model of the ultra-wideband radar antenna. Frequency range: 7.737–8.237 GHz.',
             image: '/photos/ModelOfTheUWBRadarAntenna.png',
             alt: 'UWB antenna prototype',
         },
         {
             id: 2,
             title: 'Vector Network Analyzer',
-            description: 'Экспериментальная характеризация параметров антенны с помощью векторного анализатора цепей в безэховой камере (до 110 ГГц).',
+            description: 'Experimental characterization of antenna parameters using a vector network analyzer in an anechoic chamber (up to 110 GHz).',
             image: '/photos/VectorNetworkAnalyzer.jpg',
             alt: 'VNA measurement',
         },
         {
             id: 3,
             title: 'Radiation Pattern of the UWB Antenna',
-            description: 'Измеренная 3D-диаграмма направленности антенны сверхширокополосного радара. Подтверждает заданные заказчиком характеристики усиления и формы.',
+            description: 'Measured 3D radiation pattern of the ultra-wideband radar antenna. Confirms the gain and shape characteristics requested by the customer.',
             image: '/photos/antenna-design-2.png',
             alt: 'Radiation pattern',
         },
         {
             id: 4,
-            title: 'Radar sensor PCB',
-            description: 'Топология антенны перенесена в печатную плату радарного датчика. Полная интеграция с остальными цепями.',
+            title: 'Radar Sensor PCB',
+            description: 'Antenna topology transferred to the radar sensor printed circuit board. Full integration with other circuits.',
             image: '/photos/Radar Sensor PCB.png',
             alt: 'Radar PCB',
         },
         {
             id: 5,
-            title: 'Structure of a planar Schottky diode',
-            description: 'Структура планарного диода Шоттки для терагерцового диапазона. Разработана и промоделирована в CST.',
+            title: 'Structure of a Planar Schottky Diode',
+            description: 'Structure of a planar Schottky diode for the terahertz range. Designed and simulated in CST Studio Suite.',
             image: '/photos/Structure of a planar Schottky diode.png',
             alt: 'Schottky structure',
         },
         {
             id: 6,
-            title: 'Small signal model and electron microscope image',
-            description: 'Малосигнальная модель планарного диода Шоттки и его изображение, полученное с помощью электронного микроскопа.',
+            title: 'Small Signal Model and Electron Microscope Image',
+            description: 'Small-signal model of the planar Schottky diode and its image obtained using a scanning electron microscope.',
             image: '/photos/Small signal model of the planar Schottky diode and its electron microscope image.png',
             alt: 'Schottky model and SEM',
         },
         {
             id: 7,
-            title: 'Small signal S parameters (simulation)',
-            description: 'Малосигнальные S-параметры (моделирование). Подтверждают работу диода на частотах до 1 ТГц.',
+            title: 'Small Signal S-Parameters (Simulation)',
+            description: 'Small-signal S-parameters (simulation). Confirms diode operation at frequencies up to 1 THz.',
             image: '/photos/GraphShottky.png',
             alt: 'S-parameters simulation',
         },
         {
             id: 8,
-            title: '3D model of the planar Schottky diode',
-            description: 'Трёхмерная модель планарного диода Шоттки для терагерцового диапазона.',
+            title: '3D Model of the Planar Schottky Diode',
+            description: 'Three-dimensional model of the planar Schottky diode for the terahertz range.',
             image: '/photos/3D model of the planar Schottky diode.png',
             alt: '3D Schottky diode',
         },
@@ -70,7 +69,7 @@ const AntennaDesign: React.FC = () => {
     const measurementTools = [
         'Vector Network Analyzers (VNA) up to 110 GHz',
         'Anechoic Chamber (fully accredited)',
-        'Near‑field Scanner for antenna pattern',
+        'Near-field Scanner for antenna pattern',
         'RCS Measurement Setup',
     ];
 
@@ -93,22 +92,21 @@ const AntennaDesign: React.FC = () => {
         {
             icon: '⚡',
             title: 'Fast Turnaround',
-            description: 'In‑house simulation, prototyping, and anechoic measurement reduce time‑to‑market.',
+            description: 'In-house simulation, prototyping, and anechoic measurement reduce time-to-market.',
         },
     ];
 
-    // Анимация появления при скролле
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // анимация только один раз
+                        observer.unobserve(entry.target);
                     }
                 });
             },
-            { threshold: 0.15, rootMargin: '0px 0px -50px 0px' } // срабатывает, когда 15% элемента видно
+            { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
         );
 
         const animatedElements = document.querySelectorAll('.animate-on-scroll');
@@ -119,51 +117,48 @@ const AntennaDesign: React.FC = () => {
 
     return (
         <div className="antenna-page">
-            {/* Hero */}
-            <section className="antenna-hero">
+            {/* HERO — используем общие классы */}
+            <section className="page-hero">
                 <div
-                    className="antenna-hero-bg"
+                    className="page-hero-bg"
                     style={{
                         backgroundImage: "url('/photos/lab-bg.png')",
                         opacity: 0.4,
                     }}
                 ></div>
                 <div className="container">
-                    <div className="antenna-hero-grid">
-                        <div className="antenna-hero-text animate-on-scroll fade-up">
-                            <div className="antenna-badge">ANTENNA & MICROWAVE DESIGN</div>
+                    <div className="page-hero-grid">
+                        <div className="page-hero-text animate-on-scroll fade-up">
+                            <div className="page-hero-badge">ANTENNA & MICROWAVE DESIGN</div>
                             <h1>
                                 Design and Electromagnetic Simulation of{' '}
-                                <span className="highlight">Antennas and Microwave Devices</span>
+                                <span className="page-hero-highlight">Antennas and Microwave Devices</span>
                             </h1>
-                            <p className="antenna-subtitle">
+                            <p className="page-hero-subtitle">
                                 RSDT develops microwave devices for PCBs of radar sensors – automotive, robotics, communications.
                                 Patch antenna arrays, transmission lines, power dividers, matching devices, filters, and custom radiation patterns.
-                                We also design Bluetooth, Wi‑Fi, and 5G antennas.
+                                We also design Bluetooth, Wi-Fi, and 5G antennas.
                             </p>
-                            <div className="antenna-hero-cta">
+                            <div className="page-hero-cta">
                                 <a href="/#contact" className="btn-primary">Discuss Your Antenna Project</a>
                             </div>
                         </div>
-                        <div className="antenna-hero-model"></div>
                     </div>
                 </div>
             </section>
 
-            {/* Галерея фотографий – каждая карточка анимируется */}
+            {/* Photo Gallery */}
             <section className="antenna-photo-gallery">
                 <div className="container">
                     <h2 className="section-title animate-on-scroll fade-up">Examples of Antenna Systems and Microwave Devices</h2>
                     <p className="section-description animate-on-scroll fade-up delay-1">
-                        Полный цикл разработки: от моделирования до готовой платы и СВЧ‑компонентов.
+                        Complete development cycle: from simulation to finished PCB and microwave components.
                     </p>
                     <div className="photo-timeline">
                         {photoSpots.map((spot, idx) => (
                             <div
                                 key={spot.id}
-                                className={`photo-item ${idx % 2 === 0 ? 'photo-left' : 'photo-right'} animate-on-scroll ${
-                                    idx % 2 === 0 ? 'fade-left' : 'fade-right'
-                                }`}
+                                className={`photo-item ${idx % 2 === 0 ? 'photo-left' : 'photo-right'} animate-on-scroll ${idx % 2 === 0 ? 'fade-left' : 'fade-right'}`}
                             >
                                 <div className="photo-image">
                                     <img src={spot.image} alt={spot.alt} />
@@ -178,12 +173,12 @@ const AntennaDesign: React.FC = () => {
                 </div>
             </section>
 
-            {/* Инструменты */}
+            {/* Tools & Measurement */}
             <section className="antenna-tools">
                 <div className="container">
                     <h2 className="section-title animate-on-scroll fade-up">Tools & Measurement Equipment</h2>
                     <p className="section-description animate-on-scroll fade-up delay-1">
-                        Industry‑leading simulation platforms and state‑of‑the‑art measurement facilities.
+                        Industry-leading simulation platforms and state-of-the-art measurement facilities.
                     </p>
                     <div className="tools-columns">
                         <div className="tools-column animate-on-scroll fade-left">
@@ -230,15 +225,33 @@ const AntennaDesign: React.FC = () => {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="antenna-cta">
+            {/* FINAL CTA — Contact Us style (orange) */}
+            <section className="cta-orange-grid">
                 <div className="container">
-                    <h2 className="animate-on-scroll fade-up">Ready to design your next‑generation antenna or microwave device?</h2>
-                    <p className="animate-on-scroll fade-up delay-1">
-                        Let's create custom antenna solutions optimised for your radar, communication,
-                        or sensing application – from UWB to THz.
-                    </p>
-                    <a href="/#contact" className="btn-primary animate-on-scroll fade-up delay-2">Contact Our Antenna Team</a>
+                    <div className="contact-grid">
+                        <div>
+                            <h2>Ready to design your next-generation antenna?</h2>
+                            <p style={{ fontSize: '1.15rem', color: '#555', maxWidth: '480px' }}>
+                                Let’s create a custom antenna solution optimized for your radar, communication, or sensing application.
+                            </p>
+                        </div>
+
+                        <div className="contact-card">
+                            <h3>
+                                <span className="icon">📍</span> 
+                                Get in Touch
+                            </h3>
+                            <p>
+                                <strong>Email:</strong> <a href="mailto:info@rsdt.com">info@rsdt.com</a><br />
+                                <strong>Phone:</strong> <a href="tel:+971585299178">+971 58 5299178</a><br />
+                                <strong>Address:</strong> Dubai, United Arab Emirates
+                            </p>
+                            
+                            <a href="/#contact" className="btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+                                Book a Consultation →
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

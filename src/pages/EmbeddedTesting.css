@@ -1,0 +1,129 @@
+@import '../styles/design-services-page-styles.css';
+
+/* ==================== GALLERY ==================== */
+.em-testing-photo-gallery {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.em-testing-photo-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.em-testing-photo-item {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.em-testing-photo-item.em-testing-photo-right {
+  flex-direction: row-reverse;
+}
+
+.em-testing-photo-image {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.em-testing-photo-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.em-testing-photo-item:hover .em-testing-photo-image img {
+  transform: scale(1.03);
+}
+
+.em-testing-photo-caption {
+  flex: 1;
+}
+
+.em-testing-photo-caption h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.em-testing-photo-caption p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* ==================== TOOLS ==================== */
+.em-testing-tools {
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
+/* ==================== WHY US ==================== */
+.em-testing-why-us {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.em-testing-why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.em-testing-why-us-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.em-testing-why-us-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+  border-color: #ff6b00;
+}
+
+.em-testing-why-us-circle {
+  width: 80px;
+  height: 80px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.em-testing-why-us-card:hover .em-testing-why-us-circle {
+  background: #ff6b00;
+  color: #fff;
+}
+
+/* ==================== FINAL CTA ==================== */
+.em-testing-cta {
+  background: linear-gradient(135deg, #ff6b00, #e55a00);
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.em-testing-cta h2 {
+  color: #fff;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.em-testing-cta p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.95;
+}
