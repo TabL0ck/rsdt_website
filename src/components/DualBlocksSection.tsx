@@ -61,9 +61,9 @@ const DualBlocksSection: React.FC = () => {
             <li>
               <b><strong>Ultra Wide Band (UWB) Radar Sensors:</strong></b>
               <ul>
-                <li>UWB Rear Occupant Alert Sensor</li>
-                <li>UWB Rear KICK Sensor </li>
-                <li>Child presence detection</li>
+                <li><Link to="/uwb-sensor">UWB Rear Occupant Alert Sensor</Link></li>
+                <li><Link to="/uwb-sensor">UWB Rear KICK Sensor</Link></li>
+                <li><Link to="/uwb-sensor">Child presence detection</Link></li>
               </ul>
             </li>
           </ul>

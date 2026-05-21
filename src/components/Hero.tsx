@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
       <div className="hero-grid-lines"></div>
       <div className="hero-content">
         <h1>
-          Beyond Detection. Into Understanding.<br />
+          Watch the road. We’ll watch the rest.<br />
           <span className="highlight">Radar Technology for a Safer World.</span>
         </h1>
         <p className="hero-subtitle">
