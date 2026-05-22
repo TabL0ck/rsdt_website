@@ -210,8 +210,8 @@ const ContactPage: React.FC = () => {
                 <div>
                   <h4>Visit Us</h4>
                   <address>
-                    RSDT Engineering Center<br />
-                    Dhubai Hills, Dhubai<br />
+                    Microwave Sensors Development<br />
+                    Dubai Hills, Dubai<br />
                     United Arab Emirates
                   </address>
                 </div>
