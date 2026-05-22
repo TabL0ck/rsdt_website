@@ -89,8 +89,13 @@ const Nav: React.FC = () => {
   return (
     <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <NavLink to="/" className="nav-logo">
-          <span className="dot"></span> MW-Sensor
+        <NavLink to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <img
+            src="/logo.svg"
+            alt="MW-Sensor Logo"
+            className="nav-logo-icon"
+            style={{ height: '40px', width: 'auto' }}
+          />
         </NavLink>
 
         {/* Десктопное меню */}
@@ -251,7 +256,7 @@ const Nav: React.FC = () => {
               )}
             </li>
 
-            <li><NavLink to='/contact' >Contact</NavLink></li>
+            <li><NavLink to='/contact' >Contact Us</NavLink></li>
           </ul>
         </div>
       )}

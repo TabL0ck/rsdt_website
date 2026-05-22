@@ -40,13 +40,11 @@ const Hero: React.FC = () => {
       <div className="hero-grid-lines"></div>
       <div className="hero-content">
         <h1>
-          Watch the road. We’ll watch the rest.<br />
-          <span className="highlight">Radar Technology for a Safer World.</span>
+          Sense more. Sense better.<br />
+          <span className="highlight">Radar technology for safety.</span>
         </h1>
         <p className="hero-subtitle">
-          <strong>Next-generation mmWave radar systems for automotive, medical, and smart living applications — 
-            delivering precise, contactless sensing of presence, motion, respiration, heartbeat, driver attention, 
-            and environmental dynamics through advanced signal processing, embedded intelligence, and uncompromising reliability.</strong>
+          <strong>Next-generation microwave radar sensors for automotive, robotics, medical, and smart home applications provide accurate, contactless detection of presence, motion, respiration, and heartbeat, as well as driver monitoring and analysis of environmental dynamics through advanced signal processing, built-in intelligence, and high reliability.</strong>
         </p>
         <div className="hero-buttons">
           <a href="/#solutions" onClick={(e) => handleAnchor(e, 'solutions')} className="btn-primary">

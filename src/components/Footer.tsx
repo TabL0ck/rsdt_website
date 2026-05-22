@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/design-services-page-styles.css';
 
 const Footer: React.FC = () => (
   <footer className="footer" id="contact">

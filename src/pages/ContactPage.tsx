@@ -220,9 +220,7 @@ const ContactPage: React.FC = () => {
               <div className="social-links">
                 <h4>Follow our work</h4>
                 <div className="social-icons">
-                  <a href="https://linkedin.com/company/rsdt" target="_blank" rel="noopener noreferrer">in</a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">𝕏</a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">▶</a>
+                  <a href="https://t.me/emirates_temi4" target="_blank" rel="noopener noreferrer">➤</a>
                 </div>
               </div>
 

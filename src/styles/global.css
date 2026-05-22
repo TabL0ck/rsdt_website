@@ -202,7 +202,7 @@ body {
 .advantage-card p { font-size:0.8rem; color:var(--text-muted); }
 
 /* ─── FOOTER ─── */
-.footer { background:#1a1a1a; color:#ccc; padding:3rem 2rem 2rem; text-align:center; }
+.footer { background:#1a1a1a; color:#ccc; padding:0rem 0rem 0rem; text-align:center; }
 .footer a { color:#ccc; text-decoration:none; transition:color var(--transition); }
 .footer a:hover { color:var(--orange); }
 .footer-links { display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-bottom:1.5rem; font-size:0.85rem; }
