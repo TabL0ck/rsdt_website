@@ -24,6 +24,7 @@ import ScrollToTop from './components/ScrollToTop';
 import ContactPage from './pages/ContactPage';
 import AntennaDesign from './pages/AntennaDesign';
 import EmbeddedTesting from './pages/EmbeddedTesting';
+import NotFound from './pages/NotFound';
 
 const pageTitles: Record<string, string> = {
   '/': 'MW-Sensor | Microwave Sensors Development',
@@ -42,6 +43,7 @@ const pageTitles: Record<string, string> = {
   '/contact': 'MW-Sensor | Contact Us',
   '/antenna-design': 'MW-Sensor | Antenna Design',
   '/embedded-testing': 'MW-Sensor | Embedded Testing',
+  '*' : 'MW-Sensor | 404 - Page Not Found'
 };
 
 const App: React.FC = () => {
@@ -52,9 +54,10 @@ const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location.pathname]);
 
-  // Динамический title для каждой вкладки
+  // Динамический title (исправленная версия)
   useEffect(() => {
-    const title = pageTitles[location.pathname] || 'RSDT';
+    const currentPath = location.pathname;
+    const title = pageTitles[currentPath] || pageTitles['*'] || 'MMW-Sensor | Microwave Sensors Development';
     document.title = title;
   }, [location.pathname]);
 
@@ -90,6 +93,7 @@ const App: React.FC = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/antenna-design" element={<AntennaDesign />} />
         <Route path="/embedded-testing" element={<EmbeddedTesting />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>
