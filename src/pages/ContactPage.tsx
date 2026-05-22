@@ -191,7 +191,7 @@ const ContactPage: React.FC = () => {
                 <div className="info-icon">✉️</div>
                 <div>
                   <h4>Email Us</h4>
-                  <a href="mailto:contact@rsdt.tech">contact@rsdt.tech</a>
+                  <a href="mailto:contact@mw-sensor.com">contact@mw-sensor.com</a>
                   <p>General inquiries & project requests</p>
                 </div>
               </div>

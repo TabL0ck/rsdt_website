@@ -214,7 +214,7 @@ const EmbeddedTesting: React.FC = () => {
       {/* WHY CHOOSE US */}
       <section className="em-testing-why-us">
         <div className="container">
-          <h2 className="section-title animate-on-scroll fade-up">Why Leading Companies Choose RSDT</h2>
+          <h2 className="section-title animate-on-scroll fade-up">Why Leading Companies Choose MW-Sensor</h2>
           
           <div className="em-testing-why-us-grid">
             {whyChoose.map((item, index) => (
@@ -228,36 +228,6 @@ const EmbeddedTesting: React.FC = () => {
                 <p>{item.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA — оранжевый */}
-      <section className="cta-orange-grid">
-        <div className="container">
-          <div className="contact-grid">
-            <div>
-              <h2>Ready to ensure the reliability of your radar sensor?</h2>
-              <p style={{ fontSize: '1.15rem', color: '#555', maxWidth: '480px' }}>
-                Contact our team today. We’ll create a custom testing program tailored to your project.
-              </p>
-            </div>
-
-            <div className="contact-card">
-              <h3>
-                <span className="icon">📍</span> 
-                Get in Touch
-              </h3>
-              <p>
-                <strong>Email:</strong> <a href="mailto:info@rsdt.com">info@rsdt.com</a><br />
-                <strong>Phone:</strong> <a href="tel:+971585299178">+971 58 5299178</a><br />
-                <strong>Address:</strong> Dubai, United Arab Emirates
-              </p>
-              
-              <Link to="/contact" className="btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
-                Go to Contact Page →
-              </Link>
-            </div>
           </div>
         </div>
       </section>

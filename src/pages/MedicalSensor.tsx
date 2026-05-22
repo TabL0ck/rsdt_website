@@ -172,14 +172,6 @@ const MedicalSensor: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA FINAL */}
-      <section className="product-cta-final-roas">
-        <div className="product-container-roas">
-          <h2>Ready to integrate contactless vital signs monitoring?</h2>
-          <a href="/#contact" className="btn-primary">Contact RSDT Team</a>
-        </div>
-      </section>
     </div>
   );
 };

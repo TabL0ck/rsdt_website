@@ -186,7 +186,7 @@ const CompanyHistoryPage: React.FC = () => {
           }}
         />
         <div className="product-hero-content-roas" style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <div className="product-badge-roas">RSDT</div>
+          <div className="product-badge-roas">Microwave Sensors Development</div>
           <h1>Company History</h1>
           <p className="product-subtitle-roas">
             From automotive radar sensors in 2020 to intelligent driver monitoring and non‑contact medical
@@ -212,13 +212,6 @@ const CompanyHistoryPage: React.FC = () => {
               </TimelineItem>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="product-cta-final-roas">
-        <div className="product-container-roas">
-          <h2>Want to know more about our current projects?</h2>
-          <Link to="/placeholder" className="btn-primary">Contact RSDT Team</Link>
         </div>
       </section>
     </div>

@@ -174,14 +174,6 @@ const BabysimPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* ==================== CTA / BACK ==================== */}
-      <section className="product-cta-final-roas">
-        <div className="product-container-roas">
-          <h2>Interested in the UWB sensor?</h2>
-          <Link to="/uwb" className="btn-primary">← Return to UWB</Link>
-        </div>
-      </section>
     </div>
   );
 };

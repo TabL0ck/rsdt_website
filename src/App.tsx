@@ -1,4 +1,3 @@
-// src/App.tsx (обновлённый)
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/Nav';
@@ -15,49 +14,35 @@ import ROAS from './pages/ROAS';
 import UWB from './pages/UWB';
 import MEDICAL from './pages/MedicalSensor';
 import BABYSIM from './pages/BabysimInfo';
-import MasterSensorUnit from './pages/MasterSensorUnit'
-import ABOUTHISTORY from './pages/About_History'
-import EMBEDDEDHARD from './pages/EmbeddedHardware'
+import MasterSensorUnit from './pages/MasterSensorUnit';
+import ABOUTHISTORY from './pages/About_History';
+import EMBEDDEDHARD from './pages/EmbeddedHardware';
 import US6634 from './pages/US6634';
 import LPS from './pages/LowPowerSensor';
-import EMBEDDEDSOFT from './pages/EmbeddedSoftware'
+import EMBEDDEDSOFT from './pages/EmbeddedSoftware';
 import ScrollToTop from './components/ScrollToTop';
 import ContactPage from './pages/ContactPage';
 import AntennaDesign from './pages/AntennaDesign';
 import EmbeddedTesting from './pages/EmbeddedTesting';
 
-const PlaceholderSolution: React.FC<{ title: string }> = ({ title }) => (
-  <div className="about-page" style={{ paddingTop: '80px' }}>
-    <section className="about-section" style={{ minHeight: '60vh' }}>
-      <div className="about-container">
-        <h1 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', marginBottom: '1rem' }}>
-          {title}
-        </h1>
-        <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.8, maxWidth: '800px' }}>
-          Страница продукта {title}. Здесь будет полное описание, технические характеристики, изображения и CTA-кнопки.<br />
-          (Плейсхолдер — замените на отдельный .tsx-файл в папке pages/ когда будет готов контент)
-        </p>
-        <a
-          href="/"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            background: 'var(--orange)',
-            color: '#fff',
-            padding: '14px 32px',
-            borderRadius: '50px',
-            textDecoration: 'none',
-            fontWeight: 600,
-            marginTop: '2rem'
-          }}
-        >
-          ← Вернуться на главную
-        </a>
-      </div>
-    </section>
-  </div>
-);
+const pageTitles: Record<string, string> = {
+  '/': 'MW-Sensor | Microwave Sensors Development',
+  '/about': 'MW-Sensor | About',
+  '/roas': 'MW-Sensor | Rear Occupancy Alert Sensor',
+  '/master-sensor-unit': 'MW-Sensor | Master Sensor Unit',
+  '/unified-sensor-6634': 'MW-Sensor | Unified Sensor 6634',
+  '/low-power-sensor': 'MW-Sensor | Low Power Sensor',
+  '/medical-sensor': 'MW-Sensor | Medical Sensor',
+  '/uwb-sensor': 'MW-Sensor | Ultra-Wide Band Sensor',
+  '/babysim': 'MW-Sensor | BabySim',
+  '/about-history': 'MW-Sensor | History',
+  '/main': 'MW-Sensor | Microwave Sensors Development',
+  '/embedded-hardware': 'MW-Sensor | Embedded Hardware',
+  '/embedded-software': 'MW-Sensor | Embedded Software',
+  '/contact': 'MW-Sensor | Contact Us',
+  '/antenna-design': 'MW-Sensor | Antenna Design',
+  '/embedded-testing': 'MW-Sensor | Embedded Testing',
+};
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -67,7 +52,13 @@ const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location.pathname]);
 
-  useSmoothScroll(); // обрабатывает якорные ссылки (хеши) после скролла
+  // Динамический title для каждой вкладки
+  useEffect(() => {
+    const title = pageTitles[location.pathname] || 'RSDT';
+    document.title = title;
+  }, [location.pathname]);
+
+  useSmoothScroll();
 
   return (
     <>
@@ -89,15 +80,15 @@ const App: React.FC = () => {
         <Route path="/master-sensor-unit" element={<MasterSensorUnit />} />
         <Route path="/unified-sensor-6634" element={<US6634 />} />
         <Route path="/low-power-sensor" element={<LPS />} />
-        <Route path="/medical-sensor" element={<MEDICAL/>} />
-        <Route path="/uwb-sensor" element={<UWB/>} />
-        <Route path="/babysim" element={<BABYSIM/>} />
-        <Route path="/about-history" element={<ABOUTHISTORY/>} />
-        <Route path="/main" element={<Hero/>} />
-        <Route path="/embedded-hardware" element={<EMBEDDEDHARD/>} />
-        <Route path="/embedded-software" element={<EMBEDDEDSOFT/>} />
-        <Route path="/contact" element={<ContactPage />} / >
-        <Route path="/antenna-design" element={<AntennaDesign />} / >
+        <Route path="/medical-sensor" element={<MEDICAL />} />
+        <Route path="/uwb-sensor" element={<UWB />} />
+        <Route path="/babysim" element={<BABYSIM />} />
+        <Route path="/about-history" element={<ABOUTHISTORY />} />
+        <Route path="/main" element={<Hero />} />
+        <Route path="/embedded-hardware" element={<EMBEDDEDHARD />} />
+        <Route path="/embedded-software" element={<EMBEDDEDSOFT />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/antenna-design" element={<AntennaDesign />} />
         <Route path="/embedded-testing" element={<EmbeddedTesting />} />
       </Routes>
       <Footer />

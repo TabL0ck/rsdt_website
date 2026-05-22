@@ -209,7 +209,7 @@ const AntennaDesign: React.FC = () => {
             {/* Why Choose Us */}
             <section className="antenna-why-us">
                 <div className="container">
-                    <h2 className="section-title animate-on-scroll fade-up">Why Choose RSDT for Antenna Design?</h2>
+                    <h2 className="section-title animate-on-scroll fade-up">Why Choose MW-Sensor for Antenna Design?</h2>
                     <div className="why-us-grid">
                         {whyChoose.map((item, idx) => (
                             <div
@@ -221,36 +221,6 @@ const AntennaDesign: React.FC = () => {
                                 <p>{item.description}</p>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* FINAL CTA — Contact Us style (orange) */}
-            <section className="cta-orange-grid">
-                <div className="container">
-                    <div className="contact-grid">
-                        <div>
-                            <h2>Ready to design your next-generation antenna?</h2>
-                            <p style={{ fontSize: '1.15rem', color: '#555', maxWidth: '480px' }}>
-                                Let’s create a custom antenna solution optimized for your radar, communication, or sensing application.
-                            </p>
-                        </div>
-
-                        <div className="contact-card">
-                            <h3>
-                                <span className="icon">📍</span> 
-                                Get in Touch
-                            </h3>
-                            <p>
-                                <strong>Email:</strong> <a href="mailto:info@rsdt.com">info@rsdt.com</a><br />
-                                <strong>Phone:</strong> <a href="tel:+971585299178">+971 58 5299178</a><br />
-                                <strong>Address:</strong> Dubai, United Arab Emirates
-                            </p>
-                            
-                            <a href="/#contact" className="btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
-                                Book a Consultation →
-                            </a>
-                        </div>
                     </div>
                 </div>
             </section>

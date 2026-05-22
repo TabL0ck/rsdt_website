@@ -85,25 +85,29 @@ const EmbeddedHardware: React.FC = () => {
     return (
         <div className="embedded-hardware-page">
             {/* Hero Section */}
-            <section className="embedded-hero">
+            <section className="page-hero">
                 <div
-                    className="embedded-hero-bg"
+                    className="page-hero-bg"
                     style={{
                         backgroundImage: "url('/photos/filtered-photo.png')",
                         opacity: 0.4
                     }}
                 ></div>
                 <div className="container">
-                    <div className="embedded-badge">HARDWARE DESIGN</div>
-                    <h1>
-                        Hardware <span className="highlight">Development</span>
-                    </h1>
-                    <p className="embedded-subtitle">
-                        End-to-end embedded hardware solutions — from concept and circuit design to documentation for mass production.
-                        With over 10 years of experience, we turn technical ideas into reliable, high-tech products ready for real-world operation.
-                    </p>
-                    <div className="embedded-hero-cta">
-                        <a href="/#contact" className="btn-primary">Discuss Your Project</a>
+                    <div className="page-hero-grid">
+                        <div className="page-hero-text">
+                            <div className="page-hero-badge">HARDWARE DESIGN</div>
+                            <h1>
+                                Hardware <span className="page-hero-highlight">Development</span>
+                            </h1>
+                            <p className="page-hero-subtitle">
+                                End-to-end embedded hardware solutions — from concept and circuit design to documentation for mass production.
+                                With over 10 years of experience, we turn technical ideas into reliable, high-tech products.
+                            </p>
+                            <div className="page-hero-cta">
+                                <a href="/#contact" className="btn-primary">Discuss Your Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -237,7 +241,7 @@ const EmbeddedHardware: React.FC = () => {
             {/* Why Choose Us */}
             <section className="embedded-why-us">
                 <div className="container">
-                    <h2 className="section-title">Why Choose RSDT for Hardware Design?</h2>
+                    <h2 className="section-title">Why Choose MW-Sensor for Hardware Design?</h2>
                     <div className="why-us-grid">
                         {whyChoose.map((item, index) => (
                             <div key={index} className="why-us-item">
@@ -247,15 +251,6 @@ const EmbeddedHardware: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
-
-            {/* Final CTA */}
-            <section className="embedded-cta">
-                <div className="container">
-                    <h2>Ready to turn your idea into a finished device?</h2>
-                    <p>Let's create modern hardware solutions ready for prototyping, testing, and mass production.</p>
-                    <a href="/#contact" className="btn-primary">Contact Our Team</a>
                 </div>
             </section>
         </div>
