@@ -1,0 +1,261 @@
+/* RadarAdvantageSection.css — элегантный текстовый блок */
+
+.radar-advantage-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 40%, #fef7e8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Анимированный фоновый элемент */
+.radar-advantage-section::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 120%;
+    height: 160%;
+    background: radial-gradient(circle, rgba(0,112,240,0.03) 0%, transparent 70%);
+    pointer-events: none;
+    animation: slowDrift 25s infinite alternate;
+}
+
+@keyframes slowDrift {
+    0% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+    100% { transform: translate(3%, 2%) rotate(2deg); opacity: 0.6; }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.radar-advantage-content {
+    text-align: center;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.section-badge {
+    display: inline-block;
+    background: linear-gradient(110deg, rgba(0,112,240,0.12), rgba(235,112,41,0.08));
+    padding: 0.4rem 1.4rem;
+    border-radius: 60px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0070f0;
+    backdrop-filter: blur(4px);
+    margin-bottom: 1.8rem;
+    border: 1px solid rgba(0,112,240,0.2);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.radar-advantage-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #0a2540;
+    letter-spacing: -0.02em;
+}
+
+.gradient-text {
+    background: linear-gradient(120deg, #0070f0, #eb7029);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin-bottom: 1.8rem;
+    font-weight: 450;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lead strong {
+    color: #eb7029;
+    font-weight: 600;
+}
+
+.highlight-statement {
+    font-size: 1.1rem;
+    color: #1e4663;
+    margin: 2rem 0 2rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0,112,240,0.04);
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.accent {
+    color: #eb7029;
+    font-weight: 700;
+}
+
+/* Сетка преимуществ — 3 колонки */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 28px;
+    padding: 1.8rem 1.2rem;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    border: 1px solid rgba(0,112,240,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    background: white;
+    border-color: rgba(0,112,240,0.25);
+    box-shadow: 0 20px 35px -12px rgba(0,112,240,0.15);
+}
+
+.benefit-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s;
+}
+
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.08);
+}
+
+.benefit-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0a2540;
+    margin-bottom: 0.8rem;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #4a5568;
+    margin: 0;
+}
+
+/* Цитата */
+.radar-quote {
+    font-size: 1.2rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(120deg, rgba(0,112,240,0.04), rgba(235,112,41,0.02));
+    border-radius: 50px;
+    margin-top: 2.5rem;
+    position: relative;
+    color: #1e4663;
+    font-weight: 450;
+    border: 1px solid rgba(0,112,240,0.15);
+    backdrop-filter: blur(4px);
+    display: inline-block;
+    width: auto;
+}
+
+.quote-mark {
+    font-size: 2rem;
+    font-family: serif;
+    color: #eb7029;
+    opacity: 0.6;
+    margin: 0 0.3rem;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .benefits-grid {
+        gap: 1.5rem;
+    }
+    h2 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .radar-advantage-section {
+        padding: 4rem 0;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .benefit-card {
+        padding: 1.2rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .benefit-icon {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .radar-quote {
+        font-size: 1rem;
+        padding: 1rem 1.2rem;
+    }
+    .quote-mark {
+        font-size: 1.5rem;
+    }
+}
+/* Кнопка Learn more */
+.learn-more-wrapper {
+    text-align: center;
+    margin: 1rem 0 0.5rem;
+}
+
+.btn-learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, #ac5f07, #d36205);
+    color: white;
+    padding: 0.7rem 1.8rem;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px hsla(34, 94%, 49%, 0.3);
+}
+
+.btn-learn-more svg {
+    transition: transform 0.2s;
+}
+
+.btn-learn-more:hover {
+    background: linear-gradient(135deg, #e66f0e, #d36600);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(236, 130, 8, 0.4);
+}
+
+.btn-learn-more:hover svg {
+    transform: translateX(4px);
+}

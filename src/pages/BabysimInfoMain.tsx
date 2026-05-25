@@ -42,6 +42,7 @@ const BabysimPage: React.FC = () => {
 
       </section>
 
+      {/* ==================== OVERVIEW ==================== */}
       <section className="product-section-roas">
         <div className="product-container-roas">
           <h2>Overview</h2>
@@ -49,7 +50,7 @@ const BabysimPage: React.FC = () => {
             <div className="work-item">
               <div className="work-image-wrapper">
                 <img
-                  src="/photos/babysim_new.jpg"
+                  src="/photos/Babysim-anon.png"
                   alt="BABYSIM overview"
                   className="work-image work-image-babysimPage--overview"
                 />
@@ -66,13 +67,6 @@ const BabysimPage: React.FC = () => {
                   cotton cloth soaked in a saline disinfectant solution and sealed in a plastic bag.
                   This arrangement reflects approximately <strong>30% of a 62 GHz microwave signal</strong>.
                 </p>
-                {/* Кнопка "Learn More About Babysim" */}
-                <Link to="/babysim-main" className="btn-learn-more-babysim">
-                  Learn More About Babysim
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </Link>
               </div>
             </div>
           </div>
@@ -119,7 +113,7 @@ const BabysimPage: React.FC = () => {
             <div className="work-item">
               <div className="work-image-wrapper">
                 <img
-                  src="/photos/babysim_shielding.jpg"
+                  src="/photos/babysim_new.jpg"
                   alt="Radio shielding measurement"
                   className="work-image"
                 />
@@ -175,6 +169,14 @@ const BabysimPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* ==================== CTA / BACK ==================== */}
+      <section className="product-cta-final-roas">
+              <div className="product-container-roas">
+                <h2>Interested Babysim?</h2>
+                <Link to="/contact" className="btn-primary">Contact us</Link>
+              </div>
+            </section>
     </div>
   );
 };

@@ -2,7 +2,7 @@
 import React from 'react';
 import './EmbeddedHardware.css';
 import RadarModel3D from '../components/RadarModel3D';
-
+import { Link } from 'react-router-dom';
 const EmbeddedHardware: React.FC = () => {
     const services = [
         {
@@ -79,7 +79,7 @@ const EmbeddedHardware: React.FC = () => {
         { icon: "🏆", title: "10+ Years of Experience", description: "Proven track record in automotive, industrial, and consumer electronics." },
         { icon: "🤝", title: "Turnkey Solutions", description: "From idea to finished device – hardware, firmware, and software under one roof." },
         { icon: "⚡", title: "Reliability & Manufacturability", description: "DFM focus, reduced production defects, and faster time-to-market." },
-        { icon: "🔧", title: "In-House Lab", description: "Oscilloscopes, spectrum analyzers, VNAs – rapid testing and validation." }
+        { icon: "🔧", title: "Debug & Testing", description: "Oscilloscopes, spectrum analyzers, VNAs – rapid testing and validation." }
     ];
 
     return (
@@ -198,6 +198,38 @@ const EmbeddedHardware: React.FC = () => {
                         ))}
                     </div>
                 </div>
+            </section>
+
+            <section className="embedded-debug-verification">
+            <div className="container">
+                <div className="debug-verification-grid">
+                <div className="debug-verification-text">
+                    <h2>Debugging & <span className="gradient-text">Experimental Verification</span></h2>
+                    <p>
+                    We maintain a fully equipped in‑house laboratory for rapid prototyping, debugging, and validation of your hardware.
+                    Our equipment allows us to verify high‑speed digital and RF paths before mass production, reducing risks and time‑to‑market.
+                    </p>
+                    <ul className="equipment-list">
+                    <li><strong>Oscilloscopes</strong> (high‑bandwidth, mixed‑signal)</li>
+                    <li><strong>Spectrum Analyzers</strong> (up to 110 GHz)</li>
+                    <li><strong>Vector Network Analyzers (VNA)</strong> for S‑parameter measurements</li>
+                    <li><strong>RLC meters, signal generators, power supplies</strong></li>
+                    <li><strong>Near‑field probes & anechoic chamber</strong> for EMC pre‑compliance</li>
+                    </ul>
+                    <p>
+                    We also develop specialised test setups for radar sensors, including the{' '}
+                    <Link to="/babysim" className="inline-link">BABYSIM</Link> – a breathing simulator used to validate child presence detection (CPD) algorithms.
+                    </p>
+                    <p className="debug-note">
+                    Full hardware‑software debugging, signal integrity analysis, and performance characterisation – all under one roof.
+                    </p>
+                </div>
+                <div className="debug-verification-model">
+                    {/* Можно заменить на статичную картинку или 3D-модель */}
+                    <img src="/photos/oscilo_new.jpg" alt="Laboratory equipment: oscilloscope, spectrum analyzer" />
+                </div>
+                </div>
+            </div>
             </section>
 
             {/* Debug Access Section - Special highlight */}

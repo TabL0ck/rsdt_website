@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import RsdtBanner from './components/RsdtBanner';
 import ParallaxTransition from './components/ParallaxTransition';
 import DualBlocksSection from './components/DualBlocksSection';
+import RadarAdvantageSection from './components/RadarAdvantageSection';
 import SpecsStrip from './components/SpecsStrip';
 import AdvantagesSection from './components/AdvantagesSection';
 import Footer from './components/Footer';
@@ -23,6 +24,9 @@ import EMBEDDEDSOFT from './pages/EmbeddedSoftware';
 import ScrollToTop from './components/ScrollToTop';
 import ContactPage from './pages/ContactPage';
 import AntennaDesign from './pages/AntennaDesign';
+import WhyARadarSensors from './pages/WhyARadarSensors';
+import BABYSIMMAIN from './pages/BabysimInfoMain'
+import ABOUTOURRADARS from './pages/AboutOurRadars'
 import EmbeddedTesting from './pages/EmbeddedTesting';
 import NotFound from './pages/NotFound';
 import CareersPage from './pages/CareersPage';
@@ -81,6 +85,7 @@ const App: React.FC = () => {
             <RsdtBanner />
             <ParallaxTransition />
             <DualBlocksSection />
+            <RadarAdvantageSection />
             <AdvantagesSection />
           </>
         } />
@@ -100,6 +105,8 @@ const App: React.FC = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/antenna-design" element={<AntennaDesign />} />
         <Route path="/embedded-testing" element={<EmbeddedTesting />} />
+        <Route path="/why-radars" element={<WhyARadarSensors />} / >
+        <Route path="/about-our-radars" element={<ABOUTOURRADARS />} / >
         <Route path="/news" element={<NewsPage />} />
         <Route path="/admin/news" element={<AdminNewsPage />} />
 {/*        <Route path="/semiconductors" element={< />} /> */}
