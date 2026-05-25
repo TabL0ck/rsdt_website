@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-
 const DualBlocksSection: React.FC = () => {
   const navigate = useNavigate();
 
@@ -45,7 +44,6 @@ const DualBlocksSection: React.FC = () => {
           </div>
           <h3>Radar Solutions</h3>
           <ul className="service-list">
-
             <li>
               <b><strong>Frequency-Modulated Continuous-Wave (FMCW) Radar Sensors:</strong></b>
               <ul>
@@ -57,7 +55,6 @@ const DualBlocksSection: React.FC = () => {
                 <li>Intrusion detection</li>
               </ul>
             </li>
-
             <li>
               <b><strong>Ultra Wide Band (UWB) Radar Sensors:</strong></b>
               <ul>
@@ -67,6 +64,13 @@ const DualBlocksSection: React.FC = () => {
               </ul>
             </li>
           </ul>
+          {/* Новая кнопка "About our radars" */}
+          <Link to="/about-our-radars" className="btn-about-radars">
+            About our radars
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
 
         {/* Design Services – фон 7.jpg */}

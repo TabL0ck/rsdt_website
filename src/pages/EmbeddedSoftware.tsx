@@ -184,7 +184,7 @@ const EmbeddedSoftware: React.FC = () => {
                     <h2>DMS GUI</h2>
                     <p>
                     DMS GUI is a Windows desktop application for configuring, controlling,
-                    and testing DMS2 radar sensors. It provides engineers with a clear
+                    and testing DMS radar sensors. It provides engineers with a clear
                     interface for connecting to sensors, uploading configurations,
                     monitoring live radar data, and validating detection results.
                     </p>
@@ -195,7 +195,7 @@ const EmbeddedSoftware: React.FC = () => {
                     temperature monitoring, and firmware updates through the bootloader.
                     </p>
                     <p>
-                    DMS2 GUI can be used during development, testing, calibration, and
+                    DMS GUI can be used during development, testing, calibration, and
                     demonstration of radar-based monitoring systems. It helps reduce setup
                     time, simplify diagnostics, and make sensor behavior easier to analyze.
                     </p>
