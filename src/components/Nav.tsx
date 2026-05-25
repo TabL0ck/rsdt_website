@@ -60,7 +60,7 @@ const Nav: React.FC = () => {
   const aboutLinks = [
     { name: 'About Us', path: '/about' },
     { name: 'History', path: '/about-history' },
-    { name: 'Careers', path: '/about/careers' },
+    { name: 'Careers', path: '/careers' },
   ];
 
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
@@ -136,7 +136,7 @@ const Nav: React.FC = () => {
             </ul>
           </li>
 
-          <li><a href="/#semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
+          <li><a href="/semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
 
           {/* About */}
           <li className={`dropdown ${isAboutOpen ? 'open' : ''}`}>
@@ -233,7 +233,7 @@ const Nav: React.FC = () => {
               )}
             </li>
 
-            <li><a href="/#semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
+            <li><a href="/semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
 
             {/* About */}
             <li>

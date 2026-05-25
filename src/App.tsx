@@ -25,6 +25,7 @@ import ContactPage from './pages/ContactPage';
 import AntennaDesign from './pages/AntennaDesign';
 import EmbeddedTesting from './pages/EmbeddedTesting';
 import NotFound from './pages/NotFound';
+import CareersPage from './pages/CareersPage';
 
 const pageTitles: Record<string, string> = {
   '/': 'MW-Sensor | Microwave Sensors Development',
@@ -43,6 +44,8 @@ const pageTitles: Record<string, string> = {
   '/contact': 'MW-Sensor | Contact Us',
   '/antenna-design': 'MW-Sensor | Antenna Design',
   '/embedded-testing': 'MW-Sensor | Embedded Testing',
+  '/semiconductors': 'MW-Sensor | Semiconductors',
+  '/careers': 'MW-Sensor | Careers',
   '*' : 'MW-Sensor | 404 - Page Not Found'
 };
 
@@ -93,6 +96,8 @@ const App: React.FC = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/antenna-design" element={<AntennaDesign />} />
         <Route path="/embedded-testing" element={<EmbeddedTesting />} />
+{/*        <Route path="/semiconductors" element={< />} /> */}
+{/*        <Route path="/careers" element={<CareersPage />} />      */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

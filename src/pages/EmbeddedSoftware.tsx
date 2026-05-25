@@ -203,12 +203,12 @@ const EmbeddedSoftware: React.FC = () => {
                     <ul className="gui-features">
                     <li>CAN/CAN FD and UART sensor connection</li>
                     <li>Real-time 3D point cloud visualization</li>
-                    <li>FM, SM, and global detection zone configuration</li>
+                    <li>Detection zone configuration</li>
                     <li>Sensor calibration and validation tools</li>
                     <li>TLV data logging and analysis</li>
                     <li>Temperature and system status monitoring</li>
                     <li>EEPROM configuration read/write</li>
-                    <li>Firmware update via bootloader</li>
+                    <li>Firmware update via CAN</li>
                     <li>Multi-radar Master-Slave support</li>
                     <li>Engineering tools for debugging and testing</li>
                     </ul>

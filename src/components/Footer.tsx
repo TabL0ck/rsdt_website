@@ -21,11 +21,11 @@ const Footer: React.FC = () => (
                       </h3>
                       <p>
                           <strong>Email:</strong> <a href="mailto:contact@mw-sensor.com">contact@mw-sensor.com</a><br />
-                          <strong>Phone:</strong> <a href="tel:+971585299178">+971 58 5299178</a><br />
+                          <strong>Phone:</strong> <a href="https://t.me/emirates_temi4">+971 58 5299178 (Telegram)</a><br />
                           <strong>Address:</strong> Dubai, United Arab Emirates
                       </p>
                       
-                      <a href="/#contact" className="btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+                      <a href="/contact" className="btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
                           Book a Consultation →
                       </a>
                   </div>

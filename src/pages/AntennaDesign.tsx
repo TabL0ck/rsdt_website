@@ -135,7 +135,7 @@ const AntennaDesign: React.FC = () => {
                                 <span className="page-hero-highlight">Antennas and Microwave Devices</span>
                             </h1>
                             <p className="page-hero-subtitle">
-                                RSDT develops microwave devices for PCBs of radar sensors – automotive, robotics, communications.
+                                MW-sensor develops microwave devices for PCBs of radar sensors – automotive, robotics, communications.
                                 Patch antenna arrays, transmission lines, power dividers, matching devices, filters, and custom radiation patterns.
                                 We also design Bluetooth, Wi-Fi, and 5G antennas.
                             </p>

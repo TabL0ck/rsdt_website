@@ -44,7 +44,7 @@ const ContactPage: React.FC = () => {
           from_email: formData.email,
           company: formData.company || 'Не указано',
           message: formData.message,
-          to_name: 'RSDT Team',
+          to_name: 'Microwave Sensors Developments Team',
           reply_to: formData.email,
         },
         PUBLIC_KEY
@@ -59,7 +59,7 @@ const ContactPage: React.FC = () => {
 
     } catch (err) {
       console.error('EmailJS error:', err);
-      setError('Ошибка отправки. Попробуйте позже или напишите на contact@rsdt.tech');
+      setError('Ошибка отправки. Попробуйте позже или напишите на contact@mw-sensor.com');
     } finally {
       setIsSubmitting(false);
     }
@@ -195,12 +195,12 @@ const ContactPage: React.FC = () => {
                   <p>General inquiries & project requests</p>
                 </div>
               </div>
-
+              
               <div className="info-block">
                 <div className="info-icon">📞</div>
                 <div>
                   <h4>Call Us</h4>
-                  <a href="tel:+971585299178">+971 58 5299178 </a>
+                  <a href="https://t.me/emirates_temi4">+971 58 5299178 (Telegram)</a>
                   <p>Mon–Fri, 9:00–18:00 (EET)</p>
                 </div>
               </div>
@@ -211,7 +211,7 @@ const ContactPage: React.FC = () => {
                   <h4>Visit Us</h4>
                   <address>
                     Microwave Sensors Development<br />
-                    Dubai Hills, Dubai<br />
+                    IFZA Business Park, Building A2 - Nadd Hessa, Dubai, Dubai Silicon Oasis<br />
                     United Arab Emirates
                   </address>
                 </div>
