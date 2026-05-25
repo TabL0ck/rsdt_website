@@ -24,9 +24,12 @@ import EMBEDDEDSOFT from './pages/EmbeddedSoftware';
 import ScrollToTop from './components/ScrollToTop';
 import ContactPage from './pages/ContactPage';
 import AntennaDesign from './pages/AntennaDesign';
+<<<<<<< HEAD
 import WhyARadarSensors from './pages/WhyARadarSensors';
 import BABYSIMMAIN from './pages/BabysimInfoMain'
 import ABOUTOURRADARS from './pages/AboutOurRadars'
+=======
+>>>>>>> main
 import EmbeddedTesting from './pages/EmbeddedTesting';
 import NotFound from './pages/NotFound';
 import CareersPage from './pages/CareersPage';

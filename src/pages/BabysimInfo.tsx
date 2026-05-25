@@ -78,6 +78,103 @@ const BabysimPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* ==================== INTERNAL MECHANISM ==================== */}
+      <section className="product-section-roas product-section-roas-alt">
+        <div className="product-container-roas">
+          <h2>Internal Mechanism</h2>
+          <div className="how-it-works-content">
+            <div className="work-item work-item-reverse">
+              <div className="work-image-wrapper">
+                <img
+                  src="/photos/bluetooth-mod-babysim.jpg"
+                  alt="BABYSIM internal mechanism"
+                  className="work-image"
+                />
+              </div>
+              <div className="work-description">
+                <p>
+                  Inside the doll’s body, a <strong>servo motor</strong> drives a plastic linkage that converts
+                  rotational motion into a sine‑wave oscillation of the chest and abdomen.
+                  A <strong>microcontroller</strong> precisely controls the motor to simulate realistic
+                  breathing patterns.
+                </p>
+                <p>
+                  A <strong>Bluetooth module</strong> on the main board allows remote wireless control of
+                  the chest movement amplitude and breathing rate. The entire system is powered from a
+                  <strong> +12 V DC</strong> source (minimum 1 A) – either via a standard AC/DC adapter
+                  or directly from a vehicle’s 12 V cigarette lighter socket.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== RADIO SHIELDING ==================== */}
+      <section className="product-section-roas">
+        <div className="product-container-roas">
+          <h2>Radio Transparency &amp; Shielding</h2>
+          <div className="how-it-works-content">
+            <div className="work-item">
+              <div className="work-image-wrapper">
+                <img
+                  src="/photos/babysim_shielding.jpg"
+                  alt="Radio shielding measurement"
+                  className="work-image"
+                />
+              </div>
+              <div className="work-description work-description--shielding">
+                <p>
+                  Experimental studies with 10×15 cm material samples confirmed that a <strong>
+                  cotton cloth moistened with salt water</strong> accurately mimics human body tissue.
+                  The sealed saline package not only reproduces the reflection of a 62 GHz signal but also
+                  <strong> shields the internal metal components</strong> (servo motor, wires, screws, PCB)
+                  from the radar.
+                </p>
+                <p>
+                  Measurements show that the attenuation of a microwave signal passing once through the
+                  moistened tissue exceeds <strong>30 dB at 62 GHz</strong>. Consequently, no additional
+                  absorbing material is required inside the doll to suppress unwanted reflections from
+                  metallic parts.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== REMOTE CONTROL & GUI ==================== */}
+      <section className="product-section-roas product-section-roas-alt">
+        <div className="product-container-roas">
+          <h2>Remote Control via Radar Sensor GUI</h2>
+          <div className="how-it-works-content">
+            <div className="work-item work-item-reverse">
+              <div className="work-image-wrapper">
+                <img
+                  src="/photos/gui-babysim.png"
+                  alt="Radar Sensor GUI with BABYSIM controls"
+                  className="work-image"
+                />
+              </div>
+              <div className="work-description work-description">
+                <p>
+                  To operate the simulator remotely, turn on its Bluetooth module and start the
+                  <strong> Radar Sensor GUI</strong>. The upper‑right corner of the GUI displays a
+                  <strong> TrackBar</strong> and numeric fields for the current amplitude and breathing rate.
+                </p>
+                <p>
+                  By default, the chest oscillation amplitude is <strong>1 mm</strong> and the breathing
+                  rate is <strong>20 breaths per minute (bpm)</strong>. The TrackBar allows you to vary
+                  the amplitude from <strong>1 to 5 mm</strong> and the breathing rate from
+                  <strong>20 to 60 bpm</strong>. Press the <strong>Connect/Disconnect</strong> button to
+                  transfer the new values to the BABYSIM simulator.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
