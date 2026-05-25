@@ -140,7 +140,7 @@ const AntennaDesign: React.FC = () => {
                                 We also design Bluetooth, Wi-Fi, and 5G antennas.
                             </p>
                             <div className="page-hero-cta">
-                                <a href="/#contact" className="btn-primary">Discuss Your Antenna Project</a>
+                                <a href="/contact" className="btn-primary">Discuss Your Antenna Project</a>
                             </div>
                         </div>
                     </div>

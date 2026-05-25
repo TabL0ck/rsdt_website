@@ -58,12 +58,12 @@ const MasterSensorUnit: React.FC = () => {
                     </h1>
                     
                     <p className="product-subtitle-MS">
-                        <strong>The central hub that connects up to 4 <a href="/#/roas">ROAS</a> into a unified local network, 
+                        <strong>The central hub that connects up to 4 <a href="/roas">ROAS</a> into a unified local network, 
                         completely independent of the vehicle’s CAN bus.</strong>
                     </p>
 
                     <div className="product-cta-MS">
-                        <a href="/#contact" className="btn-primary">
+                        <a href="/contact" className="btn-primary">
                             Get in Touch
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                                 <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
@@ -92,7 +92,7 @@ const MasterSensorUnit: React.FC = () => {
                 <div className="product-container-MS">
                     <h2>Core Functionality</h2>
                     <p className="section-description-MS">
-                        Advanced mmWave radar capabilities that make <a href="/#/roas">ROAS</a> one of the most intelligent 
+                        Advanced mmWave radar capabilities that make <a href="/roas">ROAS</a> one of the most intelligent 
                         and privacy-focused rear occupant monitoring systems on the market.
                     </p>
 
@@ -143,7 +143,7 @@ const MasterSensorUnit: React.FC = () => {
                                 <tr><td>Temperature Range</td><td>-40°C … +85°C</td></tr>
                                 <tr><td>Interface</td><td>2 × CAN-FD / 2 × CAN 2.0 / UART</td></tr>
                                 <tr><td>Detection Range</td><td>Up to 8 rows of seats</td></tr>
-                                <tr><td>Key feature</td><td>Control up to 4 <a href="/#/roas">ROAS</a> sensors</td></tr>
+                                <tr><td>Key feature</td><td>Control up to 4 <a href="/roas">ROAS</a> sensors</td></tr>
                             </tbody>
                         </table>
                     </div>
