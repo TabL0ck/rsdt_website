@@ -193,7 +193,7 @@ const CompanyHistoryPage: React.FC = () => {
             technologies — a timeline of innovation.
           </p>
           <div className="info-buttons" style={{ justifyContent: 'center' }}>
-            <Link to="/main" className="btn-primary">← Back to main</Link>
+            <Link to="/" className="btn-primary">← Back to main</Link>
           </div>
         </div>
       </section>

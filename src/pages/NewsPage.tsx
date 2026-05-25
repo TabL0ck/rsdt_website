@@ -102,7 +102,7 @@ const NewsPage: React.FC = () => {
             and events in automotive and medical radar technologies.
           </p>
           <div className="info-buttons" style={{ justifyContent: 'center', marginTop: '2rem' }}>
-            <Link to="/about" className="btn-primary">← Back to About</Link>
+            <Link to="/" className="btn-primary">← Back to Main</Link>
           </div>
         </div>
       </section>
@@ -124,27 +124,42 @@ const NewsPage: React.FC = () => {
 
           {!loading && (
             <div className="news-grid">
-              {news.map((item) => (
-                <div key={item.id} className="news-card" onClick={() => openModal(item)}>
-                  {item.image_url && (
-                    <div className="news-card-image">
-                      <img src={item.image_url} alt={item.title} />
+                {news.map((item) => (
+                    <div 
+                    key={item.id} 
+                    className="news-card" 
+                    onClick={() => openModal(item)}
+                    >
+                    {/* Изображение (если есть) */}
+                    {item.image_url && (
+                        <div className="news-card-image">
+                        <img 
+                            src={item.image_url} 
+                            alt={item.title} 
+                        />
+                        </div>
+                    )}
+
+                    <div className="news-card-content">
+                        <div className="news-meta">
+                        <span className="news-date">
+                            {formatDate(item.published_at)}
+                        </span>
+                        {item.category && (
+                            <span className="news-category">{item.category}</span>
+                        )}
+                        </div>
+
+                        <h3>{item.title}</h3>
+                        <p>{item.excerpt}</p>
+
+                        <div className="news-card-footer">
+                        <span className="read-more">Read more →</span>
+                        </div>
                     </div>
-                  )}
-                  <div className="news-card-content">
-                    <div className="news-meta">
-                      <span className="news-date">{formatDate(item.published_at)}</span>
-                      {item.category && <span className="news-category">{item.category}</span>}
                     </div>
-                    <h3>{item.title}</h3>
-                    <p>{item.excerpt}</p>
-                    <div className="news-card-footer">
-                      <span className="read-more">Read more →</span>
-                    </div>
-                  </div>
+                ))}
                 </div>
-              ))}
-            </div>
           )}
         </div>
       </section>
@@ -152,34 +167,56 @@ const NewsPage: React.FC = () => {
       {/* Modal */}
       {selectedNews && (
         <div className="news-modal-overlay" onClick={closeModal}>
-          <div className="news-modal" onClick={e => e.stopPropagation()}>
+            <div className="news-modal" onClick={e => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>×</button>
 
             <div className="modal-header">
-              <div className="modal-meta">
+                <div className="modal-meta">
                 <span>{formatDate(selectedNews.published_at)}</span>
                 {selectedNews.category && (
-                  <span className="modal-category">{selectedNews.category}</span>
+                    <span className="modal-category">{selectedNews.category}</span>
                 )}
-              </div>
-              <h2>{selectedNews.title}</h2>
+                </div>
+                <h2>{selectedNews.title}</h2>
             </div>
 
+            {/* Изображение (если есть) */}
+            {selectedNews.image_url && (
+                <div style={{ 
+                width: '100%', 
+                maxHeight: '420px', 
+                overflow: 'hidden',
+                borderBottom: '1px solid #eee'
+                }}>
+                <img 
+                    src={selectedNews.image_url} 
+                    alt={selectedNews.title}
+                    style={{ 
+                    width: '100%', 
+                    height: 'auto', 
+                    display: 'block',
+                    objectFit: 'cover'
+                    }} 
+                />
+                </div>
+            )}
+
             <div className="modal-body">
-              <p className="modal-excerpt">{selectedNews.excerpt}</p>
-              <div className="modal-content">
+                <p className="modal-excerpt">{selectedNews.excerpt}</p>
+                
+                <div className="modal-content">
                 {selectedNews.content.split('\n').map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
+                    <p key={index}>{paragraph}</p>
                 ))}
-              </div>
+                </div>
             </div>
 
             <div className="modal-footer">
-              <button onClick={closeModal} className="btn-primary">Close</button>
+                <button onClick={closeModal} className="btn-primary">Close</button>
             </div>
-          </div>
+            </div>
         </div>
-      )}
+        )}
     </div>
   );
 };

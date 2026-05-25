@@ -25,7 +25,7 @@ const Footer: React.FC = () => (
                           <strong>Address:</strong> Dubai, United Arab Emirates
                       </p>
                       
-                      <a href="/contact" className="btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+                      <a href="/contact" className="btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block', color: '#9900ff'}}>
                           Book a Consultation →
                       </a>
                   </div>

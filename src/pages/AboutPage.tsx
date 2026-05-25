@@ -24,7 +24,7 @@ const AboutPage: React.FC = () => {
           <h1>About MW-Sensor</h1>
           <p>Microwave Sensors Development</p>
         <div className="info-buttons" style={{ justifyContent: 'center' }}>
-            <Link to="/main" className="btn-primary">← Back to main</Link>
+            <Link to="/" className="btn-primary">← Back to main</Link>
           </div>
         </div>
       </section>

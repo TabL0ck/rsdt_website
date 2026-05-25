@@ -28,6 +28,7 @@ import NotFound from './pages/NotFound';
 import CareersPage from './pages/CareersPage';
 import NewsPage from './pages/NewsPage';
 import AdminNewsPage from './pages/AdminNewsPage';
+import NewsPreview from './components/NewsPreview';
 
 const pageTitles: Record<string, string> = {
   '/': 'MW-Sensor | Microwave Sensors Development',
@@ -82,6 +83,7 @@ const App: React.FC = () => {
             <ParallaxTransition />
             <DualBlocksSection />
             <AdvantagesSection />
+            <NewsPreview />
           </>
         } />
         <Route path="/about" element={<AboutPage />} />
