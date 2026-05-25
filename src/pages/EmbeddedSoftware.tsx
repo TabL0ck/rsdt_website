@@ -105,7 +105,7 @@ const EmbeddedSoftware: React.FC = () => {
                                 firmware for automotive, industrial and medical devices.
                             </p>
                             <div className="page-hero-cta">
-                                <a href="/#contact" className="btn-primary">Discuss Your Project</a>
+                                <a href="/contact" className="btn-primary">Discuss Your Project</a>
                             </div>
                         </div>
                     </div>

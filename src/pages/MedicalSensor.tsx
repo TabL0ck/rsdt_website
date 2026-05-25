@@ -90,7 +90,7 @@ const MedicalSensor: React.FC = () => {
             On‑board DSP with FFT, phase extraction and multi‑person tracking. Wi‑Fi &amp; Bluetooth, MQTT/JSON. </strong>
           </p>
           <div className="product-cta">
-            <a href="/#contact" className="btn-primary">
+            <a href="/contact" className="btn-primary">
               Get in Touch
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />

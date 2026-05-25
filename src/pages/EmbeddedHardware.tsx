@@ -105,7 +105,7 @@ const EmbeddedHardware: React.FC = () => {
                                 With over 10 years of experience, we turn technical ideas into reliable, high-tech products.
                             </p>
                             <div className="page-hero-cta">
-                                <a href="/#contact" className="btn-primary">Discuss Your Project</a>
+                                <a href="/contact" className="btn-primary">Discuss Your Project</a>
                             </div>
                         </div>
                     </div>

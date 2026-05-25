@@ -65,11 +65,11 @@ const LPS: React.FC = () => {
             </h1>
             <p className="product-subtitle-lps">
                 <strong>Contactless mmWave radar with <span className="highlight">4 TX channels</span> and record-low power consumption of just <span className="highlight">1.68 W</span>. 
-                Combines full functionality of <a href="/#/roas">ROAS</a> and <a href="/#/master-sensor-unit">MS</a>, 
+                Combines full functionality of <a href="/roas">ROAS</a> and <a href="/master-sensor-unit">MS</a>, 
                 allowing the use of the same software and identical boards throughout the entire vehicle without the need to load different programs for master and slave units.</strong>
             </p>
             <div className="product-cta">
-                <a href="/#contact" className="btn-primary">
+                <a href="/contact" className="btn-primary">
                 Get in Touch
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
