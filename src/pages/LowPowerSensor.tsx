@@ -157,15 +157,7 @@ const LPS: React.FC = () => {
             </div>
             </div>
         </section>
-
-        {/* CTA FINAL */}
-        <section className="product-cta-final-lps">
-            <div className="product-container-lps">
-            <h2>Ready to integrate the most efficient Low Power Sensor into your next vehicle?</h2>
-            <a href="/#contact" className="btn-primary">Contact RSDT Team</a>
-            </div>
-        </section>
-        </div>
+    </div>
     );
 };
 

@@ -156,13 +156,6 @@ const US6634: React.FC = () => {
             </div>
         </section>
 
-        {/* CTA FINAL */}
-        <section className="product-cta-final-us6634">
-            <div className="product-container-us6634">
-            <h2>Ready to integrate US6634 into your next vehicle?</h2>
-            <a href="/#contact" className="btn-primary">Contact RSDT Team</a>
-            </div>
-        </section>
         </div>
     );
 };

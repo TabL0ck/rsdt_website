@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './ContactPage.css';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
-import { EMAILJS_CONFIG } from '../components/APILoginData'
 
 interface FormData {
   name: string;
@@ -24,55 +23,47 @@ const ContactPage: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
 
     try {
-        const SERVICE_ID = EMAILJS_CONFIG.SERVICE_ID;
-        const TEMPLATE_ID = EMAILJS_CONFIG.TEMPLATE_ID;
-        const PUBLIC_KEY = EMAILJS_CONFIG.PUBLIC_KEY;
+      const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID!;
+      const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID!;
+      const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY!;
 
-        await emailjs.send(
+      await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
         {
-            from_name: formData.name,
-            from_email: formData.email,
-            company: formData.company || 'Не указано',
-            message: formData.message,
-            to_name: 'RSDT Team',
-            reply_to: formData.email,           // ← добавлено
+          from_name: formData.name,
+          from_email: formData.email,
+          company: formData.company || 'Не указано',
+          message: formData.message,
+          to_name: 'Microwave Sensors Developments Team',
+          reply_to: formData.email,
         },
         PUBLIC_KEY
-        );
+      );
 
-        setSubmitted(true);
+      setSubmitted(true);
 
-        setTimeout(() => {
+      setTimeout(() => {
         setSubmitted(false);
-        setFormData({
-            name: '',
-            email: '',
-            company: '',
-            message: ''
-        });
-        }, 2800);
+        setFormData({ name: '', email: '', company: '', message: '' });
+      }, 2800);
 
     } catch (err) {
-        console.error('EmailJS error:', err);
-        setError('Ошибка отправки. Попробуйте позже или напишите на contact@rsdt.tech');
+      console.error('EmailJS error:', err);
+      setError('Ошибка отправки. Попробуйте позже или напишите на contact@mw-sensor.com');
     } finally {
-        setIsSubmitting(false);
+      setIsSubmitting(false);
     }
-    };
+  };
 
   return (
     <div className="contact-page">
@@ -200,16 +191,16 @@ const ContactPage: React.FC = () => {
                 <div className="info-icon">✉️</div>
                 <div>
                   <h4>Email Us</h4>
-                  <a href="mailto:contact@rsdt.tech">contact@rsdt.tech</a>
+                  <a href="mailto:contact@mw-sensor.com">contact@mw-sensor.com</a>
                   <p>General inquiries & project requests</p>
                 </div>
               </div>
-
+              
               <div className="info-block">
                 <div className="info-icon">📞</div>
                 <div>
                   <h4>Call Us</h4>
-                  <a href="tel:+971585299178">+971 58 5299178 </a>
+                  <a href="https://t.me/emirates_temi4">+971 58 5299178 (Telegram)</a>
                   <p>Mon–Fri, 9:00–18:00 (EET)</p>
                 </div>
               </div>
@@ -219,8 +210,8 @@ const ContactPage: React.FC = () => {
                 <div>
                   <h4>Visit Us</h4>
                   <address>
-                    RSDT Engineering Center<br />
-                    Dhubai Hills, Dhubai<br />
+                    Microwave Sensors Development<br />
+                    IFZA Business Park, Building A2 - Nadd Hessa, Dubai, Dubai Silicon Oasis<br />
                     United Arab Emirates
                   </address>
                 </div>
@@ -229,9 +220,7 @@ const ContactPage: React.FC = () => {
               <div className="social-links">
                 <h4>Follow our work</h4>
                 <div className="social-icons">
-                  <a href="https://linkedin.com/company/rsdt" target="_blank" rel="noopener noreferrer">in</a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">𝕏</a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">▶</a>
+                  <a href="https://t.me/emirates_temi4" target="_blank" rel="noopener noreferrer">➤</a>
                 </div>
               </div>
 

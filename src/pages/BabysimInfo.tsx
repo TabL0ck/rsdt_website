@@ -78,14 +78,6 @@ const BabysimPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* ==================== CTA / BACK ==================== */}
-      <section className="product-cta-final-roas">
-        <div className="product-container-roas">
-          <h2>Interested Babysim?</h2>
-          <Link to="/contact" className="btn-primary">Contact us</Link>
-        </div>
-      </section>
     </div>
   );
 };

@@ -101,11 +101,10 @@ const SensorDetailPage: React.FC = () => {
         </table>
       </section>
 
-      {/* Блок "Why Choose RSDT" (одинаковый для всех) */}
       <section className="sensor-why">
-        <h2>Why Choose RSDT</h2>
+        <h2>Why Choose MW-sensor</h2>
         <p>
-          RSDT gathers the finest talent in mmWave, embedded hardware and software
+          MW-sensor gathers the finest talent in mmWave, embedded hardware and software
           engineering, forming a strong foundation for creating innovative end‑to‑end
           turnkey solutions. With years of expertise in radar sensor development, we
           deliver custom solutions for automotive, commercial vehicle, industrial, and

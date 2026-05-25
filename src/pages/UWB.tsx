@@ -244,15 +244,6 @@ const UWB: React.FC = () => {
           </div>
         </div>
       </section>
-
-
-      {/* CTA FINAL */}
-      <section className="product-cta-final-roas">
-        <div className="product-container-roas">
-          <h2>Ready to bring UWB precision to your next project?</h2>
-          <a href="/#contact" className="btn-primary">Contact RSDT Team</a>
-        </div>
-      </section>
     </div>
   );
 };

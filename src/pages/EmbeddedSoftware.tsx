@@ -84,26 +84,30 @@ const EmbeddedSoftware: React.FC = () => {
     return (
         <div className="embedded-hardware-page">
             {/* Hero Section */}
-            <section className="embedded-hero">
+            <section className="page-hero">
                 <div
-                    className="embedded-hero-bg"
+                    className="page-hero-bg"
                     style={{
                         backgroundImage: "url('/background/emb-soft_bg-orange.png')",
                         opacity: 0.4
                     }}
                 ></div>
                 <div className="container">
-                    <div className="embedded-badge">EMBEDDED SOFTWARE</div>
-                    <h1>
-                        Software <span className="highlight">Development</span>
-                    </h1>
-                    <p className="embedded-subtitle">
-                        End‑to‑end embedded software services — from bare‑metal drivers to DSP algorithms and
-                        graphical user interfaces. Over 10 years of experience delivering reliable, real‑time
-                        firmware for automotive, industrial and medical devices.
-                    </p>
-                    <div className="embedded-hero-cta">
-                        <a href="/#contact" className="btn-primary">Discuss Your Project</a>
+                    <div className="page-hero-grid">
+                        <div className="page-hero-text">
+                            <div className="page-hero-badge">EMBEDDED SOFTWARE</div>
+                            <h1>
+                                Embedded Software <span className="page-hero-highlight">Development</span>
+                            </h1>
+                            <p className="page-hero-subtitle">
+                                End‑to‑end embedded software services — from bare‑metal drivers to DSP algorithms and
+                                graphical user interfaces. Over 10 years of experience delivering reliable, real‑time
+                                firmware for automotive, industrial and medical devices.
+                            </p>
+                            <div className="page-hero-cta">
+                                <a href="/#contact" className="btn-primary">Discuss Your Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -199,12 +203,12 @@ const EmbeddedSoftware: React.FC = () => {
                     <ul className="gui-features">
                     <li>CAN/CAN FD and UART sensor connection</li>
                     <li>Real-time 3D point cloud visualization</li>
-                    <li>FM, SM, and global detection zone configuration</li>
+                    <li>Detection zone configuration</li>
                     <li>Sensor calibration and validation tools</li>
                     <li>TLV data logging and analysis</li>
                     <li>Temperature and system status monitoring</li>
                     <li>EEPROM configuration read/write</li>
-                    <li>Firmware update via bootloader</li>
+                    <li>Firmware update via CAN</li>
                     <li>Multi-radar Master-Slave support</li>
                     <li>Engineering tools for debugging and testing</li>
                     </ul>
@@ -257,7 +261,7 @@ const EmbeddedSoftware: React.FC = () => {
             {/* Why Choose Us */}
             <section className="embedded-why-us">
                 <div className="container">
-                    <h2 className="section-title">Why Choose RSDT for Embedded Software?</h2>
+                    <h2 className="section-title">Why Choose MW-Sensor for Embedded Software?</h2>
                     <div className="why-us-grid">
                         {whyChoose.map((item, index) => (
                             <div key={index} className="why-us-item">
@@ -267,15 +271,6 @@ const EmbeddedSoftware: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
-
-            {/* Final CTA */}
-            <section className="embedded-cta">
-                <div className="container">
-                    <h2>Ready to bring intelligence to your embedded device?</h2>
-                    <p>Let's create reliable, real‑time software that unlocks the full potential of your hardware.</p>
-                    <a href="/#contact" className="btn-primary">Contact Our Team</a>
                 </div>
             </section>
         </div>

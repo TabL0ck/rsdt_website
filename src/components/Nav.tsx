@@ -60,7 +60,7 @@ const Nav: React.FC = () => {
   const aboutLinks = [
     { name: 'About Us', path: '/about' },
     { name: 'History', path: '/about-history' },
-    { name: 'Careers', path: '/about/careers' },
+    { name: 'Careers', path: '/careers' },
   ];
 
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
@@ -89,8 +89,13 @@ const Nav: React.FC = () => {
   return (
     <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <NavLink to="/" className="nav-logo">
-          <span className="dot"></span> RSDT
+        <NavLink to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <img
+            src="/logo.svg"
+            alt="MW-Sensor Logo"
+            className="nav-logo-icon"
+            style={{ height: '40px', width: 'auto' }}
+          />
         </NavLink>
 
         {/* Десктопное меню */}
@@ -131,7 +136,7 @@ const Nav: React.FC = () => {
             </ul>
           </li>
 
-          <li><a href="/#semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
+          <li><a href="/semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
 
           {/* About */}
           <li className={`dropdown ${isAboutOpen ? 'open' : ''}`}>
@@ -150,8 +155,7 @@ const Nav: React.FC = () => {
               ))}
             </ul>
           </li>
-
-          <li><a href="/#contact" onClick={(e) => handleAnchorClick(e, 'contact')} className="nav-cta">Contact Us</a></li>
+          <li><NavLink to='/contact' className="nav-cta">Contact Us</NavLink></li>
         </ul>
 
         {/* Бургер */}
@@ -229,7 +233,7 @@ const Nav: React.FC = () => {
               )}
             </li>
 
-            <li><a href="/#semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
+            <li><a href="/semiconductors" onClick={(e) => handleAnchorClick(e, 'semiconductors')}>Semiconductors</a></li>
 
             {/* About */}
             <li>
@@ -252,7 +256,7 @@ const Nav: React.FC = () => {
               )}
             </li>
 
-            <li><a href="/#contact" onClick={(e) => handleAnchorClick(e, 'contact')} className="nav-cta">Contact Us</a></li>
+            <li><NavLink to='/contact' >Contact Us</NavLink></li>
           </ul>
         </div>
       )}
