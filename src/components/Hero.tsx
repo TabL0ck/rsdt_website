@@ -1,9 +1,25 @@
-import React from 'react';
-import RadarModel3D from './RadarModel3D';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+const slides = [
+  '/images/radar-wave.png',
+  '/images/sensor-device.png',
+  '/images/sensor-chip.png',
+  '/images/night-car.png',
+  '/images/cockpit.png',
+];
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % slides.length);
+    }, 5200);
+
+    return () => window.clearInterval(timer);
+  }, []);
 
   const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
     // Если мы не на главной, переходим на главную
@@ -24,26 +40,30 @@ const Hero: React.FC = () => {
 
   return (
     <section className="hero" id="hero">
-      <video
-        className="hero-bg-video"
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster="/videos/automob_salon.mp4"
-      >
-        <source src="/videos/automob_salon.mp4" type="video/mp4" />
-        <img src="/photos/hero-poster.jpg" alt="hero background" />
-      </video>
+      <div className="hero-slideshow" aria-hidden="true">
+        {slides.map((slide, index) => (
+          <div
+            className={`hero-slide ${index === activeSlide ? 'is-active' : ''}`}
+            key={slide}
+            style={{ backgroundImage: `url(${slide})` }}
+          />
+        ))}
+      </div>
       <div className="hero-bg-pattern"></div>
       <div className="hero-grid-lines"></div>
       <div className="hero-content">
         <h1>
-          Sense more. Sense better.<br />
-          <span className="highlight">Radar technology for safety.</span>
+          Sense more.
+          <span>
+            Sense better.
+          </span>
+          <span className="hero-title-accent">
+            Radar technology
+            <span>for safety.</span>
+          </span>
         </h1>
         <p className="hero-subtitle">
-          <strong>Next-generation microwave radar sensors for automotive, robotics, medical, and smart home applications provide accurate, contactless detection of presence, motion, respiration, and heartbeat, as well as driver monitoring and analysis of environmental dynamics through advanced signal processing, built-in intelligence, and high reliability.</strong>
+          Next-generation microwave radar sensors for automotive, robotics, medical, and smart home applications provide accurate, contactless detection of presence, motion, respiration, and heartbeat, as well as driver monitoring and analysis of environmental dynamics through advanced signal processing, built-in intelligence, and high reliability.
         </p>
         <div className="hero-buttons">
           <a href="/#solutions" onClick={(e) => handleAnchor(e, 'solutions')} className="btn-primary">
