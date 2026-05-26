@@ -87,7 +87,7 @@ const LPS: React.FC = () => {
                     modelCenter={[45, 110, 0]}
                     modelScale={1.5}
                     rotationAxis={'y'}
-                    rotationSpeed={0.008}
+                    rotationSpeed={0.016}
                     rotationCenter={[45, 100, 0]}
                 />
             </div>

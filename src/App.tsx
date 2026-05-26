@@ -6,6 +6,7 @@ import RsdtBanner from './components/RsdtBanner';
 import ParallaxTransition from './components/ParallaxTransition';
 import DualBlocksSection from './components/DualBlocksSection';
 import RadarAdvantageSection from './components/RadarAdvantageSection';
+import NewsPreview from './components/NewsPreview';
 import SpecsStrip from './components/SpecsStrip';
 import AdvantagesSection from './components/AdvantagesSection';
 import Footer from './components/Footer';
@@ -29,10 +30,9 @@ import BABYSIMMAIN from './pages/BabysimInfoMain'
 import ABOUTOURRADARS from './pages/AboutOurRadars'
 import EmbeddedTesting from './pages/EmbeddedTesting';
 import NotFound from './pages/NotFound';
-import CareersPage from './pages/CareersPage';
 import NewsPage from './pages/NewsPage';
+import CareersPage from './pages/CareersPage';
 import AdminNewsPage from './pages/AdminNewsPage';
-import NewsPreview from './components/NewsPreview';
 
 const pageTitles: Record<string, string> = {
   '/': 'MW-Sensor | Microwave Sensors Development',
@@ -55,6 +55,8 @@ const pageTitles: Record<string, string> = {
   '/careers': 'MW-Sensor | Careers',
   '/news': 'MW-Sensor | News',
   '/admin/news': 'MW-Sensor | News Editor',
+  '/why-radars': 'MW-Sensor | Why Radar',
+  '/about-our-radars': 'MW-Sensor | About Our Radars',
   '*' : 'MW-Sensor | 404 - Page Not Found'
 };
 

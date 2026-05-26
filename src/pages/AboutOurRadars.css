@@ -1,10 +1,9 @@
 /* WhyARadarSensors.css – современный дизайн с таблицей */
 
-.why-radar-page {
+.about-our-radars-page {
     background: linear-gradient(135deg, #f8fcff 0%, #ffffff 100%);
     min-height: 100vh;
-    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    color: #1a2c3e;
+    padding-top: var(--navbar-height);
 }
 
 .container {
@@ -13,45 +12,54 @@
     padding: 0 2rem;
 }
 
-/* Hero секция */
-.why-radar-hero {
+/* Hero section */
+.about-our-radars-hero {
     background: linear-gradient(110deg, #0a2540 0%, #1a3a5f 100%);
     color: white;
-    padding: 4rem 0 3rem;
+    padding: 6rem 0 4rem;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-.why-radar-hero::before {
+.about-our-radars-hero::before {
     content: '';
     position: absolute;
-    top: -30%;
-    left: -10%;
-    width: 120%;
-    height: 160%;
-    background: radial-gradient(circle, rgba(0,112,240,0.2) 0%, transparent 70%);
+    top: -50%;
+    left: -20%;
+    width: 140%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,112,240,0.15) 0%, transparent 70%);
     pointer-events: none;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+.hero-content {
+    text-align: center;      /* ← центр */
+    max-width: 800px;
+    margin-left: auto;       /* ← центр */
+    margin-right: auto;
 }
 
-.gradient-text {
-    background: linear-gradient(120deg, #f47920, #ffb347);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .hero-lead {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto;
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;          /* ← центр */
+    line-height: 1.6;
     opacity: 0.9;
+}
+
+.gradient-text {
+    background: linear-gradient(120deg, #eb7029, #ffb347);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 /* Таблица */

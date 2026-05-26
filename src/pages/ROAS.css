@@ -2,7 +2,7 @@
 .product-page-roas {
   background: var(--white);
   color: var(--text);
-  padding-top: 64px;
+  padding-top: var(--navbar-height);
   position: relative;
   overflow: hidden;
   min-height: 100vh;

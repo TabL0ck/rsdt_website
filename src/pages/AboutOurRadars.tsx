@@ -4,9 +4,9 @@ import './AboutOurRadars.css';
 
 const WhyARadarSensors: React.FC = () => {
   return (
-    <div className="why-radar-page">
+    <div className="about-our-radars-page">
       {/* Hero секция */}
-      <section className="why-radar-hero">
+      <section className="about-our-radars-hero">
         <div className="container">
           <div className="hero-content">
             <h1>About <span className="gradient-text">Our Radars</span></h1>
