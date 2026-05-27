@@ -50,7 +50,7 @@ const DualBlocksSection: React.FC = () => {
                 <li><Link to="/roas">Rear Occupant Alert Sensor</Link></li>
                 <li><Link to="/medical-sensor">Vital Signs Monitoring Sensor</Link></li>
                 <li>Driver Monitoring Sensor</li>
-                <li>Driver & Passenger Monitoring System</li>
+                <li><Link to="/driver-passengers-monitoring">Driver & Passenger Monitoring System</Link></li>
                 <li>Child presence detection</li>
                 <li>Intrusion detection</li>
               </ul>
