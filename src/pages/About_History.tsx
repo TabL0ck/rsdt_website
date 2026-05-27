@@ -1,4 +1,4 @@
-// About_History.tsx — финальная версия с обновлённым текстом
+// About_History.tsx — финальная версия с блоком Milestones & Expertise
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './About_History.css';
@@ -6,7 +6,7 @@ import './About_History.css';
 const timelineData = [
   {
     year:'2015',
-    title:'Launch of Integrated Circuit Development',
+    title:'Launch of Development',
     content: (
       <>
       <p>
@@ -16,9 +16,10 @@ const timelineData = [
       <p>
         From the beginning, the company established a full-cycle development process for electronic devices — from requirements analysis
          and system design to prototype manufacturing and comprehensive testing. 
-         Project activities included:
       </p>
+         <p>Project activities included:</p>
       <ul>
+        <li>design of RF IC based on RFCMOS and SiGe BiCMOS technologies</li>
         <li>design of Wi-Fi and Bluetooth communication modules</li>
         <li>design of antenna systems and RF/microwave circuits</li>
         <li>development of communication and control systems based on DSPs and microcontrollers</li>
@@ -46,7 +47,7 @@ const timelineData = [
   },
   {
     year: '2021–2022',
-    title: 'Technology Development',
+    title: 'Microwave Radar Sensor Enhancement',
     content: (
       <>
         <p>
@@ -73,7 +74,7 @@ const timelineData = [
   },
   {
     year: '2023',
-    title: 'Medical Sensing Systems',
+    title: 'Medical Sensing System',
     content: (
       <>
         <p>
@@ -101,7 +102,7 @@ const timelineData = [
         for data exchange and synchronization.
         The D&PMS features seat occupancy detection, passenger classification, driver and passenger vital sign monitoring, child 
         presence detection, and intrusion detection.
-</p>
+      </p>
     )
   },
   {
@@ -113,18 +114,18 @@ const timelineData = [
         The Low Power Driver & Passengers Monitoring System (LPD&PMS) was implemented using four LPSs, 
         with the potential to connect more sensors. These LPSs are connected via a local CAN network to form 
         the LPD&PMS system, with signal processing performed by the master sensor to improve the probability of
-       passengers detection, recognition, and child presence detection.</p>
+        passengers detection, recognition, and child presence detection.</p>
 
-      <p>JSX expressions must have one parent element.</p>
+      <p><strong className="extra-bold">Integrated Circuit of SDR Transceiver</strong></p>
 
-      <p>In 2025, the development of a 0.1 – 6 GHz SDR transceiver integrated circuit (IC) 
+      <p>In 2025, the development of a <strong className="extra-bold">0.1 – 6 GHz SDR transceiver integrated circuit (IC)</strong> 
         based on a 28 nm RF CMOS process technology was started.</p>
       </>
     )    
   },
   {
     year: '2026',
-    title: 'New projects started',
+    title: 'Current projects',
     content: (
       <>
         <p>
@@ -133,33 +134,18 @@ const timelineData = [
         <p>
           The UWB ROA & Kick radar sensor utilizes a new chip based on the IEEE 802.15.4a standard, which enhances the detection probability of occupants, including infants, by improving radio wave penetration into areas of the vehicle interior obscured by seats. The sensor also implements gesture recognition algorithms for opening the car trunk.
         </p>        
-      <p>
+        <p>
         2. Development of the Enhanced In-Cabin Monitoring Sensor (ICMS) was started.
         </p>
         <p>The enhanced driver and occupant monitoring system based on the new sensor is designed to improve the accuracy of driver respiratory rate and heart rate measurements 
           through improved digital signal processing algorithms and sensor fusion.</p>
          
         <p>
-          The development project of the 0.1–6 GHz SDR transceiver integrated circuit (IC) based on a 28 nm RF CMOS process technology is ongoing.
+          The development project of the <strong className="extra-bold">0.1–6 GHz SDR transceiver integrated circuit (IC)</strong> based on a 28 nm RF CMOS process technology is ongoing.
         </p>
         <p>
-          The IC is suitable for a wide range of applications, including the construction of communication systems that realize V2X technology for autonomous vehicles
+          The IC is suitable for a wide range of applications, including the construction of communication systems that realize V2X technology for autonomous vehicles.
         </p>
-        <p>By this stage, the company had completed:</p>
-        <ul>
-          <li>Six projects dedicated to the development of automotive sensors;</li>
-          <li>One project that delivered a contactless medical sensor;</li>
-          <li>Five projects focused on radio frequency and microwave integrated circuits for communications and radar systems.</li>
-        </ul>
-        <p>The company's accumulated experience enables it to develop:</p>
-        <ul>
-          <li>Automotive radar systems;</li>
-          <li>Contactless vital sign monitoring systems;</li>
-          <li>Intelligent microwave radar sensors for automotive and medical applications;</li>
-          <li>Embedded and front end software;</li>
-          <li>Radio frequency/microwave integrated circuits and semiconductor devices;</li>
-          <li>Antennas, including AESA (Active Electronically Scanned Arrays).</li>
-        </ul>
       </>
     ),
   },
@@ -214,6 +200,46 @@ const TimelineItem = ({
   );
 };
 
+const MilestonesBlock: React.FC = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, 0.3);
+
+  return (
+    <section className="milestones-section">
+      <div className="product-container-roas">
+        <div
+          ref={ref}
+          className={`milestones-card ${inView ? 'milestones-card--visible' : ''}`}
+        >
+          <h2 className="milestones-title">Milestones & Expertise</h2>
+          <div className="milestones-grid">
+            <div className="milestones-col">
+              <h3>Completed projects</h3>
+              <ul>
+                <li>Six projects dedicated to the development of automotive microwave radar sensors;</li>
+                <li>One project that delivered a contactless medical sensor;</li>
+                <li>Five projects focused on the development of radio-frequency and microwave integrated circuits for communications and radar systems.
+</li>
+              </ul>
+            </div>
+            <div className="milestones-col">
+              <h3>Core expertise</h3>
+              <ul>
+                <li>Automotive radar systems;</li>
+                <li>Contactless vital sign monitoring systems;</li>
+                <li>Intelligent microwave radar sensors for automotive and medical applications;</li>
+                <li>Embedded and front-end software;</li>
+                <li>Radio frequency/microwave integrated circuits and semiconductor devices;</li>
+                <li>Antennas, including AESA (Active Electronically Scanned Arrays).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const CompanyHistoryPage: React.FC = () => {
   return (
     <div className="product-page-roas uwb-page">
@@ -237,7 +263,7 @@ const CompanyHistoryPage: React.FC = () => {
           <div className="product-badge-roas">Microwave Sensors Development</div>
           <h1>Company History</h1>
           <p className="product-subtitle-roas">
-            From RF integrated circuits in 2015 to automotive radar sensors and intelligent driver and passengers monitoring systems — a timeline of innovation.
+           From RF integrated circuits in 2015 to automotive microwave radar sensors,<br></br> intelligent driver and passengers monitoring systems in 2026 — a timeline of innovation.
           </p>
           <div className="info-buttons" style={{ justifyContent: 'center' }}>
             <Link to="/main" className="btn-primary">← Back to main</Link>
@@ -261,6 +287,8 @@ const CompanyHistoryPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <MilestonesBlock />
     </div>
   );
 };

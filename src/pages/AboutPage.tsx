@@ -37,9 +37,11 @@ const AboutPage: React.FC = () => {
           <div className="about-story-grid">
             <div className="about-story-text">
               <p>
-                Microwave Sensors Development (MW-Sensor) is a leading provider of full-cycle microwave radar sensor design, intelligent perception systems, and advanced embedded engineering. 
-                With over 10 years of focused development, we offer a proven portfolio of short-, mid-, and long-range radar sensors for in-cabin monitoring, driver assistance, and autonomous driving applications. 
-                MW-Sensor assembles top-tier expertise in system architecture, DSP algorithm design, microwave antenna and feeder development, embedded software, hardware, and functional testing, all within a single engineering center.
+                Microwave Sensors Development (MW-Sensor) is an innovative IT company specializing in the development of microwave radar sensors, RF & MW integrated circuits, and unique embedded software for automotive, robotics, medical, and smart home applications.
+                  With over 10 years of experience, MW-Sensor performs a full development cycle — from technical specifications to mass production documentation — combining system architecture design, signal processing, antenna and PCB design, embedded firmware design, and full validation.
+                  Our proven short range microwave radar sensors for in cabin monitoring build on a track record of six completed automotive radar projects covering occupancy detection, vital sign monitoring, and Child Presence Detection. 
+                  Our client engagements include a South Korean automotive supplier for KIA and Hyundai OEM companies. Our in cabin sensors are already in mass production and are equiped to the latest premium vehicle models.
+
               </p>
             </div>
             <div className="about-story-image">
@@ -58,11 +60,11 @@ const AboutPage: React.FC = () => {
             </div>
               <div className="about-story-text">
               <p>
-               MW-Sensor executes every phase of sensor creation – from requirement analysis and system design through signal processing, antenna and PCB development, embedded DSP firmware, and full validation to final technical documentation.
-                Our solutions build on a track record of six completed automotive radar projects, covering occupancy detection, vital-sign monitoring, and blind-spot sensing.
-                 Additionally, two R&D programs in contactless respiration and heartbeat sensing for medical use have been successfully delivered. Our client engagements include multinational automotive suppliers and innovative technology companies.
-                  We also have been recognized in national innovation competitions. MW-Sensor combines proven engineering methods with deep domain knowledge to bring pioneering radar sensing products to market faster and more reliably.
-              </p>
+                MW-Sensor also designs integrated circuits (ICs) and IP blocks for communication systems, including V2X technologies for autonomous vehicles. We deliver final GDSII files and complete technical documentation based on RF CMOS and SiGe BiCMOS process technologies down to 28 nm, utilizing the official PDKs of leading global foundries such as TSMC, SMIC, IHP, and others.
+                MW-Sensor also designs integrated circuits (ICs) and IP blocks for communication systems, including systems that realize V2X technology for autonomous vehicles. Our ICs are designed using PDKs for RF CMOS and SiGe BiCMOS process technologies down to 28 nm. We deliver final GDSII files and complete technical documentation for tape-out and chip fabrication at leading global foundries such as TSMC, SMIC, IHP and others.
+                If the required function is not yet available in any of our standard radar sensors or ICs, MW Sensor can meet specific customer requirements.
+
+               </p>
               {/* остальные элементы (этапы, проекты) останутся ниже */}
           </div>
           </div>
