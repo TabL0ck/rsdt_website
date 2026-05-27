@@ -312,3 +312,87 @@
         font-size: 1.6rem;
     }
 }
+
+@media (max-width: 640px) {
+    .about-our-radars-page {
+        overflow-x: hidden;
+    }
+
+    .about-our-radars-hero {
+        padding: 4rem 0 3rem;
+    }
+
+    .radar-comparison-table {
+        padding: 2.5rem 0 1.5rem;
+    }
+
+    .table-intro {
+        border-radius: 22px;
+        padding: 1.4rem 1.2rem;
+    }
+
+    .table-wrapper {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border-radius: 18px;
+        box-shadow: 0 14px 28px -18px rgba(10, 37, 64, 0.35);
+        -webkit-overflow-scrolling: touch;
+        scrollbar-color: #f47920 #f4ede6;
+        scrollbar-width: thin;
+    }
+
+    .table-wrapper::after {
+        content: '';
+        position: sticky;
+        right: 0;
+        display: block;
+        width: 42px;
+        height: 0;
+        pointer-events: none;
+        box-shadow: -26px 0 28px 12px rgba(255, 255, 255, 0.92);
+    }
+
+    .comparison-table {
+        width: max-content;
+        min-width: 680px;
+        font-size: 0.84rem;
+    }
+
+    .comparison-table th {
+        padding: 0.9rem 0.85rem;
+        font-size: 0.82rem;
+        line-height: 1.25;
+    }
+
+    .comparison-table th:first-child,
+    .comparison-table td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        width: 150px;
+        min-width: 150px;
+        max-width: 150px;
+        box-shadow: 8px 0 18px -16px rgba(10, 37, 64, 0.45);
+    }
+
+    .comparison-table td {
+        padding: 0.8rem 0.85rem;
+        min-width: 210px;
+        max-width: 250px;
+        font-size: 0.82rem;
+        line-height: 1.45;
+    }
+
+    .comparison-table th:first-child {
+        z-index: 3;
+    }
+
+    .radar-advantages-section {
+        padding: 2.5rem 0;
+    }
+
+    .advantage-card {
+        border-radius: 18px;
+    }
+}
