@@ -300,3 +300,42 @@
     padding: 3.5rem 1.5rem;
   }
 }
+
+@media (max-width: 640px) {
+  .careers-page {
+    overflow-x: hidden;
+  }
+
+  .careers-hero {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .careers-hero-content .info-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .careers-hero-content .info-buttons .btn-primary {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .careers-section {
+    padding: 3rem 1rem;
+  }
+
+  .why-card,
+  .position-card,
+  .spontaneous-application,
+  .perk-item {
+    min-width: 0;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .position-card,
+  .spontaneous-application {
+    border-radius: 14px;
+  }
+}

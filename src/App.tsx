@@ -53,7 +53,6 @@ const pageTitles: Record<string, string> = {
   '/antenna-design': 'MW-Sensor | Antenna Design',
   '/embedded-testing': 'MW-Sensor | Embedded Testing',
   '/semiconductors': 'MW-Sensor | Semiconductors',
-  '/careers': 'MW-Sensor | Careers',
   '/news': 'MW-Sensor | News',
   '/admin/news': 'MW-Sensor | News Editor',
   '/why-radars': 'MW-Sensor | Why Radar',

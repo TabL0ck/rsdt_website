@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 const Nav: React.FC = () => {
@@ -11,6 +11,7 @@ const Nav: React.FC = () => {
   const [mobileDesignOpen, setMobileDesignOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const location = useLocation();
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -40,6 +41,25 @@ const Nav: React.FC = () => {
       document.body.style.overflow = '';
     };
   }, [menuOpen]);
+
+  useEffect(() => {
+    const closeDesktopDropdowns = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node | null;
+      if (target && navRef.current?.contains(target)) return;
+
+      setIsSolutionsOpen(false);
+      setIsDesignOpen(false);
+      setIsAboutOpen(false);
+    };
+
+    document.addEventListener('mousedown', closeDesktopDropdowns);
+    document.addEventListener('touchstart', closeDesktopDropdowns);
+
+    return () => {
+      document.removeEventListener('mousedown', closeDesktopDropdowns);
+      document.removeEventListener('touchstart', closeDesktopDropdowns);
+    };
+  }, []);
 
   const radarSolutions = [
     { name: 'ROAS', path: '/roas' },
@@ -87,7 +107,7 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
+    <nav ref={navRef} className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
         <NavLink to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <img
