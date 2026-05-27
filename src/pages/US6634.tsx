@@ -64,10 +64,10 @@ const US6634: React.FC = () => {
                 US6634 — Unified Sensor<br />
             </h1>
             <p className="product-subtitle-us6634">
-                <strong>Contactless mmWave radar that combine full functionality of <a href="/#/roas">ROAS</a> and <a href="/#/master-sensor-unit">MS</a> allowing the use of the same software and boards of the same type throughout the entire vehicle without the need to explicitly load different programs for the master and slaves.</strong>
+                <strong>Contactless mmWave radar that combine full functionality of <a href="/roas">ROAS</a> and <a href="/master-sensor-unit">MS</a> allowing the use of the same software and boards of the same type throughout the entire vehicle without the need to explicitly load different programs for the master and slaves.</strong>
             </p>
             <div className="product-cta">
-                <a href="/#contact" className="btn-primary">
+                <a href="/contact" className="btn-primary">
                 Get in Touch
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
@@ -96,9 +96,9 @@ const US6634: React.FC = () => {
             <div className="product-container-us6634">
             <h2>Core Functionality</h2>
             <p className="section-description-us6634">
-                Advanced mmWave radar capabilities that make <a href="/#/unified-sensor-6634">US6634</a> the ultimate unified sensor on the market. 
-                It combines the full rear occupant monitoring functionality of <a href="/#/roas">ROAS</a> with the master sensor unit 
-                capabilities of <a href="/#/master-sensor-unit">MS</a>, allowing the use of identical hardware and software throughout the entire vehicle 
+                Advanced mmWave radar capabilities that make <a href="/unified-sensor-6634">US6634</a> the ultimate unified sensor on the market. 
+                It combines the full rear occupant monitoring functionality of <a href="/roas">ROAS</a> with the master sensor unit 
+                capabilities of <a href="/master-sensor-unit">MS</a>, allowing the use of identical hardware and software throughout the entire vehicle 
                 without the need to explicitly load different programs for master and slave units.
             </p>
 
