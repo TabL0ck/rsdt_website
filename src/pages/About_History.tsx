@@ -5,35 +5,42 @@ import './About_History.css';
 
 const timelineData = [
   {
-    year: '2020',
-    title: 'Launch of Automotive Development',
+    year:'2015',
+    title:'Launch of Integrated Circuit Development',
     content: (
       <>
-        <p>
-          The company’s development history began in 2020. The company’s primary areas of activity became the
-          development of automotive sensors for a South Korean customer, as well as research and development in
-          the field of non‑contact medical sensors.
-        </p>
-        <p>
-          From the very beginning, the company established a full‑cycle development process for electronic and
-          radar devices — from requirements analysis and system design to prototype manufacturing and comprehensive
-          testing. Project activities included:
-        </p>
-        <ul>
-          <li>development of digital signal processing algorithms;</li>
-          <li>design of antenna systems and RF/microwave front‑end circuits;</li>
-          <li>electrical and mechanical design of devices;</li>
-          <li>development of embedded DSP software;</li>
-          <li>testing and preparation of engineering documentation;</li>
-          <li>prototype manufacturing using the company’s in‑house technological capabilities.</li>
-        </ul>
-        <p>
-          The first major area of activity was the development of automotive radar sensors for a large
-          South Korean company. In 2020, the company developed <strong>ROA (Rear Occupant Alert version 1)</strong> — a
-          universal solution with omnidirectional antennas designed to detect passenger presence inside a vehicle cabin.
-          The development of the second‑generation sensor marked an important transition from basic sensing systems to
-          intelligent radar solutions with advanced analytical capabilities.
-        </p>
+      <p>
+        The company's history began in 2015. Its primary focus was the development of radio-frequency integrated circuits
+         (RF IC) for communications systems, UWB radars, and communication modules.
+      </p>
+      <p>
+        From the beginning, the company established a full-cycle development process for electronic devices — from requirements analysis
+         and system design to prototype manufacturing and comprehensive testing. 
+         Project activities included:
+      </p>
+      <ul>
+        <li>design of Wi-Fi and Bluetooth communication modules</li>
+        <li>design of antenna systems and RF/microwave circuits</li>
+        <li>development of communication and control systems based on DSPs and microcontrollers</li>
+        <li>development of embedded DSP software</li>
+        <li>electrical and mechanical design of devices</li>
+        <li>testing and preparation of technical documentation</li>
+        <li>prototyping using the company's in-house technologies.</li>
+      </ul>
+      </>
+    )
+  },
+  {
+    year: '2020',
+    title: 'Launch of Automotive Microwave Sensors Development',
+    content: (
+      <>
+      <p>
+        The development of automotive microwave sensors began in 2020. The company’s key activities included the creation 
+       of in‑cabin sensors for a South Korean customer.
+      In 2020, the company developed ROAS (Rear Occupant Alert Sensor) version 1 – a universal solution with omnidirectional antennas designed to detect the presence of passengers in a vehicle, implementing the Child Presence Detection 
+      (CPD) function – one of the requirements of the EURO NCAP standard. 
+      </p>
       </>
     ),
   },
@@ -65,52 +72,93 @@ const timelineData = [
     ),
   },
   {
-    year: '2023–2024',
+    year: '2023',
     title: 'Medical Sensing Systems',
     content: (
       <>
         <p>
-          In <strong>2023</strong>, the <strong>VSM (Vital Signs Monitor)</strong> medical sensor was first introduced.
+          In 2023, the company began developing the Vital Signs Monitor (VSM), a non-contact medical technology. 
+          The same year, it also started developing a compact radar-based medical sensor that realized this technology.
+           The project focused on creating a Contactless Medical Monitoring System (CMMS) with Wi-Fi 
+           data transmission to measure the heart rate and breathing rate of hospital patients.
         </p>
         <p>
-          In <strong>2024</strong>, the company continued developing non‑contact medical technologies. The project
-          focused on creating a compact radar‑based <strong>CMMS (Contactless Medical Monitoring System)</strong> to
-          measure heart rate and breath rate without the use of contact sensors.
+          In the end of 2023, the VSM radar sensor and CMMS were first introduced.
         </p>
+        <p>Driver Monitoring System version 2</p>
+        <p>In 2023, the DMS2 (Driver Monitoring System version 2) automotive radar sensor was developed.
+           The DMS2 project aimed to improve vehicle safety through continuous driver condition monitoring, vital
+            signs analysis, and detection of potentially dangerous conditions associated with fatigue or loss of attention.</p>
       </>
     ),
   },
   {
-    year: '2025–2026',
-    title: 'Intelligent Driver Monitoring Systems',
+    year: '2024',
+    title: "Intelligent Driver and Passenger Monitoring System",
+    content:(
+      <p>This year, the development of the Driver and Passenger Monitoring System (D&PMS) began.
+        The D&PMS is based on three mmWave slave radar sensors and one mmWave master sensor, connected via a local CAN network 
+        for data exchange and synchronization.
+        The D&PMS features seat occupancy detection, passenger classification, driver and passenger vital sign monitoring, child 
+        presence detection, and intrusion detection.
+</p>
+    )
+  },
+  {
+    year: "2025",
+    title: "Low Power Intelligent Driver and Passengers Monitoring System and SDR Transceiver IC",
+    content:(
+      <>
+      <p>In 2025, a unified Low Power Sensor (LPS) based on the AWRL6843 chip was developed. 
+        The Low Power Driver & Passengers Monitoring System (LPD&PMS) was implemented using four LPSs, 
+        with the potential to connect more sensors. These LPSs are connected via a local CAN network to form 
+        the LPD&PMS system, with signal processing performed by the master sensor to improve the probability of
+       passengers detection, recognition, and child presence detection.</p>
+
+      <p>JSX expressions must have one parent element.</p>
+
+      <p>In 2025, the development of a 0.1 – 6 GHz SDR transceiver integrated circuit (IC) 
+        based on a 28 nm RF CMOS process technology was started.</p>
+      </>
+    )    
+  },
+  {
+    year: '2026',
+    title: 'New projects started',
     content: (
       <>
         <p>
-          During this year, the development of <strong>DMS2</strong> started. The DMS2 project aimed at improving
-          vehicle safety through continuous driver condition monitoring, vital signs analysis, and detection of
-          potentially dangerous conditions associated with fatigue or loss of attention.
+        1. Development of the Ultra-Wideband (UWB) Rear Occupant Alert (ROA) & Kick radar sensor was started.
         </p>
         <p>
-          In <strong>2026</strong>, two new projects were started: <strong>ICMS (In‑Cabin Monitoring Sensor)</strong>{' '}
-          and <strong>UWBKaROA (Ultra‑Wideband Kick and Rear Occupant Alert)</strong>. UWBKaROA utilized a new radar
-          chip based on IEEE 802.15.4a standard.
+          The UWB ROA & Kick radar sensor utilizes a new chip based on the IEEE 802.15.4a standard, which enhances the detection probability of occupants, including infants, by improving radio wave penetration into areas of the vehicle interior obscured by seats. The sensor also implements gesture recognition algorithms for opening the car trunk.
+        </p>        
+      <p>
+        2. Development of the Enhanced In-Cabin Monitoring Sensor (ICMS) was started.
+        </p>
+        <p>The enhanced driver and occupant monitoring system based on the new sensor is designed to improve the accuracy of driver respiratory rate and heart rate measurements 
+          through improved digital signal processing algorithms and sensor fusion.</p>
+         
+        <p>
+          The development project of the 0.1–6 GHz SDR transceiver integrated circuit (IC) based on a 28 nm RF CMOS process technology is ongoing.
         </p>
         <p>
-          By this stage, the company had completed:
+          The IC is suitable for a wide range of applications, including the construction of communication systems that realize V2X technology for autonomous vehicles
         </p>
+        <p>By this stage, the company had completed:</p>
         <ul>
-          <li>six automotive sensor development projects;</li>
-          <li>two non‑contact medical sensors.</li>
+          <li>Six projects dedicated to the development of automotive sensors;</li>
+          <li>One project that delivered a contactless medical sensor;</li>
+          <li>Five projects focused on radio frequency and microwave integrated circuits for communications and radar systems.</li>
         </ul>
-        <p>
-          The accumulated experience enabled the company to establish expertise in:
-        </p>
+        <p>The company's accumulated experience enables it to develop:</p>
         <ul>
-          <li>automotive radar systems;</li>
-          <li>DSP and embedded software;</li>
-          <li>RF/microwave engineering;</li>
-          <li>non‑contact vital signs monitoring;</li>
-          <li>intelligent sensor systems for transportation and medical applications.</li>
+          <li>Automotive radar systems;</li>
+          <li>Contactless vital sign monitoring systems;</li>
+          <li>Intelligent microwave radar sensors for automotive and medical applications;</li>
+          <li>Embedded and front end software;</li>
+          <li>Radio frequency/microwave integrated circuits and semiconductor devices;</li>
+          <li>Antennas, including AESA (Active Electronically Scanned Arrays).</li>
         </ul>
       </>
     ),
@@ -189,8 +237,7 @@ const CompanyHistoryPage: React.FC = () => {
           <div className="product-badge-roas">Microwave Sensors Development</div>
           <h1>Company History</h1>
           <p className="product-subtitle-roas">
-            From automotive radar sensors in 2020 to intelligent driver monitoring and non‑contact medical
-            technologies — a timeline of innovation.
+            From RF integrated circuits in 2015 to automotive radar sensors and intelligent driver and passengers monitoring systems — a timeline of innovation.
           </p>
           <div className="info-buttons" style={{ justifyContent: 'center' }}>
             <Link to="/main" className="btn-primary">← Back to main</Link>
