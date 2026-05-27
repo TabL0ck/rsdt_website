@@ -119,8 +119,8 @@ const BabysimPage: React.FC = () => {
             <div className="work-item">
               <div className="work-image-wrapper">
                 <img
-                  src="/photos/babysim_shielding.jpg"
-                  alt="Radio shielding measurement"
+                  src="/photos/Babysim-anon.png"
+                  alt="BABYSIM radio shielding area"
                   className="work-image"
                 />
               </div>

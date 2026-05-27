@@ -33,7 +33,7 @@ const NewsPreview: React.FC = () => {
   if (loading || news.length === 0) return null;
 
   return (
-    <section style={{ padding: '70px 20px', background: '#fff' }}>
+    <section className="news-preview-section" style={{ padding: '70px 20px' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         {/* Заголовок секции */}
         <div style={{ 
@@ -60,13 +60,12 @@ const NewsPreview: React.FC = () => {
             <Link 
               to="/news" 
               key={item.id}
+              className="news-preview-card"
               style={{ 
                 textDecoration: 'none', 
                 color: 'inherit',
-                background: 'white',
                 borderRadius: '16px',
                 overflow: 'hidden',
-                boxShadow: '0 6px 20px rgba(0,0,0,0.07)',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                 display: 'block'
               }}
@@ -76,8 +75,7 @@ const NewsPreview: React.FC = () => {
                 <div style={{ 
                   width: '100%', 
                   height: '180px', 
-                  overflow: 'hidden',
-                  background: '#f5f5f5'
+                  overflow: 'hidden'
                 }}>
                   <img 
                     src={item.image_url} 
@@ -94,9 +92,8 @@ const NewsPreview: React.FC = () => {
 
               {/* Контент карточки */}
               <div style={{ padding: '24px' }}>
-                <div style={{ 
+                <div className="news-preview-meta" style={{ 
                   fontSize: '13px', 
-                  color: '#888', 
                   marginBottom: '10px' 
                 }}>
                   {new Date(item.published_at).toLocaleDateString('en-US', {
@@ -107,18 +104,16 @@ const NewsPreview: React.FC = () => {
                   {item.category && ` • ${item.category}`}
                 </div>
 
-                <h3 style={{ 
+                <h3 className="news-preview-title" style={{ 
                   fontSize: '1.3rem', 
                   lineHeight: '1.35', 
                   marginBottom: '12px',
-                  color: '#222',
                   fontWeight: 600
                 }}>
                   {item.title}
                 </h3>
 
-                <p style={{ 
-                  color: '#555', 
+                <p className="news-preview-excerpt" style={{ 
                   fontSize: '15px', 
                   lineHeight: '1.6',
                   margin: 0

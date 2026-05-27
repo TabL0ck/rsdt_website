@@ -3,11 +3,18 @@ import { useNavigate } from 'react-router-dom';
 
 const slides = [
   '/images/radar-wave.png',
-  '/images/sensor-device.png',
-  '/images/sensor-chip.png',
+  '/images/child-safety.png',
   '/images/night-car.png',
   '/images/cockpit.png',
 ];
+
+const getSlideClass = (slide: string) => {
+  if (slide.includes('child-safety')) {
+    return 'hero-slide--child-safety';
+  }
+
+  return '';
+};
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
@@ -43,7 +50,7 @@ const Hero: React.FC = () => {
       <div className="hero-slideshow" aria-hidden="true">
         {slides.map((slide, index) => (
           <div
-            className={`hero-slide ${index === activeSlide ? 'is-active' : ''}`}
+            className={`hero-slide ${getSlideClass(slide)} ${index === activeSlide ? 'is-active' : ''}`}
             key={slide}
             style={{ backgroundImage: `url(${slide})` }}
           />
