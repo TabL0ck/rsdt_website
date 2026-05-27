@@ -32,7 +32,7 @@ const AboutPage: React.FC = () => {
       {/* история компании – теперь с фото справа */}
       <section className="about-section about-history">
         <div className="about-container">
-          <h2>Our Story</h2>
+          <h2>About Us</h2>
 
           <div className="about-story-grid">
             <div className="about-story-text">

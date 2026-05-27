@@ -21,7 +21,7 @@ const WhyARadarSensors: React.FC = () => {
       <section className="radar-comparison-table">
         <div className="container">
           <h2>FMCW vs UWB Radar Sensors</h2>
-          <div className="table-intro">
+          <div className="table-intro">ч1
             <div className="intro-content">
               <h3>Types of Radar Sensors</h3>
               <p>
@@ -49,8 +49,8 @@ const WhyARadarSensors: React.FC = () => {
                 </tr>
                 <tr>
                   <td data-label="Property">Primary application area</td>
-                  <td data-label="FMCW">Transportation, industry, automation, and smart cities</td>
-                  <td data-label="UWB">Consumer electronics, local navigation, and IoT</td>
+                  <td data-label="FMCW">Automotive, robotics, medical, and smart home.</td>
+                  <td data-label="UWB">Consumer electronics, local navigation, automative, and IoT.</td>
                 </tr>
                 <tr>
                   <td data-label="Property">Operating frequency</td>
@@ -69,7 +69,7 @@ const WhyARadarSensors: React.FC = () => {
                 </tr>
                 <tr>
                   <td data-label="Property">Power consumption</td>
-                  <td data-label="FMCW">Moderate to high</td>
+                  <td data-label="FMCW">Low</td>
                   <td data-label="UWB">Very low</td>
                 </tr>
                 <tr>
