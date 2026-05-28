@@ -87,7 +87,7 @@ const ContactPage: React.FC = () => {
           <div className="contact-grid">
             
             {/* Contact Form */}
-            <div className="contact-form-wrapper">
+            <div className="contact-form-wrapper" id="contact-form">
               <h2>Send us a message</h2>
               <p className="form-subtitle">
                 Fill out the form below and we'll respond within 24 hours.

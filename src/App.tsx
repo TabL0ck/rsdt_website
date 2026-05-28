@@ -68,8 +68,10 @@ const App: React.FC = () => {
 
   // Скролл вверх при смене маршрута
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [location.pathname]);
+    if (!location.hash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location.pathname, location.hash]);
 
   // Динамический title (исправленная версия)
   useEffect(() => {

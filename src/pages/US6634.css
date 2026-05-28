@@ -199,3 +199,19 @@
     max-width: 100%;
   }
 }
+
+.us6634-page .product-section-us6634:nth-of-type(odd) {
+  background: var(--white);
+}
+
+.us6634-page .product-section-us6634:nth-of-type(even) {
+  background: var(--off-white);
+}
+
+html[data-theme="dark"] .us6634-page .product-section-us6634:nth-of-type(odd) {
+  background: #081019 !important;
+}
+
+html[data-theme="dark"] .us6634-page .product-section-us6634:nth-of-type(even) {
+  background: linear-gradient(125deg, #0a1a2f 0%, #0f2a3e 100%) !important;
+}

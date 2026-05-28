@@ -97,7 +97,9 @@ const AboutPage: React.FC = () => {
               <div className="offer-icon">⚙️</div>
               <p className="offer-text">
                 If the required function is not yet available in any of our standard radar sensors or ICs,<br />
-                <strong>MW-Sensor can meet specific customer requirements.</strong>
+                <Link to="/contact#contact-form" className="offer-contact-link">
+                  <strong>MW-Sensor can meet specific customer requirements.</strong>
+                </Link>
               </p>
             </div>
           </div>

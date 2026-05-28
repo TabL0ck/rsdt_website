@@ -365,3 +365,17 @@
 [data-theme="dark"] .offer-text strong {
   color: #fb923c;
 }
+
+.offer-contact-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.offer-contact-link strong {
+  transition: color var(--transition), text-shadow var(--transition);
+}
+
+.offer-contact-link:hover strong {
+  color: var(--orange-dark);
+  text-shadow: 0 0 18px rgba(244,121,32,0.22);
+}

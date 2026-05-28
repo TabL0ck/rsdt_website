@@ -199,3 +199,19 @@
     max-width: 100%;
   }
 }
+
+.roas-page .product-section-roas:nth-of-type(odd) {
+  background: var(--white);
+}
+
+.roas-page .product-section-roas:nth-of-type(even) {
+  background: var(--off-white);
+}
+
+html[data-theme="dark"] .roas-page .product-section-roas:nth-of-type(odd) {
+  background: #081019 !important;
+}
+
+html[data-theme="dark"] .roas-page .product-section-roas:nth-of-type(even) {
+  background: linear-gradient(125deg, #0a1a2f 0%, #0f2a3e 100%) !important;
+}
