@@ -163,65 +163,6 @@ const UWB: React.FC = () => {
         </div>
       </section>
 
-       {/* HOW IT WORKS */}
-        {/* HOW IT WORKS */}
-        <section id="how-it-works" className="product-section-roas product-section-roas-alt">
-            <div className="product-container-roas">
-                <h2>How It Works</h2>
-                <div className="how-it-works-content">
-
-                {/* BABYSIM */}
-                <div className="work-item work-item-reverse">
-                    <div className="work-image-wrapper">
-                    <img
-                        src="/photos/babysim.jpg"
-                        alt="BABYSIM – infant-sized baby simulator"
-                        className="work-image work-image--babysim"
-                    />
-                    </div>
-                    <div className="work-description">
-                    <h3>Child Presence Detection with BABYSIM</h3>
-                    <p>
-                        The BABYSIM is an infant‑sized doll (47 cm) covered with a special radio‑transparent cotton
-                        cloth that reflects ~30% of a 62 GHz microwave signal – equivalent to living infant skin.
-                        Inside, a microcontroller‑driven servo mechanism produces a sine‑wave oscillation of the
-                        chest and abdomen, simulating the movements of a sleeping baby’s breathing.
-                    </p>
-                    <p>
-                        This precise simulator is used to debug the Phase Detection Method and to test our
-                        Child Presence Detection Sensor (CPDS) with realistic, repeatable conditions.
-                    </p>
-                    <div className="babysim-more-wrapper">
-                        <Link to="/babysim" className="btn-primary">Learn More About BABYSIM</Link>
-                    </div>
-                    </div>
-                </div>
-
-                {/* GUI */}
-                <div className="work-item">
-                  <div className="work-image-wrapper">
-                    <img
-                      src="/photos/UWB_GUI.jpg"
-                      alt="UWB GUI – reflected signal and AOA"
-                      className="work-image"
-                    />
-                  </div>
-                  <div className="work-description">
-                    <h3>Graphical User Interface</h3>
-                    <p>
-                      GUI displays the reflected signal received from objects located within the sensor’s field of view.
-                      The signal level and AOA are calculated on the sensor.
-                    </p>
-                    <div className="babysim-more-wrapper">
-                      <Link to="/uwb-gui" className="btn-primary">More About GUI</Link>
-                    </div>
-                  </div>
-                </div>
-
-                </div>
-            </div>
-        </section> 
-
       {/* TECHNICAL SPECIFICATIONS */}
       <section className="product-section-roas" id="specs">
         <div className="product-container-roas">

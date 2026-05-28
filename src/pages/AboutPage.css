@@ -266,3 +266,81 @@
   max-width: 600px;
   margin: 0 auto;
 }
+
+
+/* Блок с предложением о кастомизации – на всю ширину, элегантный акцент */
+.about-custom-offer {
+  margin: 3rem 0 2rem;
+  background: linear-gradient(120deg, rgba(244, 121, 32, 0.05) 0%, rgba(244, 121, 32, 0.12) 100%);
+  border-radius: 2rem;
+  padding: 0.1rem; /* для внутреннего свечения, не обязательно */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.custom-offer-inner {
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  text-align: center;
+  border: 1px solid rgba(244, 121, 32, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-custom-offer:hover .custom-offer-inner {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 30px -12px rgba(244, 121, 32, 0.25);
+  border-color: rgba(244, 121, 32, 0.4);
+}
+
+.offer-icon {
+  font-size: 3rem;
+  background: var(--orange-light);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 8px 14px rgba(244, 121, 32, 0.2);
+}
+
+.offer-text {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--text);
+  font-weight: 500;
+  margin: 0;
+  flex: 1;
+}
+
+.offer-text strong {
+  color: var(--orange);
+  font-weight: 700;
+  border-bottom: 2px dotted var(--orange);
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .custom-offer-inner {
+    flex-direction: column;
+    padding: 1.8rem;
+    gap: 1rem;
+  }
+  .offer-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
+  }
+  .offer-text {
+    font-size: 1.1rem;
+  }
+  .offer-text br {
+    display: none;
+  }
+}
