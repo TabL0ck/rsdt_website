@@ -334,3 +334,43 @@
     font-size: 1.3rem;
   }
 }
+
+/* Стили для текстовых ссылок – оранжевые с плавным подчёркиванием */
+.timeline-body a,
+.milestones-col li a,
+.product-hero-roas a:not(.btn-primary),
+.milestones-card a:not(.btn-primary) {
+  color: var(--orange);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.timeline-body a::after,
+.milestones-col li a::after,
+.product-hero-roas a:not(.btn-primary)::after,
+.milestones-card a:not(.btn-primary)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.timeline-body a:hover::after,
+.milestones-col li a:hover::after,
+.product-hero-roas a:not(.btn-primary):hover::after,
+.milestones-card a:not(.btn-primary):hover::after {
+  transform: scaleX(1);
+}
+
+/* Дополнительно – чтобы ссылки внутри жирного текста тоже были оранжевыми */
+.timeline-body strong a,
+.milestones-col strong a {
+  color: var(--orange);
+}
