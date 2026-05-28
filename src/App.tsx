@@ -34,6 +34,7 @@ import NewsPage from './pages/NewsPage';
 import CareersPage from './pages/CareersPage';
 import AdminNewsPage from './pages/AdminNewsPage';
 import DriverPassengersMonitoring from './pages/DriverPassengersMonitoring';
+import IntrusionDetection from './pages/IntrusionDetection';
 
 const pageTitles: Record<string, string> = {
   '/': 'MW-Sensor | Microwave Sensors Development',
@@ -58,6 +59,7 @@ const pageTitles: Record<string, string> = {
   '/why-radars': 'MW-Sensor | Why Radar',
   '/about-our-radars': 'MW-Sensor | About Our Radars',
   '/driver-passengers-monitoring': 'MW-Sensor | Driver & Passangers Monitoring System',
+  '/cabin-intrusion': 'MW-Sensor | Intrusion Detection',
   '*' : 'MW-Sensor | 404 - Page Not Found'
 };
 
@@ -115,6 +117,7 @@ const App: React.FC = () => {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/admin/news" element={<AdminNewsPage />} />
         <Route path="/driver-passengers-monitoring" element={<DriverPassengersMonitoring />} />
+        <Route path="/cabin-intrusion" element={<IntrusionDetection />} />
 {/*        <Route path="/semiconductors" element={< />} /> */}
 {/*        <Route path="/careers" element={<CareersPage />} />      */}
         <Route path="*" element={<NotFound />} />
