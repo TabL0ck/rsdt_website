@@ -206,15 +206,16 @@ const EmbeddedHardware: React.FC = () => {
                 <div className="debug-verification-text">
                     <h2>Debugging & <span className="gradient-text">Experimental Verification</span></h2>
                     <p>
-                    We maintain a fully equipped in‑house laboratory for rapid prototyping, debugging, and validation of your hardware.
-                    Our equipment allows us to verify high‑speed digital and RF paths before mass production, reducing risks and time‑to‑market.
+                    We maintain a fully equipped laboratory for rapid prototyping, debugging, and validation of our microwave radar sensors.
+                    Our equipment enables us to verify high-speed digital and RF paths before mass production, minimizing risks and shortening time-to-market.
                     </p>
                     <ul className="equipment-list">
-                    <li><strong>Oscilloscopes</strong> (high‑bandwidth, mixed‑signal)</li>
-                    <li><strong>Spectrum Analyzers</strong> (up to 110 GHz)</li>
-                    <li><strong>Vector Network Analyzers (VNA)</strong> for S‑parameter measurements</li>
+                    <li><strong>Vector Network Analyzers (VNA)</strong> (up to 67 GHz)</li>
+                    <li><strong>Oscilloscopes</strong> (up to 6 GHz)</li>
+                    <li><strong>Spectrum Analyzers</strong> (up to 44 GHz)</li>
                     <li><strong>RLC meters, signal generators, power supplies</strong></li>
                     <li><strong>Near‑field probes & anechoic chamber</strong> for EMC pre‑compliance</li>
+                    <li><strong>Logical Analyzer</strong>(up to 500 Mb/s)</li>
                     </ul>
                     <p>
                     We also develop specialised test setups for radar sensors, including the{' '}

@@ -365,3 +365,199 @@
     margin: 0.6rem auto 0;
     border-radius: 4px;
 }
+
+/* Compliance cards inside NCAP block */
+.compliance-card {
+    background: white;
+    border-radius: 28px;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0 0;
+    box-shadow: 0 8px 20px -8px rgba(0,0,0,0.08);
+    border-left: 4px solid #0070f0;
+    transition: all 0.2s ease;
+}
+
+.compliance-card:first-of-type {
+    margin-top: 2rem;
+}
+
+.compliance-card h3 {
+    font-size: 1.4rem;
+    margin: 0 0 0.75rem 0;
+    color: #0a2540;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.compliance-icon {
+    font-size: 1.8rem;
+}
+
+.compliance-card p {
+    font-size: 0.95rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.compliance-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.compliance-list li {
+    position: relative;
+    padding-left: 1.6rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: #1e2f3e;
+}
+
+.compliance-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #eb7029;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.compliance-list strong {
+    color: #0070f0;
+    font-weight: 600;
+}
+
+/* Responsive adjustments for compliance cards */
+@media (max-width: 768px) {
+    .compliance-card {
+        padding: 1.2rem;
+        margin: 1.5rem 0 0;
+    }
+    .compliance-card h3 {
+        font-size: 1.2rem;
+        gap: 0.4rem;
+    }
+    .compliance-icon {
+        font-size: 1.5rem;
+    }
+    .compliance-list li {
+        font-size: 0.9rem;
+        padding-left: 1.4rem;
+    }
+}
+
+/* Extended compliance styles for detailed NCAP / FCC sections */
+.compliance-card {
+    background: white;
+    border-radius: 28px;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0 0;
+    box-shadow: 0 8px 20px -8px rgba(0,0,0,0.08);
+    border-left: 4px solid #0070f0;
+    transition: all 0.2s ease;
+}
+
+.compliance-card:first-of-type {
+    margin-top: 2rem;
+}
+
+.compliance-card h3 {
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem 0;
+    color: #0a2540;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.compliance-card h4 {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem 0;
+    color: #1e4663;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.compliance-subsection {
+    margin-top: 1.2rem;
+    border-top: 1px solid rgba(0,112,240,0.1);
+    padding-top: 0.8rem;
+}
+
+.compliance-subsection:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.compliance-icon {
+    font-size: 1.8rem;
+}
+
+.compliance-card p {
+    font-size: 0.95rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.compliance-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.compliance-list li {
+    position: relative;
+    padding-left: 1.6rem;
+    font-size: 0.94rem;
+    line-height: 1.45;
+    color: #1e2f3e;
+}
+
+.compliance-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #eb7029;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.compliance-list strong {
+    color: #0070f0;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .compliance-card {
+        padding: 1.2rem;
+        margin: 1.5rem 0 0;
+    }
+    .compliance-card h3 {
+        font-size: 1.2rem;
+        gap: 0.4rem;
+    }
+    .compliance-card h4 {
+        font-size: 1rem;
+    }
+    .compliance-icon {
+        font-size: 1.5rem;
+    }
+    .compliance-list li {
+        font-size: 0.9rem;
+        padding-left: 1.4rem;
+    }
+}
