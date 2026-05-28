@@ -231,3 +231,68 @@
 .news-card:hover .news-card-image img {
   transform: scale(1.05);
 }
+
+
+[data-theme="dark"] .not-found-container {
+  background: #0b1018;
+  color: #e2e8f0;
+}
+
+/* Радар в тёмной теме */
+[data-theme="dark"] .radar-wrapper {
+  filter: drop-shadow(0 0 40px rgba(255, 107, 0, 0.35));
+}
+
+[data-theme="dark"] .radar {
+  border-color: rgba(255, 107, 0, 0.5);
+  box-shadow: 
+    0 0 60px rgba(255, 107, 0, 0.2),
+    inset 0 0 50px rgba(255, 107, 0, 0.1);
+}
+
+[data-theme="dark"] .radar::before {
+  border-color: rgba(255, 107, 0, 0.6);
+}
+
+[data-theme="dark"] .radar-sweep {
+  background: linear-gradient(90deg, transparent, #ff6b00, transparent);
+  box-shadow: 0 0 25px #ff6b00;
+}
+
+/* Текст */
+[data-theme="dark"] .error-title {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .error-message {
+  color: #94a3b8;
+}
+
+/* Кнопка в тёмной теме */
+[data-theme="dark"] .back-home-btn {
+  color: #f1f5f9;
+  border-color: #ff6b00;
+}
+
+[data-theme="dark"] .back-home-btn:hover {
+  background: #ff6b00;
+  color: #ffffff;
+  box-shadow: 0 0 50px rgba(255, 107, 0, 0.6);
+}
+
+/* Сканирующие линии */
+[data-theme="dark"] .scan-lines {
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 3px,
+    rgba(255, 107, 0, 0.06) 3px,
+    rgba(255, 107, 0, 0.06) 4px
+  );
+}
+
+[data-theme="dark"] .radar-dots {
+  background: 
+    radial-gradient(circle at 28% 32%, #ff6b00 2px, transparent 3px),
+    radial-gradient(circle at 72% 38%, rgba(255,107,0,0.9) 1.5px, transparent 2px),
+    radial-gradient(circle at 48% 68%, rgba(255,107,0,0.95) 2px, transparent 3px);
+}

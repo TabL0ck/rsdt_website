@@ -317,3 +317,116 @@
     padding-right: 1.5rem;
   }
 }
+
+/* ============================================
+   ТЁМНАЯ ТЕМА — NewsPage
+   ============================================ */
+
+[data-theme="dark"] .news-page {
+  background: #0b1018;
+  color: #e2e8f0;
+}
+
+/* Hero */
+[data-theme="dark"] .news-hero {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+[data-theme="dark"] .news-hero p {
+  color: #94a3b8;
+}
+
+/* Заголовки и текст */
+[data-theme="dark"] .news-header h2 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .section-subtitle {
+  color: #64748b;
+}
+
+/* Карточки новостей */
+[data-theme="dark"] .news-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .news-card:hover {
+  border-color: #ff8a2a;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2), 
+              0 8px 10px -6px rgb(0 0 0 / 0.2);
+}
+
+[data-theme="dark"] .news-card-image {
+  background: #334155;
+}
+
+[data-theme="dark"] .news-card-content h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .news-card-content p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .news-date {
+  color: #64748b;
+}
+
+[data-theme="dark"] .news-category {
+  background: rgba(251, 146, 60, 0.15);
+  color: #fb923c;
+}
+
+[data-theme="dark"] .news-card-footer {
+  border-top-color: #334155;
+}
+
+/* Модальное окно */
+[data-theme="dark"] .news-modal {
+  background: #1e293b;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+}
+
+[data-theme="dark"] .modal-header {
+  border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .modal-meta {
+  color: #64748b;
+}
+
+[data-theme="dark"] .modal-category {
+  background: rgba(251, 146, 60, 0.15);
+  color: #fb923c;
+}
+
+[data-theme="dark"] .modal-header h2 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .modal-excerpt {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .modal-content p {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .modal-footer {
+  border-top-color: #334155;
+}
+
+[data-theme="dark"] .modal-close {
+  color: #64748b;
+}
+
+[data-theme="dark"] .modal-close:hover {
+  color: #f1f5f9;
+}
+
+/* Loading */
+[data-theme="dark"] .spinner {
+  border-color: #334155;
+  border-top-color: #fb923c;
+}

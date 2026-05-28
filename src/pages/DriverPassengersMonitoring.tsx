@@ -25,7 +25,7 @@ const DriverPassengersMonitoring: React.FC = () => {
         },
         {
             title: "Cabin Intrusion Detection",
-            description: "",
+            description: "An additional sensor allows monitoring of the area outside the vehicle, alerting the owner of any attempted break-in.",
             icon: "⚠️"
         }
     ];
@@ -107,7 +107,7 @@ const DriverPassengersMonitoring: React.FC = () => {
                             </div>
                             <div className="slave-card">
                                 <div className="slave-label">Sensor 4</div>
-                                <p>Additional zone <br />(Cabin intrusion)</p>
+                                <a href="/cabin-intrusion" className="sensor-dot-href"><p>Additional zone <br />(Cabin intrusion)</p></a>
                             </div>
                         </div>
                     </div>

@@ -218,12 +218,12 @@
 /* Tooltip */
 .sensor-dot .tooltip {
     position: absolute;
-    bottom: 140%;
+    bottom: -540%;
     left: 50%;
     transform: translateX(-50%);
     background: #ffffff;
     color: #ff9a4d;
-    padding: 10px 14px;
+    padding: 1px 14px;
     border-radius: 8px;
     font-size: 0.85rem;
     white-space: nowrap;
@@ -921,4 +921,161 @@
     color: #444;
     font-size: 1.05rem;
     line-height: 1.7;
+}
+
+/* ============================================
+   ТЁМНАЯ ТЕМА — Driver & Passengers Monitoring
+   ============================================ */
+
+[data-theme="dark"] .driver-monitoring-page {
+  background: #0b1018;
+}
+
+/* === Общие секции === */
+[data-theme="dark"] .section-title {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .section-description {
+  color: #94a3b8;
+}
+
+/* === CAN Bootloader === */
+[data-theme="dark"] .can-bootloader-section {
+  background: #0b1018;
+}
+
+[data-theme="dark"] .bootloader-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .bootloader-card h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .bootloader-card p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .bootloader-note {
+  background: #1e293b;
+  color: #cbd5e1;
+}
+
+/* === Data Processing === */
+[data-theme="dark"] .data-processing-section {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .processing-step {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .processing-step h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .processing-step p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .step-number {
+  background: rgba(251, 146, 60, 0.15);
+  color: #fb923c;
+}
+
+/* === GUI Showcase === */
+[data-theme="dark"] .gui-showcase {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .gui-visual {
+  background: #1e293b;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .gui-text h2 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .gui-text p {
+  color: #94a3b8;
+}
+
+/* Модальное окно */
+[data-theme="dark"] .modal-content {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .modal-content h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .modal-content p {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .modal-close {
+  color: #94a3b8;
+}
+
+/* === Capabilities === */
+[data-theme="dark"] .capability-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .capability-card h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .capability-card p {
+  color: #94a3b8;
+}
+
+/* === Architecture === */
+[data-theme="dark"] .slave-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .slave-card .slave-label {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .slave-card p {
+  color: #94a3b8;
+}
+
+/* === Specs Table === */
+[data-theme="dark"] .specs-table {
+  background: #1e293b;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .specs-table td {
+  border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .specs-table td:first-child {
+  background: #1e293b;
+  color: #fb923c;
+}
+
+/* === Общие улучшения === */
+[data-theme="dark"] .page-hero-subtitle {
+  color: rgba(255,255,255,0.85);
+}
+
+[data-theme="dark"] .cabin-image {
+  border-color: #334155;
+}
+
+[data-theme="dark"] .sensor-dot .tooltip {
+  background: #1e293b;
+  color: #f1f5f9;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }

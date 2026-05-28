@@ -374,3 +374,41 @@
 .milestones-col strong a {
   color: var(--orange);
 }
+
+[data-theme="dark"] .milestones-section {
+  background: transparent;
+}
+
+[data-theme="dark"] .milestones-card {
+  background: #1e293b;
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4), 
+              0 0 0 1px rgba(255, 138, 42, 0.2);
+}
+
+[data-theme="dark"] .milestones-card:hover {
+  background: #1e293b;
+  box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5), 
+              0 0 0 1px rgba(255, 138, 42, 0.35);
+}
+
+[data-theme="dark"] .milestones-title {
+  background: linear-gradient(135deg, #ff8a2a 0%, #fb923c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Заголовки колонок */
+[data-theme="dark"] .milestones-col h3 {
+  color: #f1f5f9;
+  border-left-color: #ff8a2a;
+}
+
+/* Элементы списка */
+[data-theme="dark"] .milestones-col li {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .milestones-col li::before {
+  color: #ff8a2a;
+}

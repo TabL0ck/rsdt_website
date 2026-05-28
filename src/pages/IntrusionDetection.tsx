@@ -72,10 +72,6 @@ const IntrusionDetection: React.FC = () => {
 
           <div className="advantages-grid">
             <div className="advantage-card">
-              <h3>Ultra-Low Power</h3>
-              <p>Designed for extended "sentry mode" operation without significant battery drain.</p>
-            </div>
-            <div className="advantage-card">
               <h3>True Volumetric Sensing</h3>
               <p>Monitors the entire cabin volume, not just specific points or surfaces.</p>
             </div>
@@ -102,10 +98,17 @@ const IntrusionDetection: React.FC = () => {
 
             <div className="cabin-zones-visual">
             <div className="cabin-image-wrapper">
+                {/* Светлая версия */}
                 <img 
-                src="/images/night-car.png" 
+                src="/images/cabin-intrusion-coverage-light.jpg" 
                 alt="Cabin intrusion detection zones" 
-                className="cabin-image"
+                className="cabin-image cabin-image-light"
+                />
+                {/* Тёмная версия */}
+                <img 
+                src="/images/cabin-intrusion-coverage-dark.png" 
+                alt="Cabin intrusion detection zones (dark)" 
+                className="cabin-image cabin-image-dark"
                 />
             </div>
             </div>
@@ -131,10 +134,6 @@ const IntrusionDetection: React.FC = () => {
               <p>Identifies attempts to break glass or force doors through vibration and micro-motion analysis.</p>
             </div>
             <div className="capability-card">
-              <h3>Human vs Object Classification</h3>
-              <p>Reduces false alarms by distinguishing between humans, animals, and inanimate objects.</p>
-            </div>
-            <div className="capability-card">
               <h3>Automotive Grade Integration</h3>
               <p>Native support for CAN-FD and compatibility with vehicle electrical architectures.</p>
             </div>
@@ -156,10 +155,9 @@ const IntrusionDetection: React.FC = () => {
               <tbody>
                 <tr><td>Detection Type</td><td>Volumetric (full cabin coverage)</td></tr>
                 <tr><td>Power Consumption</td><td>Optimized for long-term parked vehicle monitoring</td></tr>
-                <tr><td>False Alarm Reduction</td><td>Advanced micro-Doppler classification</td></tr>
                 <tr><td>Operating Temperature</td><td>−40°C to +85°C (Automotive Grade)</td></tr>
                 <tr><td>Privacy</td><td>No image or video capture</td></tr>
-                <tr><td>Integration</td><td>CAN-FD ready</td></tr>
+                <tr><td>Integration</td><td>CAN 2.0 / CAN-FD</td></tr>
               </tbody>
             </table>
           </div>

@@ -258,3 +258,30 @@
   border-color: var(--orange);
   color: var(--orange);
 }
+
+/* === Переключение изображения по теме === */
+.cabin-image-wrapper {
+  position: relative;
+}
+
+.cabin-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* По умолчанию показываем светлую версию */
+.cabin-image-dark {
+  display: none;
+}
+
+/* В тёмной теме показываем тёмную версию */
+[data-theme="dark"] .cabin-image-light {
+  display: none;
+}
+
+[data-theme="dark"] .cabin-image-dark {
+  display: block;
+}

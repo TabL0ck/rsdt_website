@@ -344,3 +344,24 @@
     display: none;
   }
 }
+
+[data-theme="dark"] .about-custom-offer {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+[data-theme="dark"] .custom-offer-inner {
+  background: transparent;
+}
+
+[data-theme="dark"] .offer-icon {
+  filter: brightness(1.1);
+}
+
+[data-theme="dark"] .offer-text {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .offer-text strong {
+  color: #fb923c;
+}
