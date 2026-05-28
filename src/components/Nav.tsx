@@ -1,8 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const Nav: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    const savedTheme = localStorage.getItem('site_theme');
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+      return savedTheme;
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  });
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isDesignOpen, setIsDesignOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
@@ -11,6 +19,7 @@ const Nav: React.FC = () => {
   const [mobileDesignOpen, setMobileDesignOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -18,6 +27,11 @@ const Nav: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('site_theme', theme);
+  }, [theme]);
 
   // Закрываем меню при смене страницы
   useEffect(() => {
@@ -105,11 +119,20 @@ const Nav: React.FC = () => {
     setMobileDesignOpen(false);
     setMobileAboutOpen(false);
   };
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    closeMenu();
+    navigate('/');
+    window.setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 0);
+  };
+  const toggleTheme = () => setTheme((current) => current === 'dark' ? 'light' : 'dark');
 
   return (
-    <nav ref={navRef} className={`nav ${scrolled ? 'scrolled' : ''}`}>
+    <nav ref={navRef} className={`nav ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}>
       <div className="nav-inner">
-        <NavLink to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <NavLink to="/" className="nav-logo" onClick={handleLogoClick} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <img
             src="/logo.svg"
             alt="MW-Sensor Logo"
@@ -178,6 +201,19 @@ const Nav: React.FC = () => {
           <li><NavLink to='/contact' className="nav-cta">Contact Us</NavLink></li>
         </ul>
 
+        <button
+          type="button"
+          className="theme-toggle desktop-theme-toggle"
+          onClick={toggleTheme}
+          aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+          aria-pressed={theme === 'dark'}
+        >
+          <span className="theme-toggle-track">
+            <span className="theme-toggle-thumb" />
+          </span>
+          <span className="theme-toggle-text">{theme === 'dark' ? 'Dark' : 'Light'}</span>
+        </button>
+
         {/* Бургер */}
         <button 
           className={`burger ${menuOpen ? 'open' : ''}`} 
@@ -195,6 +231,18 @@ const Nav: React.FC = () => {
       {menuOpen && (
         <div className="mobile-menu" style={{ zIndex: 1100 }}>
           <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '0 0.5rem 0.5rem' }}>
+            <button
+              type="button"
+              className="theme-toggle mobile-theme-toggle"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+              aria-pressed={theme === 'dark'}
+            >
+              <span className="theme-toggle-track">
+                <span className="theme-toggle-thumb" />
+              </span>
+              <span className="theme-toggle-text">{theme === 'dark' ? 'Dark' : 'Light'}</span>
+            </button>
             <button 
               onClick={closeMenu} 
               style={{ 

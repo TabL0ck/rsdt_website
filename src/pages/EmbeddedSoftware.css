@@ -512,3 +512,51 @@
     max-width: 100%;
   }
 }
+
+html[data-theme="dark"] .embedded-hardware-page {
+    --text-dark: #f3f7fb;
+    --bg-light: #081019;
+    --card-bg: #131d28;
+    background: var(--page-bg);
+    color: var(--text);
+}
+
+html[data-theme="dark"] .embedded-services,
+html[data-theme="dark"] .embedded-process,
+html[data-theme="dark"] .embedded-project,
+html[data-theme="dark"] .embedded-tools,
+html[data-theme="dark"] .embedded-why-us,
+html[data-theme="dark"] .gui-showcase {
+    background: var(--page-bg);
+    color: var(--text);
+}
+
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] .expertise-content h2,
+html[data-theme="dark"] .project-content h2,
+html[data-theme="dark"] .gui-text h2,
+html[data-theme="dark"] .gui-text h3,
+html[data-theme="dark"] .service-card h3,
+html[data-theme="dark"] .process-step h3,
+html[data-theme="dark"] .why-us-item h3 {
+    color: var(--text);
+}
+
+html[data-theme="dark"] .section-description,
+html[data-theme="dark"] .service-card p,
+html[data-theme="dark"] .process-step p,
+html[data-theme="dark"] .tool-category li,
+html[data-theme="dark"] .why-us-item p,
+html[data-theme="dark"] .gui-text p,
+html[data-theme="dark"] .gui-features li {
+    color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .service-card,
+html[data-theme="dark"] .process-step,
+html[data-theme="dark"] .tool-category,
+html[data-theme="dark"] .why-us-item {
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+}

@@ -682,3 +682,92 @@
         font-size: 1.8rem;
     }
 }
+
+html[data-theme="dark"] .embedded-hardware-page {
+    --text-dark: #f3f7fb;
+    --bg-light: #081019;
+    --card-bg: #131d28;
+    background: var(--page-bg);
+    color: var(--text);
+}
+
+html[data-theme="dark"] .embedded-services,
+html[data-theme="dark"] .embedded-expertise,
+html[data-theme="dark"] .embedded-process,
+html[data-theme="dark"] .embedded-project,
+html[data-theme="dark"] .embedded-tools,
+html[data-theme="dark"] .embedded-debug-access,
+html[data-theme="dark"] .embedded-why-us {
+    background: var(--page-bg);
+    color: var(--text);
+}
+
+html[data-theme="dark"] .embedded-hardware-page .embedded-services,
+html[data-theme="dark"] .embedded-hardware-page .embedded-process,
+html[data-theme="dark"] .embedded-hardware-page .embedded-debug-verification,
+html[data-theme="dark"] .embedded-hardware-page .embedded-why-us {
+    background: linear-gradient(125deg, #0a1a2f 0%, #0f2a3e 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+html[data-theme="dark"] .embedded-hardware-page .embedded-services::before,
+html[data-theme="dark"] .embedded-hardware-page .embedded-process::before,
+html[data-theme="dark"] .embedded-hardware-page .embedded-why-us::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 80%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(0,112,240,0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+html[data-theme="dark"] .embedded-hardware-page .embedded-services > .container,
+html[data-theme="dark"] .embedded-hardware-page .embedded-process > .container,
+html[data-theme="dark"] .embedded-hardware-page .embedded-why-us > .container {
+    position: relative;
+    z-index: 1;
+}
+
+html[data-theme="dark"] .embedded-debug-access {
+    background: linear-gradient(135deg, #081019 0%, #101821 100%);
+}
+
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] .expertise-content h2,
+html[data-theme="dark"] .project-content h2,
+html[data-theme="dark"] .debug-content h2,
+html[data-theme="dark"] .service-card h3,
+html[data-theme="dark"] .process-step h3,
+html[data-theme="dark"] .why-us-item h3 {
+    color: var(--text);
+}
+
+html[data-theme="dark"] .section-description,
+html[data-theme="dark"] .service-card p,
+html[data-theme="dark"] .process-step p,
+html[data-theme="dark"] .tool-category li,
+html[data-theme="dark"] .why-us-item p,
+html[data-theme="dark"] .debug-content p,
+html[data-theme="dark"] .debug-content li {
+    color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .service-card,
+html[data-theme="dark"] .process-step,
+html[data-theme="dark"] .tool-category,
+html[data-theme="dark"] .why-us-item,
+html[data-theme="dark"] .expertise-item {
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+}
+
+html[data-theme="dark"] .debug-note {
+    background: rgba(255, 138, 42, 0.12);
+    border-left-color: var(--orange);
+    color: var(--text-secondary);
+}

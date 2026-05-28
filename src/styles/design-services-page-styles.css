@@ -583,3 +583,59 @@
     margin-top: 2rem;
   }
 }
+
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] .page-hero-text h1 {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .section-description {
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .tools-column h3,
+html[data-theme="dark"] .em-testing-tools-column h3 {
+  color: var(--orange);
+}
+
+html[data-theme="dark"] .tool-group h4,
+html[data-theme="dark"] .em-testing-tool-group h4 {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .tool-group li,
+html[data-theme="dark"] .em-testing-tool-group li,
+html[data-theme="dark"] .measurement-list li,
+html[data-theme="dark"] .em-testing-measurement-list li {
+  color: var(--text-secondary);
+  border-bottom-color: var(--border);
+}
+
+html[data-theme="dark"] .tool-group li:hover,
+html[data-theme="dark"] .em-testing-tool-group li:hover,
+html[data-theme="dark"] .measurement-list li:hover,
+html[data-theme="dark"] .em-testing-measurement-list li:hover {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .contact-section {
+  background: var(--page-bg);
+}
+
+html[data-theme="dark"] .contact-form,
+html[data-theme="dark"] .contact-card {
+  background: var(--surface-elevated);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+html[data-theme="dark"] .contact-form h2,
+html[data-theme="dark"] .contact-form label,
+html[data-theme="dark"] .contact-card h3 {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .contact-card p,
+html[data-theme="dark"] .contact-card a {
+  color: var(--text-secondary);
+}

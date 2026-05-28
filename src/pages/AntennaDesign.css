@@ -268,6 +268,44 @@
   padding: 6rem 0;
 }
 
+/* Keep the tool list animation, but separate the marker from the underline. */
+.antenna-tools .tool-group li {
+  padding-left: 2rem;
+  transform: none;
+}
+
+.antenna-tools .tool-group li:hover {
+  padding-left: 2rem;
+  transform: translateX(4px);
+}
+
+.antenna-tools .tool-group li::before {
+  display: block;
+  left: 0;
+  right: auto;
+  top: auto;
+  bottom: -1px;
+  transform: none;
+  width: 0;
+  height: 2px;
+}
+
+.antenna-tools .tool-group li::after {
+  content: "▶";
+  left: 0.1rem;
+  transform: translateY(-50%);
+}
+
+.antenna-tools .tool-group li:hover::after {
+  left: 0.1rem;
+  color: #eb7029;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.antenna-tools .tool-group li:hover::before {
+  width: 100%;
+}
+
 .testing-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -389,4 +427,83 @@
   .photo-image img {
     max-height: 250px;
   }
+}
+
+html[data-theme="dark"] .antenna-page,
+html[data-theme="dark"] .antenna-key-services,
+html[data-theme="dark"] .antenna-projects,
+html[data-theme="dark"] .antenna-photo-gallery,
+html[data-theme="dark"] .antenna-integration,
+html[data-theme="dark"] .antenna-pullquote,
+html[data-theme="dark"] .antenna-testing,
+html[data-theme="dark"] .antenna-tools,
+html[data-theme="dark"] .antenna-why-us {
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+html[data-theme="dark"] .antenna-page .antenna-tools {
+  background: linear-gradient(125deg, #0a1a2f 0%, #0f2a3e 100%) !important;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+html[data-theme="dark"] .antenna-page .antenna-tools::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 80%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(0,112,240,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+html[data-theme="dark"] .antenna-page .antenna-tools > .container {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme="dark"] .antenna-page .antenna-why-us {
+  background: var(--page-bg) !important;
+}
+
+html[data-theme="dark"] .key-service-item,
+html[data-theme="dark"] .project-carousel-card,
+html[data-theme="dark"] .photo-item,
+html[data-theme="dark"] .why-us-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+html[data-theme="dark"] .photo-image,
+html[data-theme="dark"] .photo-image img {
+  background-color: #0b121a;
+}
+
+html[data-theme="dark"] .key-service-content h3,
+html[data-theme="dark"] .project-carousel-content h3,
+html[data-theme="dark"] .integration-text h2,
+html[data-theme="dark"] .testing-text h2,
+html[data-theme="dark"] .why-us-card h3,
+html[data-theme="dark"] .antenna-pullquote blockquote {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .key-service-content p,
+html[data-theme="dark"] .project-carousel-content p,
+html[data-theme="dark"] .photo-caption p,
+html[data-theme="dark"] .integration-text p,
+html[data-theme="dark"] .testing-text li,
+html[data-theme="dark"] .testing-note,
+html[data-theme="dark"] .why-us-card p,
+html[data-theme="dark"] .pullquote-attribution {
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .testing-note {
+  background: rgba(255, 138, 42, 0.12);
+  border-left-color: var(--orange);
 }
