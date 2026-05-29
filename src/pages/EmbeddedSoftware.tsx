@@ -82,7 +82,7 @@ const EmbeddedSoftware: React.FC = () => {
     ];
 
     return (
-        <div className="embedded-hardware-page embedded-software-page">
+        <div className="embedded-hardware-page">
             {/* Hero Section */}
             <section className="page-hero">
                 <div

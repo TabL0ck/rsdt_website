@@ -74,12 +74,8 @@ const NewsPreview: React.FC = () => {
               {item.image_url && (
                 <div style={{ 
                   width: '100%', 
-                  height: 'clamp(220px, 30vw, 360px)', 
-                  overflow: 'hidden',
-                  background: 'var(--surface)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
+                  height: '180px', 
+                  overflow: 'hidden'
                 }}>
                   <img 
                     src={item.image_url} 
@@ -87,7 +83,7 @@ const NewsPreview: React.FC = () => {
                     style={{ 
                       width: '100%', 
                       height: '100%', 
-                      objectFit: 'contain',
+                      objectFit: 'cover',
                       transition: 'transform 0.4s ease'
                     }}
                   />

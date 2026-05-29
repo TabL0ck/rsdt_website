@@ -1,4 +1,4 @@
-/* MedicalSensor.css — identical to ROAS.css */
+/* MedicalSensor.css - shared product page styling */
 .product-page-roas {
   background: var(--white);
   color: var(--text);
@@ -8,7 +8,6 @@
   min-height: 100vh;
 }
 
-/* ==================== SINGLE GRADIENT FOR THE ENTIRE PAGE ==================== */
 .product-page-roas::before {
   content: '';
   position: absolute;
@@ -21,7 +20,6 @@
   pointer-events: none;
 }
 
-/* ==================== HERO — no separate gradient ==================== */
 .product-hero-roas {
   background: transparent;
   padding: 6rem 2rem 8rem;
@@ -76,7 +74,11 @@
   margin-bottom: 2rem;
 }
 
-/* Sections — all transparent so the single gradient is visible everywhere */
+.product-subtitle-secondary {
+  font-size: 1rem;
+  margin-top: -1.25rem;
+}
+
 .product-section-roas,
 .product-section-roas-alt {
   position: relative;
@@ -110,16 +112,21 @@
 
 .section-description-roas {
   text-align: center;
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto 1.5rem;
   font-size: 1.1rem;
   color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 .product-grid-roas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+}
+
+.product-grid-compact-roas {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .product-card-roas,
@@ -146,6 +153,82 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   display: block;
+}
+
+.gui-showcase-roas {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.gui-copy-roas h2 {
+  text-align: left;
+}
+
+.gui-copy-roas h2::after {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.gui-copy-roas p {
+  color: var(--text-secondary);
+  font-size: 1.08rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.gui-feature-list-roas {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gui-feature-list-roas li {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  line-height: 1.55;
+  padding: 1rem 1rem 1rem 2.75rem;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.gui-feature-list-roas li::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 1.35rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.gui-visual-roas {
+  border: 1px solid rgba(244,121,32,0.28);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.gui-visual-roas img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gui-visual-roas p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  text-align: center;
 }
 
 .specs-table-roas table {
@@ -186,7 +269,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .product-hero-roas {
     flex-direction: column;
@@ -194,24 +276,23 @@
     gap: 1.5rem;
     padding: 4rem 1rem 7rem;
   }
+
   .product-hero-model-roas {
     justify-content: center;
     max-width: 100%;
   }
-}
 
-.medical-sensor-page .product-section-roas:nth-of-type(odd) {
-  background: var(--white);
-}
+  .gui-showcase-roas {
+    grid-template-columns: 1fr;
+  }
 
-.medical-sensor-page .product-section-roas:nth-of-type(even) {
-  background: var(--off-white);
-}
+  .gui-copy-roas h2 {
+    text-align: center;
+  }
 
-html[data-theme="dark"] .medical-sensor-page .product-section-roas:nth-of-type(odd) {
-  background: #081019 !important;
-}
+  .gui-copy-roas h2::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-html[data-theme="dark"] .medical-sensor-page .product-section-roas:nth-of-type(even) {
-  background: linear-gradient(125deg, #0a1a2f 0%, #0f2a3e 100%) !important;
 }

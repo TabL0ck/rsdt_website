@@ -80,8 +80,10 @@ const Nav: React.FC = () => {
     { name: 'Master Sensor/Unit', path: '/master-sensor-unit' },
     { name: 'Unified Sensor 6634', path: '/unified-sensor-6634' },
     { name: 'Low power sensor', path: '/low-power-sensor' },
-    { name: 'Medical sensor', path: '/medical-sensor' },
+    { name: 'Vital signs sensor', path: '/vitalsigns-sensor' },
+    { name: 'Contactless Medical Monitoring System', path: '/medical-sensor' },
     { name: 'UWB sensor', path: '/uwb-sensor' },
+    { name: 'Intrusion detection', path: '/cabin-intrusion' },
   ];
 
   const designServices = [
@@ -95,6 +97,7 @@ const Nav: React.FC = () => {
     { name: 'About Us', path: '/about' },
     { name: 'History', path: '/about-history' },
     { name: 'Careers', path: '/careers' },
+    { name: 'EuroNCAP', path: '/euroncap' },
   ];
 
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {

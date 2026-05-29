@@ -11,9 +11,11 @@ import SpecsStrip from './components/SpecsStrip';
 import AdvantagesSection from './components/AdvantagesSection';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
+import EURONCAP from './pages/EuroNCAP';
 import useSmoothScroll from './hooks/useSmoothScroll';
 import ROAS from './pages/ROAS';
 import UWB from './pages/UWB';
+import VITALSIGNS from './pages/VitalSigns';
 import MEDICAL from './pages/MedicalSensor';
 import BABYSIM from './pages/BabysimInfo';
 import MasterSensorUnit from './pages/MasterSensorUnit';
@@ -43,6 +45,7 @@ const pageTitles: Record<string, string> = {
   '/master-sensor-unit': 'MW-Sensor | Master Sensor Unit',
   '/unified-sensor-6634': 'MW-Sensor | Unified Sensor 6634',
   '/low-power-sensor': 'MW-Sensor | Low Power Sensor',
+  '/vitalsigns-sensor': 'MW-Sensor | Vital Signs Sensor',
   '/medical-sensor': 'MW-Sensor | Medical Sensor',
   '/uwb-sensor': 'MW-Sensor | Ultra-Wide Band Sensor',
   '/babysim': 'MW-Sensor | BabySim',
@@ -99,11 +102,12 @@ const App: React.FC = () => {
           </>
         } />
         <Route path="/about" element={<AboutPage />} />
-
+        <Route path="/euroncap" element={<EURONCAP />} />
         <Route path="/roas" element={<ROAS />} />
         <Route path="/master-sensor-unit" element={<MasterSensorUnit />} />
         <Route path="/unified-sensor-6634" element={<US6634 />} />
         <Route path="/low-power-sensor" element={<LPS />} />
+        <Route path="/vitalsigns-sensor" element={<VITALSIGNS />} />
         <Route path="/medical-sensor" element={<MEDICAL />} />
         <Route path="/uwb-sensor" element={<UWB />} />
         <Route path="/babysim" element={<BABYSIM />} />

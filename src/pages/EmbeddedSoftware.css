@@ -101,18 +101,6 @@
     background-color: var(--bg-light);
 }
 
-.embedded-software-page .embedded-services,
-.embedded-software-page .embedded-tools,
-.embedded-software-page .embedded-why-us {
-    background-color: var(--bg-light);
-}
-
-.embedded-software-page .embedded-process,
-.embedded-software-page .embedded-project,
-.embedded-software-page .gui-showcase {
-    background-color: #ffffff;
-}
-
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -541,18 +529,6 @@ html[data-theme="dark"] .embedded-why-us,
 html[data-theme="dark"] .gui-showcase {
     background: var(--page-bg);
     color: var(--text);
-}
-
-html[data-theme="dark"] .embedded-software-page .embedded-services,
-html[data-theme="dark"] .embedded-software-page .embedded-tools,
-html[data-theme="dark"] .embedded-software-page .embedded-why-us {
-    background: #081019;
-}
-
-html[data-theme="dark"] .embedded-software-page .embedded-process,
-html[data-theme="dark"] .embedded-software-page .embedded-project,
-html[data-theme="dark"] .embedded-software-page .gui-showcase {
-    background: #0b1621;
 }
 
 html[data-theme="dark"] .section-title,

@@ -39,7 +39,8 @@ const timelineData = [
       <p>
         The development of automotive microwave sensors began in 2020. The company’s key activities included the creation 
        of in‑cabin sensors for a South Korean customer.
-      In 2020, the company developed <strong><Link to="roas">ROAS (Rear Occupant Alert Sensor)</Link></strong> version 1 – a universal solution with omnidirectional antennas designed to detect the presence of passengers in a vehicle, implementing the <strong><Link to="/*">Child Presence Detection (CPD) function</Link></strong> – one of the requirements of the <strong><Link to="/*">EURO NCAP</Link></strong> standard. 
+      In 2020, the company developed ROAS (Rear Occupant Alert Sensor) version 1 – a universal solution with omnidirectional antennas designed to detect the presence of passengers in a vehicle, implementing the Child Presence Detection 
+      (CPD) function – one of the requirements of the EURO NCAP standard. 
       </p>
       </>
     ),
@@ -63,10 +64,10 @@ const timelineData = [
           suitable for integration into modern vehicle safety and monitoring systems.
         </p>
         <p>
-          In <strong>2021</strong>, the <strong><Link to="*">DMS (Driver Monitoring System version 1)</Link></strong> automotive sensor was developed.
+          In <strong>2021</strong>, the <strong>DMS (Driver Monitoring System version 1)</strong> automotive sensor was developed.
         </p>
         <p>
-          In <strong>2022</strong>, the <strong><Link to="/roas">ROA2 (Rear Occupant Alert version 2)</Link></strong> automotive sensor was developed.
+          In <strong>2022</strong>, the <strong>ROA2 (Rear Occupant Alert version 2)</strong> automotive sensor was developed.
         </p>
       </>
     ),
@@ -77,16 +78,16 @@ const timelineData = [
     content: (
       <>
         <p>
-          In <strong>2023</strong>, the company began developing the <strong><Link to="medical-sensor">Vital Signs Monitor (VSM)</Link></strong>, a non-contact medical technology. 
+          In 2023, the company began developing the Vital Signs Monitor (VSM), a non-contact medical technology. 
           The same year, it also started developing a compact radar-based medical sensor that realized this technology.
-           The project focused on creating a <strong><Link to="/*">Contactless Medical Monitoring System (CMMS)</Link></strong> with Wi-Fi 
+           The project focused on creating a Contactless Medical Monitoring System (CMMS) with Wi-Fi 
            data transmission to measure the heart rate and breathing rate of hospital patients.
         </p>
         <p>
           In the end of 2023, the VSM radar sensor and CMMS were first introduced.
         </p>
         <p>Driver Monitoring System version 2</p>
-        <p>In <strong>2023</strong>, the <strong><Link to="/unified-sensor-6634">DMS2 (Driver Monitoring System version 2)</Link></strong> automotive radar sensor was developed.
+        <p>In 2023, the DMS2 (Driver Monitoring System version 2) automotive radar sensor was developed.
            The DMS2 project aimed to improve vehicle safety through continuous driver condition monitoring, vital
             signs analysis, and detection of potentially dangerous conditions associated with fatigue or loss of attention.</p>
       </>
@@ -96,8 +97,8 @@ const timelineData = [
     year: '2024',
     title: "Intelligent Driver and Passenger Monitoring System",
     content:(
-      <p>This year, the development of the <strong><Link to="/master-sensor-unit">Driver and Passenger Monitoring System (D&PMS)</Link></strong> began.
-        The D&PMS is based on three mmWave <strong><Link to="/">Slave Radar Sensors</Link></strong> and one mmWave <strong><Link to="/">Master Radar Sensor</Link></strong>, connected via a local CAN network 
+      <p>This year, the development of the Driver and Passenger Monitoring System (D&PMS) began.
+        The D&PMS is based on three mmWave slave radar sensors and one mmWave master sensor, connected via a local CAN network 
         for data exchange and synchronization.
         The D&PMS features seat occupancy detection, passenger classification, driver and passenger vital sign monitoring, child 
         presence detection, and intrusion detection.
@@ -109,15 +110,15 @@ const timelineData = [
     title: "Low Power Intelligent Driver and Passengers Monitoring System and SDR Transceiver IC",
     content:(
       <>
-      <p>In <strong>2025</strong>, a unified <strong><Link to="/low-power-sensor">Low Power Sensor (LPS)</Link></strong> based on the AWRL6843 chip was developed. 
-        The <strong><Link to="/*">Low Power Driver & Passengers Monitoring System (LPD&PMS)</Link></strong> was implemented using four LPSs, 
+      <p>In 2025, a unified Low Power Sensor (LPS) based on the AWRL6843 chip was developed. 
+        The Low Power Driver & Passengers Monitoring System (LPD&PMS) was implemented using four LPSs, 
         with the potential to connect more sensors. These LPSs are connected via a local CAN network to form 
         the LPD&PMS system, with signal processing performed by the master sensor to improve the probability of
         passengers detection, recognition, and child presence detection.</p>
 
-      <p><h3>Integrated Circuit of SDR Transceiver</h3></p>
+      <p><strong className="extra-bold">Integrated Circuit of SDR Transceiver</strong></p>
 
-      <p>In <strong>2025</strong>, the development of a <strong className="extra-bold">0.1 – 6 GHz SDR transceiver integrated circuit (IC) </strong> 
+      <p>In 2025, the development of a <strong className="extra-bold">0.1 – 6 GHz SDR transceiver integrated circuit (IC)</strong> 
         based on a 28 nm RF CMOS process technology was started.</p>
       </>
     )    
@@ -128,19 +129,19 @@ const timelineData = [
     content: (
       <>
         <p>
-        1. Development of the <strong><Link to="/uwb-sensor">Ultra-Wideband (UWB)</Link>, <Link to="/roas">Rear Occupant Alert (ROA)</Link> & <Link to="/*">Kick radar sensor</Link></strong> was started.
+        1. Development of the Ultra-Wideband (UWB) Rear Occupant Alert (ROA) & Kick radar sensor was started.
         </p>
         <p>
           The UWB ROA & Kick radar sensor utilizes a new chip based on the IEEE 802.15.4a standard, which enhances the detection probability of occupants, including infants, by improving radio wave penetration into areas of the vehicle interior obscured by seats. The sensor also implements gesture recognition algorithms for opening the car trunk.
         </p>        
         <p>
-        2. Development of the <strong>Enhanced In-Cabin Monitoring Sensor (ICMS)</strong> was started.
+        2. Development of the Enhanced In-Cabin Monitoring Sensor (ICMS) was started.
         </p>
         <p>The enhanced driver and occupant monitoring system based on the new sensor is designed to improve the accuracy of driver respiratory rate and heart rate measurements 
           through improved digital signal processing algorithms and sensor fusion.</p>
          
         <p>
-        3. Development of the <strong className="extra-bold">0.1–6 GHz SDR transceiver integrated circuit (IC)</strong> based on a 28 nm RF CMOS process technology is ongoing.
+          The development project of the <strong className="extra-bold">0.1–6 GHz SDR transceiver integrated circuit (IC)</strong> based on a 28 nm RF CMOS process technology is ongoing.
         </p>
         <p>
           The IC is suitable for a wide range of applications, including the construction of communication systems that realize V2X technology for autonomous vehicles.

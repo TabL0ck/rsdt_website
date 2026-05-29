@@ -1,0 +1,291 @@
+.about-page {
+  background: var(--white);
+  color: var(--text);
+}
+
+/* Hero */
+.about-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--orange-light) 0%, var(--white) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: #111010;
+  margin-bottom: 0.5rem;
+  opacity: 0.78;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #111010;
+  opacity: 0.72;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #111010;
+  text-transform: uppercase;
+  padding: 0.45rem 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.info-buttons {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.euroncap-hero {
+  overflow: hidden;
+}
+
+.euroncap-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.32;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.euroncap-hero-content {
+  max-width: 780px;
+}
+
+/* Shared sections */
+.about-section {
+  padding: 5rem 2rem;
+}
+
+.about-section:nth-child(even) {
+  background: var(--off-white);
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about-section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--orange);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+.about-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: var(--text);
+}
+
+.about-section p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.euroncap-page .about-section p {
+  font-size: 1rem;
+}
+
+/* Text and image grid */
+.about-story-grid {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.about-story-text {
+  flex: 1;
+}
+
+.about-story-image {
+  flex-shrink: 0;
+  width: 40%;
+  max-width: 450px;
+}
+
+.about-story-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+
+/* Protocol highlights */
+.euroncap-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 3rem;
+}
+
+.euroncap-highlight-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  transition: all var(--transition);
+}
+
+.euroncap-highlight-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.euroncap-highlight-card span,
+.euroncap-requirement span {
+  display: inline-block;
+  color: var(--orange);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.euroncap-highlight-card h3,
+.euroncap-requirement h3 {
+  margin: 0 0 0.65rem;
+  color: var(--text);
+}
+
+/* Requirement mapping */
+.euroncap-requirements {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.euroncap-requirement {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.35fr) 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+}
+
+.euroncap-requirement p {
+  margin-bottom: 0;
+}
+
+/* Summary cards */
+.about-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.project-item {
+  display: flex;
+  gap: 1.2rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: all var(--transition);
+}
+
+.project-item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+.project-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--orange-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  font-weight: 800;
+}
+
+.project-info h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.project-client {
+  display: inline-block;
+  background: var(--orange-light);
+  color: var(--orange);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 20px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .about-story-grid {
+    flex-direction: column;
+  }
+
+  .about-story-image {
+    width: 100%;
+    max-width: 100%;
+    order: -1;
+  }
+
+  .euroncap-requirement {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .about-hero {
+    padding: 4rem 1.25rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2.4rem;
+  }
+}

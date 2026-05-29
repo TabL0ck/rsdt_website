@@ -7,23 +7,15 @@ const useSmoothScroll = () => {
   useEffect(() => {
     if (hash) {
       const id = hash.replace('#', '');
-
-      const scrollToHash = () => {
+      // Даём время на рендер компонентов
+      setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          const navHeight = 64 + 32;
+          const navHeight = 64 + 16;
           const top = element.getBoundingClientRect().top + window.pageYOffset - navHeight;
           window.scrollTo({ top, behavior: 'smooth' });
         }
-      };
-
-      const timeout = window.setTimeout(() => {
-        window.requestAnimationFrame(() => {
-          window.requestAnimationFrame(scrollToHash);
-        });
-      }, 180);
-
-      return () => window.clearTimeout(timeout);
+      }, 100);
     }
   }, [hash, pathname]);
 };

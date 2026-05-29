@@ -233,7 +233,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    background: linear-gradient(135deg, #f47920, #e06b10);
+    background: linear-gradient(135deg, #ac5f07, #d36205);
     color: white;
     padding: 0.7rem 1.8rem;
     border-radius: 40px;
@@ -243,7 +243,7 @@
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(244,121,32,0.3);
+    box-shadow: 0 4px 12px hsla(34, 94%, 49%, 0.3);
 }
 
 .btn-learn-more svg {
@@ -251,9 +251,9 @@
 }
 
 .btn-learn-more:hover {
-    background: linear-gradient(135deg, #e06b10, #c95e0a);
+    background: linear-gradient(135deg, #e66f0e, #d36600);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(244,121,32,0.4);
+    box-shadow: 0 8px 20px rgba(236, 130, 8, 0.4);
 }
 
 .btn-learn-more:hover svg {
@@ -261,7 +261,7 @@
 }
 
 html[data-theme="dark"] .radar-advantage-section {
-    background: #081019;
+    background: linear-gradient(125deg, #0a1a2f 0%, #0f2a3e 100%);
 }
 
 html[data-theme="dark"] .radar-advantage-section::before {

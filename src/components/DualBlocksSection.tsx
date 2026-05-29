@@ -48,7 +48,8 @@ const DualBlocksSection: React.FC = () => {
               <b><strong>Frequency-Modulated Continuous-Wave (FMCW) Radar Sensors:</strong></b>
               <ul>
                 <li><Link to="/roas">Rear Occupant Alert Sensor</Link></li>
-                <li><Link to="/medical-sensor">Vital Signs Monitoring Sensor</Link></li>
+                <li><Link to="/vitalsigns-sensor">Vital Signs Monitoring Sensor</Link></li>
+                <li><Link to="/medical-sensor">Contactless Medical Monitoring System</Link></li>
                 <li>Driver Monitoring Sensor</li>
                 <li><Link to="/driver-passengers-monitoring">Driver & Passenger Monitoring System</Link></li>
                 <li>Child presence detection</li>
