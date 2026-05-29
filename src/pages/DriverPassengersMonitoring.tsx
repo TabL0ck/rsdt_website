@@ -173,6 +173,35 @@ const DriverPassengersMonitoring: React.FC = () => {
                 </div>
             </section>
 
+            <section className="section cabin-zone-section">
+            <div className="container">
+                <div className="cabin-zone-header">
+                <h2 className="section-title">Cabin Zone Coverage</h2>
+                <p className="section-description">
+                    The system supports flexible volumetric monitoring of the vehicle cabin. 
+                    Different sensitivity levels can be configured for the driver area, rear seats, and cargo space.
+                </p>
+                </div>
+
+                <div className="cabin-zone-visual">
+                    <div className="cabin-image-wrapper">
+                        {/* Светлая версия */}
+                        <img 
+                        src="/images/cabin-zone-coverage-light.jpg" 
+                        alt="Cabin intrusion detection zones" 
+                        className="cabin-image cabin-image-light"
+                        />
+                        {/* Тёмная версия */}
+                        <img 
+                        src="/images/cabin-zone-coverage-dark.png" 
+                        alt="Cabin intrusion detection zones (dark)" 
+                        className="cabin-image cabin-image-dark"
+                        />
+                    </div>
+                </div>
+            </div>
+            </section>
+
             {/* CABIN PLACEMENT */}
             <section className="section">
                 <div className="container">
@@ -250,9 +279,9 @@ const DriverPassengersMonitoring: React.FC = () => {
                                 </video>
 
                                 {/* Интерактивные точки */}
-                                <div className="video-dot dot-1" onClick={() => openModal(0)}></div>
-                                <div className="video-dot dot-2" onClick={() => openModal(1)}></div>
-                                <div className="video-dot dot-3" onClick={() => openModal(2)}></div>
+                                <div className="video-dot DPMS-dot-1" onClick={() => openModal(0)}></div>
+                                <div className="video-dot DPMS-dot-2" onClick={() => openModal(1)}></div>
+                                <div className="video-dot DPMS-dot-3" onClick={() => openModal(2)}></div>
                             </div>
                         </div>
                     </div>
